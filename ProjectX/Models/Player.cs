@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Caliburn.Micro;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,16 +7,52 @@ using System.Threading.Tasks;
 
 namespace ProjectX.Models
 {
-    public class Player
+    public class Player:Screen
     {
 
         private string _name;
+        public string Name
+        {
+                get { return _name; }
+                set
+                {
+                _name = value;
+                NotifyOfPropertyChange(() => Name);
+                }
+            
+        }
         private int _playerId;
-        private string _nickname;
-        
-        public ScoreCardProp scoreCardProp;
-        private ScoreCard scoreCard;
+        public int PlayerID
+        {
+            get { return _playerId; }
+            set
+            {
+                _playerId = value;
+                NotifyOfPropertyChange(() => PlayerID);
+            }
 
-        internal ScoreCard ScoreCard { get => scoreCard; set => scoreCard = value; }
+        }
+
+        private string _nickname;
+        public string NickName
+        {
+            get { return _nickname; }
+            set
+            {
+                _nickname = value;
+                NotifyOfPropertyChange(() => NickName);
+            }
+
+        }
+        public ScoreCard ScoreCard;
+        public ScoreCardProp ScoreCardProp;
+
+        public Player()
+        {
+            ScoreCard = new ScoreCard();
+            ScoreCardProp = new ScoreCardProp();
+        }
+
+
     }
 }

@@ -46,9 +46,14 @@ namespace ProjectX.ViewModels
            
             GameSet.GameName = "Game Round 1";
             DateTime today = DateTime.Now;
-            GameSet.Started_At= today;
-
             
+            GameSet.Started_At = today;
+            GameSet.Started_At.ToShortDateString();
+
+
+
+
+
         }
 
         private void RollDices()
@@ -57,31 +62,31 @@ namespace ProjectX.ViewModels
             {
                 dice.DiceValue = r.Next(1, 7);
                 dice.Img = new BitmapImage(new Uri(@"\" + dice.DiceValue.ToString() + ".png", UriKind.Relative));
-                Dicepanel.Dice1 = dice;
+                GameSet.DicePanel.Dice1 = dice;
             }
             if (dice1.Keep == false)
             {
                 dice1.DiceValue = r.Next(1, 7);
                 dice1.Img = new BitmapImage(new Uri(@"\" + dice1.DiceValue.ToString() + ".png", UriKind.Relative));
-                Dicepanel.Dice2 = dice1;
+                GameSet.DicePanel.Dice2 = dice1;
             }
             if (dice2.Keep == false)
             {
                 dice2.DiceValue = r.Next(1, 7);
                 dice2.Img = new BitmapImage(new Uri(@"\" + dice2.DiceValue.ToString() + ".png", UriKind.Relative));
-                Dicepanel.Dice3 = dice2;
+                GameSet.DicePanel.Dice3 = dice2;
             }
             if (dice3.Keep == false)
             {
                 dice3.DiceValue = r.Next(1, 7);
                 dice3.Img = new BitmapImage(new Uri(@"\" + dice3.DiceValue.ToString() + ".png", UriKind.Relative));
-                Dicepanel.Dice4 = dice3;
+                GameSet.DicePanel.Dice4 = dice3;
             }
             if (dice4.Keep == false)
             {
                 dice4.DiceValue = r.Next(1, 7);
                 dice4.Img = new BitmapImage(new Uri(@"\" + dice4.DiceValue.ToString() + ".png", UriKind.Relative));
-                Dicepanel.Dice5 = dice4;
+                GameSet.DicePanel.Dice5 = dice4;
             }
         }
             public void SaveDice()

@@ -7,9 +7,8 @@ using System.Threading.Tasks;
 
 namespace ProjectX.Models
 {
-    internal class ScoreCard:Screen
+    public class ScoreCard:Screen
     {
-
         private int _ones;
         private int _twos;
         private int _threes;
