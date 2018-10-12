@@ -45,25 +45,25 @@
             <TextBlock Padding="0, 0,0, 0" VerticalAlignment="Center" Foreground="Red" FontSize="80" >X</TextBlock>
         </StackPanel>
 
-        <TextBlock VerticalAlignment="Center" Foreground="White" FontSize="40" Grid.Column="1" Grid.Row="1">Välkommen</TextBlock>
+        <TextBlock Margin="20" VerticalAlignment="Center" Foreground="White" FontSize="40" Grid.Column="1" Grid.Row="1">Välkommen</TextBlock>
 
         <StackPanel x:Name="Player" Margin="20,0,0,0"  Background="Black"  Grid.Column="1"  Grid.Row="2">          
             <TextBlock Foreground="White" FontSize="20" >Välj Antal Motspelare</TextBlock>
-            <TextBlock Foreground="Red" FontSize="15" >Det måste vara två spelare i spelet</TextBlock>
+            <TextBlock Foreground="Red" FontSize="15" >Det måste vara två spelare i spelet<LineBreak/></TextBlock>
             <Button x:Name="ThreePlayers" Background="Green">3 Spelare</Button>
             <Button x:Name="FourPlayers" Background="Green">4 Spelare</Button>
         </StackPanel>
 
         <StackPanel x:Name="GameStyle" Margin="20,0,0,0"  Background="Black"  Grid.Column="2"  Grid.Row="2">
             <TextBlock Foreground="White" FontSize="20" >Välj Typ Av Spel</TextBlock>
-            <TextBlock Foreground="Red" FontSize="15" >Klassisk: Frittval och Tvingande: Bestämd turordning</TextBlock>
+            <TextBlock Foreground="Red" FontSize="15" >Klassisk: Frittval och <LineBreak/> Tvingande: Bestämd turordning</TextBlock>
             <Button x:Name="Classic" Background="Green">Klassiskt</Button>
             <Button x:Name="Restricted" Background="Green">Tvingende</Button>
         </StackPanel>
 
         <StackPanel x:Name="StartGameButtonNav" Margin="20,0,0,0"  Background="Black"  Grid.Column="3"  Grid.Row="2">
             <TextBlock Foreground="White" FontSize="20" >Starta Spelet</TextBlock>
-            <TextBlock Foreground="Red" FontSize="15" >Tryck nedan för att starta spelet</TextBlock>
+            <TextBlock Foreground="Red" FontSize="15" >Tryck nedan för att starta spelet<LineBreak/></TextBlock>
             <Button x:Name="LoadMainGameWindow" Background="Green">Starta spelet</Button>
           
         </StackPanel>
