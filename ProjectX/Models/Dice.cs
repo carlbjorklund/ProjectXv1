@@ -40,6 +40,33 @@ namespace ProjectX.Models
             }
         }
 
+        public bool KeepDiceOne
+        {
+            get { return Keep; }
+            set
+            {
+                _keep = value;
+                if (value == true)
+                    Keep = true;
+                if (value == false)
+                   _keep = false;
+                NotifyOfPropertyChange(() => KeepDiceOne);
+            }
+        }
+        public bool KeepDiceTwo
+        {
+            get { return Keep; }
+            set
+            {
+                _keep = value;
+                if (value == true)
+                    Keep = true;
+                if (value == false)
+                    _keep = false;
+                NotifyOfPropertyChange(() => KeepDiceTwo);
+            }
+        }
+
         private BitmapImage img;
         public BitmapImage Img
         {

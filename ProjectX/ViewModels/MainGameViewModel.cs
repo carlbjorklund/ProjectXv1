@@ -37,7 +37,9 @@ namespace ProjectX.ViewModels
 
             // creating players
             player1 = new Player();
+            player1.Name = "Cecelia";
             player2 = new Player();
+            player2.Name = "Ulrich";
             player3 = new Player();
             player4 = new Player();
 
@@ -106,12 +108,60 @@ namespace ProjectX.ViewModels
                 GameSet.DicePanel.Dice5 = dice4;
             }
         }
-            public void SaveDice()
+            public void KeepDiceOne()
             {
-
+            if (dice.Keep == false)
+                dice.Keep = true;
+            else
+            {
+                dice.Keep = false;
             }
+       
+            }
+        public void KeepDiceTwo()
+        {
+            if (dice1.Keep == false)
+                dice1.Keep = true;
+            else
+            {
+                dice1.Keep = false;
+            }
+
         }
+        public void KeepDiceThree()
+        {
+            if (dice2.Keep == false)
+                dice2.Keep = true;
+            else
+            {
+                dice2.Keep = false;
+            }
+
+        }
+        public void KeepDiceFour()
+        {
+            if (dice3.Keep == false)
+                dice3.Keep = true;
+            else
+            {
+                dice3.Keep = false;
+            }
+
+        }
+        public void KeepDiceFive()
+        {
+            if (dice4.Keep == false)
+                dice4.Keep = true;
+            else
+            {
+                dice4.Keep = false;
+            }
+
+        }
+
     }
+}
+    
 
 
 

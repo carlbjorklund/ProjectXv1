@@ -27,11 +27,11 @@
         
           <Grid Grid.RowSpan="2" >
                 <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="20" />
+                <ColumnDefinition Width="50" />
             <ColumnDefinition Width="auto" />
-            <ColumnDefinition Width="10" />
             <ColumnDefinition Width="auto" />
-            <ColumnDefinition Width="10" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="auto" />
             <ColumnDefinition Width="auto" />
             <ColumnDefinition Width="auto" />
             <ColumnDefinition Width="auto" />
@@ -89,8 +89,11 @@
             <Button x:Name="PickChance" Grid.Row="18" Grid.Column="1" Foreground="White" Background="Green" >Välj</Button>
             <Button x:Name="PickYatzy" Grid.Row="19" Grid.Column="1" Foreground="White" Background="Green">Välj</Button>
 
-            <TextBlock Grid.Row="1" Grid.Column="3" FontWeight="Bold" FontSize="42" Foreground="White" >Yatzy!</TextBlock>
+            <TextBlock Grid.Row="1" Grid.Column="3" FontSize="15" Foreground="White" >Yatzy!</TextBlock>
+            <TextBlock Grid.Row="2" Grid.Column="4" Foreground="White" Text="{Binding  player1.Name, Mode=TwoWay}" ></TextBlock>
+            <TextBlock Margin="5,0,0,0" Grid.Row="1" Grid.Column="5" Foreground="White" Text="{Binding  player2.Name, Mode=TwoWay}" ></TextBlock>
             <TextBlock Grid.Row="2" Grid.Column="3" FontWeight="Bold" Foreground="White" >Spelare</TextBlock>
+            <TextBlock Grid.Row="2" Grid.Column="0" FontWeight="Bold" Foreground="White" >Förslag</TextBlock>
             <TextBlock Grid.Row="3" Grid.Column="3" Foreground="White" >Ettor</TextBlock>
             <TextBlock Grid.Row="4" Grid.Column="3" Foreground="White" >Twåor</TextBlock>
             <TextBlock Grid.Row="5" Grid.Column="3" Foreground="White" >Treor</TextBlock>
@@ -123,12 +126,10 @@
         <TextBlock Text="{Binding dice3.DiceValue, Mode=OneWay}" Foreground="Black" FontSize="30"/>
         <TextBlock Text="{Binding dice4.DiceValue, Mode=OneWay}" Foreground="Black" FontSize="30"/>-->
         <TextBlock Text="{Binding GameSet.GameName, Mode=OneWay}"  Foreground="Black" FontSize="30"/>
-        <TextBlock Text="{Binding GameSet.Started_At, Mode=OneWay}" Foreground="Black" FontSize="30"/>
-        
-        
-       
+        <TextBlock Text="{Binding GameSet.Started_At, Mode=OneWay}" Foreground="Black" FontSize="30"/>          
         </StackPanel>
 
+        
         <!--<Image Grid.Row="2" Grid.Column="1"  Height="95" HorizontalAlignment="Left" Margin="19,56,0,0" Name="image1"  Source="{Binding dice.Img}" Stretch="Uniform" VerticalAlignment="Top" Width="95" />-->
         <StackPanel  Grid.Column="1" Grid.Row="2"  Orientation="Horizontal">
         <Image Grid.Row="2" Grid.Column="1"  Height="95" HorizontalAlignment="Left" Margin="0,60,0,0" Source="{Binding dice.Img}" Stretch="Uniform" VerticalAlignment="Top" Width="95" />
@@ -139,11 +140,11 @@
        
         </StackPanel>
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="1" Grid.Row="2" Orientation="Horizontal">
-            <CheckBox x:Name="SaveDiceOne"  Margin="0,0,50,0"   IsChecked="False" >Spara</CheckBox>
-            <CheckBox x:Name="SaveDiceTwo"  Margin="10,0,50,0" IsChecked="False" >Spara</CheckBox>
-            <CheckBox x:Name="SaveDiceThree" Margin="10,0,50,0"  IsChecked="False">Spara</CheckBox>
-            <CheckBox x:Name="SaveDiceFour" Margin="10,0,45,0"  IsChecked="False">Spara</CheckBox>
-            <CheckBox x:Name="SaveDiceFive" Margin="10,0,0,0"  IsChecked="False">Spara</CheckBox>
+            <CheckBox x:Name="KeepDiceOne"  Margin="0,0,50,0"   IsChecked="False" >Spara</CheckBox>
+            <CheckBox x:Name="KeepDiceTwo"  Margin="10,0,50,0" IsChecked="False" >Spara</CheckBox>
+            <CheckBox x:Name="KeepDiceThree" Margin="10,0,50,0"  IsChecked="False">Spara</CheckBox>
+            <CheckBox x:Name="KeepDiceFour" Margin="10,0,45,0"  IsChecked="False">Spara</CheckBox>
+            <CheckBox x:Name="KeepDiceFive" Margin="10,0,0,0"  IsChecked="False">Spara</CheckBox>
         </StackPanel>
 
 
