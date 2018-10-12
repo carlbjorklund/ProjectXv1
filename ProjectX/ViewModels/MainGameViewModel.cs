@@ -19,22 +19,42 @@ namespace ProjectX.ViewModels
         public GameSetEngine GameSet { get; private set; }
         public Dice dice { get; private set; }
         public Dice dice1 { get; private set; }
-
         public Dice dice2 { get; private set; }
         public Dice dice3 { get; private set; }
         public Dice dice4 { get; private set; }
+        public Player player1 { get; private set; }
+        public Player player2 { get; private set; }
+        public Player player3 { get; private set; }
+        public Player player4 { get; private set; }
         public DicePanel Dicepanel { get; private set; }
 
          Random r = new Random();
 
         public MainGameViewModel()
         {
+            // create a new GameSet objekt
             GameSet = new GameSetEngine();
+
+            // creating players
+            player1 = new Player();
+            player2 = new Player();
+            player3 = new Player();
+            player4 = new Player();
+
+            // Adding players to the Gamest
+            GameSet.Players.Add(player1);
+            GameSet.Players.Add(player2);
+            GameSet.Players.Add(player3);
+            GameSet.Players.Add(player4);
+            
+            // Create the dices.
             dice = new Dice();
             dice1 = new Dice();
             dice2 = new Dice();
             dice3 = new Dice();
             dice4 = new Dice();
+            
+            // create the Dicepanel
             Dicepanel = new DicePanel();
         }
 
@@ -49,10 +69,7 @@ namespace ProjectX.ViewModels
             
             GameSet.Started_At = today;
             GameSet.Started_At.ToShortDateString();
-
-
-
-
+            
 
         }
 
