@@ -9,64 +9,439 @@ namespace ProjectX.Models
 {
     public class ScoreCard:Screen
     {
-        private int _ones;
-        private int _twos;
-        private int _threes;
-        private int _fours;
-        private int _fives;
-        private int _sixes;
-        private int _sum;
-        private int _bonus;
-        private int _pair;
-        private int _twoPairs;
-        private int _threeOfAKind;
-        private int _fourOfAKind;
-        private int _smallStraight;
-        private int _largeStraight;
-        private int _fullHouse;
-        private int _chance;
-        private int _yatzy;
-        private int _total;
+        private int ones;
+        public int Ones
+        {
+            get { return ones; }
+            set
+            {
+                ones = value;
+
+                NotifyOfPropertyChange(() => Ones);
+            }
+        }
+        private int twos;
+        public int Twos
+        {
+            get { return twos; }
+            set
+            {
+                twos = value;
+
+                NotifyOfPropertyChange(() => Twos);
+            }
+        }
+
+        private int threes;
+        public int Threes
+        {
+            get { return threes; }
+            set
+            {
+                threes = value;
+
+                NotifyOfPropertyChange(() => Threes);
+            }
+        }
+
+
+        private int fours;
+        public int Fours
+        {
+            get { return fours; }
+            set
+            {
+                fours = value;
+
+                NotifyOfPropertyChange(() => Fours);
+            }
+        }
+
+
+        private int fives;
+        public int Fives
+        {
+            get { return fives; }
+            set
+            {
+                fives = value;
+
+                NotifyOfPropertyChange(() => Fives);
+            }
+        }
+
+
+
+        private int sixes;
+        public int Sixes
+        {
+            get { return sixes; }
+            set
+            {
+                sixes = value;
+
+                NotifyOfPropertyChange(() => Sixes);
+            }
+        }
+
+        private int sum;
+        public int Sum
+        {
+            get { return sum; }
+            set
+            {
+                sum = value;
+
+                NotifyOfPropertyChange(() => Sum);
+            }
+        }
+
+
+        private int bonus;
+        public int Bonus
+        {
+            get { return bonus; }
+            set
+            {
+                bonus = value;
+
+                NotifyOfPropertyChange(() => Bonus);
+            }
+        }
+
+
+
+        private int pair;
+        public int Pair
+        {
+            get { return pair; }
+            set
+            {
+                pair = value;
+
+                NotifyOfPropertyChange(() => Pair);
+            }
+        }
+        private int twoPairs;
+        public int TwoPairs
+        {
+            get { return twoPairs; }
+            set
+            {
+                twoPairs = value;
+
+                NotifyOfPropertyChange(() => TwoPairs);
+            }
+        }
+        private int threeOfAKind;
+        public int ThreeOfAKind
+        {
+            get { return threeOfAKind; }
+            set
+            {
+                threeOfAKind = value;
+
+                NotifyOfPropertyChange(() => ThreeOfAKind);
+            }
+        }
+        private int fourOfAKind;
+        public int FourOfAKind
+        {
+            get { return fourOfAKind; }
+            set
+            {
+                fourOfAKind = value;
+
+                NotifyOfPropertyChange(() => FourOfAKind);
+            }
+        }
+        private int smallStraight;
+        public int SmallStraight
+        {
+            get { return smallStraight; }
+            set
+            {
+                smallStraight = value;
+
+                NotifyOfPropertyChange(() => SmallStraight);
+            }
+        }
+        private int largeStraight;
+        public int LargeStraight
+        {
+            get { return largeStraight; }
+            set
+            {
+                largeStraight = value;
+
+                NotifyOfPropertyChange(() => LargeStraight);
+            }
+        }
+        private int fullHouse;
+        public int FullHouse
+        {
+            get { return fullHouse; }
+            set
+            {
+                fullHouse = value;
+
+                NotifyOfPropertyChange(() => FullHouse);
+            }
+        }
+        private int chance;
+        public int Chance
+        {
+            get { return chance; }
+            set
+            {
+                chance = value;
+
+                NotifyOfPropertyChange(() => Chance);
+            }
+        }
+        private int yatzy;
+        public int Yatzy
+        {
+            get { return yatzy; }
+            set
+            {
+                yatzy = value;
+
+                NotifyOfPropertyChange(() => Yatzy);
+            }
+        }
+        private int total;
+        public int Total
+        {
+            get { return total; }
+            set
+            {
+                total = value;
+
+                NotifyOfPropertyChange(() => Total);
+            }
+        }
     }
     public class ScoreCardProp : Screen
     {
-        private bool _isonesprop;
-        private bool _istwosprop;
-        private bool _isthreesprop;
-        private bool _isfoursprop;
-        private bool _isfivesprop;
-        private bool _issixesprop;
-        private bool _issumprop;
-        private bool _isbonusprop;
-        private bool _ispairprop;
-        private bool _istwoPairsprop;
-        private bool _isthreeOfAKindprop;
-        private bool _isfourOfAKindprop;
-        private bool _issmallStraightprop;
-        private bool _islargeStraightprop;
-        private bool _isfullHouseprop;
-        private bool _ischanceprop;
-        private bool _isyatzyprop;
-        private bool _istotalprop;
+        public bool _isonesprop;
+        public bool _istwosprop;
+        public bool _isthreesprop;
+        public bool _isfoursprop;
+        public bool _isfivesprop;
+        public bool _issixesprop;
+        public bool _issumprop;
+        public bool _isbonusprop;
+        public bool _ispairprop;
+        public bool _istwoPairsprop;
+        public bool _isthreeOfAKindprop;
+        public bool _isfourOfAKindprop;
+        public bool _issmallStraightprop;
+        public bool _islargeStraightprop;
+        public bool _isfullHouseprop;
+        public bool _ischanceprop;
+        public bool _isyatzyprop;
+        public bool _istotalprop;
 
-        private int _onesprop;
-        private int _twosprop;
-        private int _threesprop;
-        private int _foursprop;
-        private int _fivesprop;
-        private int _sixesprop;
-        private int _sumprop;
-        private int _bonusprop;
-        private int _pairprop;
-        private int _twoPairsprop;
-        private int _threeOfAKindprop;
-        private int _fourOfAKindprop;
-        private int _smallStraightprop;
-        private int _largeStraightprop;
-        private int _fullHouseprop;
-        private int _chanceprop;
-        private int _yatzyprop;
-        private int _totalprop;
+        private int onesprop;
+        public int PropOnes
+        {
+            get { return onesprop; }
+            set
+            {
+                onesprop = value;
+
+                NotifyOfPropertyChange(() => PropOnes);
+            }
+        }
+        private int twosprop;
+        public int PropTwos
+        {
+            get { return twosprop; }
+            set
+            {
+                twosprop = value;
+
+                NotifyOfPropertyChange(() => PropTwos);
+            }
+        }
+        private int threesprop;
+        public int PropThree
+        {
+            get { return threesprop; }
+            set
+            {
+                threesprop = value;
+
+                NotifyOfPropertyChange(() => PropThree);
+            }
+        }
+        private int foursprop;
+        public int PropFour
+        {
+            get { return foursprop; }
+            set
+            {
+                foursprop = value;
+
+                NotifyOfPropertyChange(() => PropFour);
+            }
+        }
+        private int fivesprop;
+        public int PropFive
+        {
+            get { return fivesprop; }
+            set
+            {
+                fivesprop = value;
+
+                NotifyOfPropertyChange(() => PropFive);
+            }
+        }
+        private int sixesprop;
+        public int PropSixes
+        {
+            get { return sixesprop; }
+            set
+            {
+                sixesprop = value;
+
+                NotifyOfPropertyChange(() => PropSixes);
+            }
+        }
+        private int sumprop;
+        public int PropSum
+        {
+            get { return sumprop; }
+            set
+            {
+                sumprop = value;
+
+                NotifyOfPropertyChange(() => PropSum);
+            }
+        }
+        private int bonusprop;
+        public int Bonusprop
+        {
+            get { return bonusprop; }
+            set
+            {
+                bonusprop = value;
+
+                NotifyOfPropertyChange(() => Bonusprop);
+            }
+        }
+
+        private int pairprop;
+        public int PropPair
+        {
+            get { return pairprop; }
+            set
+            {
+                pairprop = value;
+
+                NotifyOfPropertyChange(() => PropPair);
+            }
+        }
+        private int twoPairsprop;
+        public int PropTwoPairs
+        {
+            get { return twoPairsprop; }
+            set
+            {
+                twoPairsprop = value;
+
+                NotifyOfPropertyChange(() => PropTwoPairs);
+            }
+        }
+        private int threeOfAKindprop;
+        public int PropThreeOfAKind
+        {
+            get { return threeOfAKindprop; }
+            set
+            {
+                threeOfAKindprop = value;
+
+                NotifyOfPropertyChange(() => PropThreeOfAKind);
+            }
+        }
+        private int fourOfAKindprop;
+        public int PropFourOfAKind
+        {
+            get { return fourOfAKindprop; }
+            set
+            {
+                fourOfAKindprop = value;
+
+                NotifyOfPropertyChange(() => PropFourOfAKind);
+            }
+        }
+        private int smallStraightprop;
+        public int SmallStraightprop
+        {
+            get { return smallStraightprop; }
+            set
+            {
+                smallStraightprop = value;
+
+                NotifyOfPropertyChange(() => SmallStraightprop);
+            }
+        }
+        private int largeStraightprop;
+        public int PropLargeStraight
+        {
+            get { return largeStraightprop; }
+            set
+            {
+                largeStraightprop = value;
+
+                NotifyOfPropertyChange(() => PropLargeStraight);
+            }
+        }
+        private int fullHouseprop;
+        public int PropFullHouse
+        {
+            get { return fullHouseprop; }
+            set
+            {
+                fullHouseprop = value;
+
+                NotifyOfPropertyChange(() => PropFullHouse);
+            }
+        }
+        private int chanceprop;
+        public int PropChance
+        {
+            get { return chanceprop; }
+            set
+            {
+                chanceprop = value;
+
+                NotifyOfPropertyChange(() => PropChance);
+            }
+        }
+        private int yatzyprop;
+        public int PropYatzy
+        {
+            get { return yatzyprop; }
+            set
+            {
+                yatzyprop = value;
+
+                NotifyOfPropertyChange(() => PropYatzy);
+            }
+        }
+        private int totalprop;
+        public int PropTotal
+        {
+            get { return totalprop; }
+            set
+            {
+                totalprop = value;
+
+                NotifyOfPropertyChange(() => PropTotal);
+            }
+        }
     }
 
 }
