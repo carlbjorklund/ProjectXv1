@@ -89,6 +89,7 @@ namespace ProjectX.Models
            DicePanel = new DicePanel();
            Players = new List<Player>();
         }
+
     }
 }
 
