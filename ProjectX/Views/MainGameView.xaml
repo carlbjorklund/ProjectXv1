@@ -91,7 +91,8 @@
 
             <TextBlock Grid.Row="1" Grid.Column="3" FontSize="15" Foreground="White" >Yatzy!</TextBlock>
             <TextBlock Grid.Row="2" Grid.Column="4" Foreground="White" Text="{Binding  player1.Name, Mode=TwoWay}" ></TextBlock>
-            <TextBlock Margin="5,0,0,0" Grid.Row="1" Grid.Column="5" Foreground="White" Text="{Binding  player2.Name, Mode=TwoWay}" ></TextBlock>
+            <TextBlock Margin="5,0,0,0" Grid.Row="2" Grid.Column="6" Foreground="White" Text="{Binding  player2.Name, Mode=TwoWay}" ></TextBlock>
+            <TextBlock Foreground="Red" Text="{Binding Path=PropOnes, Mode=TwoWay}" Grid.Row="3" Grid.Column="0"></TextBlock>  
             <TextBlock Grid.Row="2" Grid.Column="3" FontWeight="Bold" Foreground="White" >Spelare</TextBlock>
             <TextBlock Grid.Row="2" Grid.Column="0" FontWeight="Bold" Foreground="White" >Förslag</TextBlock>
             <TextBlock Grid.Row="3" Grid.Column="3" Foreground="White" >Ettor</TextBlock>

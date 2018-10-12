@@ -266,36 +266,36 @@ namespace ProjectX.Models
             }
         }
         private int threesprop;
-        public int PropThree
+        public int PropThrees
         {
             get { return threesprop; }
             set
             {
                 threesprop = value;
 
-                NotifyOfPropertyChange(() => PropThree);
+                NotifyOfPropertyChange(() => PropThrees);
             }
         }
         private int foursprop;
-        public int PropFour
+        public int PropFours
         {
             get { return foursprop; }
             set
             {
                 foursprop = value;
 
-                NotifyOfPropertyChange(() => PropFour);
+                NotifyOfPropertyChange(() => PropFours);
             }
         }
         private int fivesprop;
-        public int PropFive
+        public int PropFives
         {
             get { return fivesprop; }
             set
             {
                 fivesprop = value;
 
-                NotifyOfPropertyChange(() => PropFive);
+                NotifyOfPropertyChange(() => PropFives);
             }
         }
         private int sixesprop;
