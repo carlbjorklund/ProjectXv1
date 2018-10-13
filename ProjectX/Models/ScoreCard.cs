@@ -224,6 +224,10 @@ namespace ProjectX.Models
     }
     public class ScoreCardProp : Screen
     {
+        public ScoreCardProp()
+        {
+    }
+
         public bool _isonesprop;
         public bool _istwosprop;
         public bool _isthreesprop;

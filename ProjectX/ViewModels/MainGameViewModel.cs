@@ -32,6 +32,11 @@ namespace ProjectX.ViewModels
         public DicePanel Dicepanel { get; private set; }
         public ScoreCardProp PropScoreCard { get; private set; }
 
+        public ScoreCard ScoreCardp1 { get; private set; }
+        public ScoreCard ScoreCardp2 { get; private set; }
+        public ScoreCard ScoreCardp3 { get; private set; }
+        public ScoreCard ScoreCardp4 { get; private set; }
+
         Random r = new Random();
 
         public MainGameViewModel()
@@ -47,12 +52,7 @@ namespace ProjectX.ViewModels
             player3 = new Player();
             player4 = new Player();
 
-            // Adding players to the Gamest
-            GameSet.Players.Add(player1);
-            GameSet.Players.Add(player2);
-            GameSet.Players.Add(player3);
-            GameSet.Players.Add(player4);
-            
+                   
             // Create the dices.
             dice = new Dice();
             dice1 = new Dice();
@@ -60,12 +60,44 @@ namespace ProjectX.ViewModels
             dice3 = new Dice();
             dice4 = new Dice();
 
+            //creating the proposal scorecard
             PropScoreCard = new ScoreCardProp();
+
+            // Creating players scorecards
+            ScoreCardp1 = new ScoreCard();
+            ScoreCardp2 = new ScoreCard();
+            ScoreCardp3 = new ScoreCard();
+            ScoreCardp4 = new ScoreCard();
+
+            //giving players their scorecards
+            player1.ScoreCard = ScoreCardp1;
+            player2.ScoreCard = ScoreCardp2;
+            player3.ScoreCard = ScoreCardp3;
+            player4.ScoreCard = ScoreCardp4;
 
             // create the Dicepanel
             Dicepanel = new DicePanel();
+
+            // Adding players to the Gamest
+            GameSet.Players.Add(player1);
+            GameSet.Players.Add(player2);
+            GameSet.Players.Add(player3);
+            GameSet.Players.Add(player4);
+        }
+        public void Revaluate()
+        {
+            ClearDice();
         }
 
+        public void ClearDice()
+        {         
+            
+            for (int i = 0; i < diceValues.Length; i++)
+            {
+                diceValues[i] = 0;
+            }
+
+        }
         public void Enable()
         {
             GameSet.GameName = "Game Round 1";
@@ -74,17 +106,21 @@ namespace ProjectX.ViewModels
             GameSet.Started_At = today;
             GameSet.Started_At.ToShortDateString();
 
+            ClearDice();
             RollDices();
             SaveDicesToEvaluationArray();
-            EvaluateProposal();
+            EvaluateProposal();         
+
 
         }
         /// <summary>
         /// Checking what score the end user can obtain based upon current dice values
         /// </summary>
-
+        /// 
         private void EvaluateProposal()
         {
+            
+
             if (One(diceValues) > 0)
             {
                 PropScoreCard.PropOnes = 0;
@@ -161,7 +197,7 @@ namespace ProjectX.ViewModels
                 PropScoreCard.PropYatzy = 0;
                 PropScoreCard.PropYatzy = Yatzee(diceValues);
             }
-
+         
 
         }
 
@@ -634,10 +670,198 @@ namespace ProjectX.ViewModels
 
         #endregion
 
+        #region Populating scorecards
+        public void PickOne()
+        {
+            //make an if to see which player it is? and then fire the functions for each players scorecard???? how to do it???
+            // have to put it twice in order to get the results not duplicated...
+            // sixes does not display proparly, they seem to disapear.
+
+         
+            SaveDicesToEvaluationArrayForScoreCard();
+            ScoreCardp1.Ones = One(diceValues);
+            ClearDice();
+            SaveDicesToEvaluationArrayForScoreCard();
+            ScoreCardp1.Ones = One(diceValues);
+            ClearDice();
+            //PickOne();
+
+        }
+
+        public void PickTwo()
+        {
+            //SaveDicesToEvaluationArrayForScoreCard();
+
+            //ScoreCardp1.Twos = One(diceValues);
+            //ClearDice();
+
+            SaveDicesToEvaluationArrayForScoreCard();
+            ScoreCardp1.Twos = Two(diceValues);
+            ClearDice();
+
+            SaveDicesToEvaluationArrayForScoreCard();
+            ScoreCardp1.Twos = Two(diceValues);
+            ClearDice();
+
+        }
+        public void PickThree()
+        {
+            SaveDicesToEvaluationArrayForScoreCard();
+            ScoreCardp1.Threes = Three(diceValues);
+            ClearDice();
+
+            SaveDicesToEvaluationArrayForScoreCard();
+            ScoreCardp1.Threes = Three(diceValues);
+            ClearDice();
+        }
+        public void PickFour()
+        {
+            SaveDicesToEvaluationArrayForScoreCard();
+            ScoreCardp1.Fours = Four(diceValues);
+            ClearDice();
+
+            SaveDicesToEvaluationArrayForScoreCard();
+            ScoreCardp1.Fours = Four(diceValues);
+            ClearDice();
+        }
+        public void PickFive()
+        {
+            SaveDicesToEvaluationArrayForScoreCard();
+            ScoreCardp1.Fives = Five(diceValues);
+            ClearDice();
+
+            SaveDicesToEvaluationArrayForScoreCard();
+            ScoreCardp1.Fives = Five(diceValues);
+            ClearDice();
+        }
+        public void PickSix()
+        {
+            SaveDicesToEvaluationArrayForScoreCard();
+            ScoreCardp1.Sixes = Six(diceValues);
+            ClearDice();
+
+
+            SaveDicesToEvaluationArrayForScoreCard();
+            ScoreCardp1.Sixes = Six(diceValues);
+            ClearDice();
+        }
+        public void PickPair()
+        {
+            SaveDicesToEvaluationArrayForScoreCard();
+            ScoreCardp1.Pair = Pair(diceValues);
+            ClearDice();
+
+            SaveDicesToEvaluationArrayForScoreCard();
+            ScoreCardp1.Pair = Pair(diceValues);
+            ClearDice();
+        }
+        public void PickTwoPair()
+        {
+            SaveDicesToEvaluationArrayForScoreCard();
+            ScoreCardp1.TwoPairs = TwoPair(diceValues);
+            ClearDice();
+
+            SaveDicesToEvaluationArrayForScoreCard();
+            ScoreCardp1.TwoPairs = TwoPair(diceValues);
+            ClearDice();
+        }
+        public void PickThreeOfKind()
+        {
+            SaveDicesToEvaluationArrayForScoreCard();
+            ScoreCardp1.ThreeOfAKind = ThreeOfKind(diceValues);
+            ClearDice();
+
+            SaveDicesToEvaluationArrayForScoreCard();
+            ScoreCardp1.ThreeOfAKind = ThreeOfKind(diceValues);
+            ClearDice();
+        }
+        public void PickFourOfKInd()
+        {
+            SaveDicesToEvaluationArrayForScoreCard();
+            ScoreCardp1.FourOfAKind = FourOfKind(diceValues);
+            ClearDice();
+
+            SaveDicesToEvaluationArrayForScoreCard();
+            ScoreCardp1.FourOfAKind = FourOfKind(diceValues);
+            ClearDice();
+        }
+        public void PickSmallStraight()
+        {
+            SaveDicesToEvaluationArrayForScoreCard();
+            ScoreCardp1.SmallStraight = SmallStraight(diceValues);
+            ClearDice();
+
+            SaveDicesToEvaluationArrayForScoreCard();
+            ScoreCardp1.SmallStraight = SmallStraight(diceValues);
+            ClearDice();
+        }
+        public void PickLargeStraight()
+        {
+            SaveDicesToEvaluationArrayForScoreCard();
+            ScoreCardp1.LargeStraight =BigStraight(diceValues);
+            ClearDice();
+
+            SaveDicesToEvaluationArrayForScoreCard();
+            ScoreCardp1.LargeStraight = BigStraight(diceValues);
+            ClearDice();
+        }
+        public void PickFullHouse()
+        {
+            SaveDicesToEvaluationArrayForScoreCard();
+            ScoreCardp1.FullHouse = FullHouse(diceValues);
+            ClearDice();
+
+            SaveDicesToEvaluationArrayForScoreCard();
+            ScoreCardp1.FullHouse = FullHouse(diceValues);
+            ClearDice();
+        }
+        public void PickChance()
+        {
+            SaveDicesToEvaluationArrayForScoreCard();
+            ScoreCardp1.Chance = Chance(diceValues);
+            ClearDice();
+
+
+            SaveDicesToEvaluationArrayForScoreCard();
+            ScoreCardp1.Chance = Chance(diceValues);
+            ClearDice();
+        }
+        #endregion
+
         /// <summary>
         /// Save the faces on the dices in an array..
         /// </summary>
         private void SaveDicesToEvaluationArray()
+        {
+            for (int i = 0; i < dices.Length; i++)
+            {
+                switch (dices[i])
+                {
+                    case 1:
+                        diceValues[0]++;
+                        break;
+                    case 2:
+                        diceValues[1]++;
+                        break;
+                    case 3:
+                        diceValues[2]++;
+                        break;
+                    case 4:
+                        diceValues[3]++;
+                        break;
+                    case 5:
+                        diceValues[4]++;
+                        break;
+                    case 6:
+                        diceValues[5]++;
+                        break;
+                }
+
+
+            }
+
+        }
+        private void SaveDicesToEvaluationArrayForScoreCard()
         {
             for (int i = 0; i < dices.Length; i++)
             {

@@ -39,7 +39,7 @@ namespace ProjectX.Views
 
         private void Rolldice_Click(object sender, RoutedEventArgs e)
         {
-            int value, value2, value100, value200;
+            //int value, value2, value100, value200;
             //value = r.Next(1, 7);
             //value2 = r.Next(1, 7);
             //value100 = r.Next(1, 7);
