@@ -226,105 +226,101 @@ namespace ProjectX.Models
     {
         public ScoreCardProp()
         {
-    }
 
-        public bool _isonesprop;
+        }
         public bool IsOnesProp { get { return onesprop != -1; } }
-        public bool _istwosprop;
-        public bool _isthreesprop;
-        public bool _isfoursprop;
-        public bool _isfivesprop;
-        public bool _issixesprop;
-        public bool _issumprop;
-        public bool _isbonusprop;
-        public bool _ispairprop;
-        public bool _istwoPairsprop;
-        public bool _isthreeOfAKindprop;
-        public bool _isfourOfAKindprop;
-        public bool _issmallStraightprop;
-        public bool _islargeStraightprop;
-        public bool _isfullHouseprop;
-        public bool _ischanceprop;
-        public bool _isyatzyprop;
-        public bool _istotalprop;
-
+        private bool isonesprop;
         private int onesprop = -1;
         public int PropOnes
         {
             get { return onesprop; }
             set
             {
-                onesprop = value; _isonesprop = true;
+                onesprop = value; isonesprop = true;
 
                 NotifyOfPropertyChange(() => PropOnes);
             }
         }
-        private int twosprop;
+        public bool Istwosprop { get { return twosprop != -1; } }
+        private bool istwoprop;
+        private int twosprop = -1;
         public int PropTwos
         {
             get { return twosprop; }
             set
             {
-                twosprop = value;
+                twosprop = value; istwoprop = true;
 
                 NotifyOfPropertyChange(() => PropTwos);
             }
         }
-        private int threesprop;
+        public bool Isthreesprop { get { return threesprop != -1; } }
+        private bool isthreespop;
+        private int threesprop = -1;
         public int PropThrees
         {
             get { return threesprop; }
             set
             {
-                threesprop = value;
+                threesprop = value; isthreespop = true;
 
                 NotifyOfPropertyChange(() => PropThrees);
             }
         }
-        private int foursprop;
+        public bool Isfoursprop { get { return foursprop != -1; } }
+        private bool isfourprop;
+        private int foursprop=-1;
         public int PropFours
         {
             get { return foursprop; }
             set
             {
-                foursprop = value;
+                foursprop = value; isfourprop = true;
 
                 NotifyOfPropertyChange(() => PropFours);
             }
         }
-        private int fivesprop;
+        public bool Isfivesprop { get { return fivesprop != -1; } }
+        private bool isfivesprop;
+        private int fivesprop=-1;
         public int PropFives
         {
             get { return fivesprop; }
             set
             {
-                fivesprop = value;
+                fivesprop = value; isfivesprop = true;
 
                 NotifyOfPropertyChange(() => PropFives);
             }
         }
-        private int sixesprop;
+        public bool Issixesprop { get { return sixesprop != -1; } }
+        private bool issixesprop;
+        private int sixesprop=-1;
         public int PropSixes
         {
             get { return sixesprop; }
             set
             {
-                sixesprop = value;
+                sixesprop = value; issixesprop = true;
 
                 NotifyOfPropertyChange(() => PropSixes);
             }
         }
+        public bool Issumprop { get { return fivesprop != -1; } }
+        private bool issumprop;
         private int sumprop;
         public int PropSum
         {
             get { return sumprop; }
             set
             {
-                sumprop = value;
+                sumprop = value; issumprop = true;
 
                 NotifyOfPropertyChange(() => PropSum);
             }
         }
+
+        public bool Isbonusprop;
         private int bonusprop;
         public int Bonusprop
         {
@@ -336,7 +332,7 @@ namespace ProjectX.Models
                 NotifyOfPropertyChange(() => Bonusprop);
             }
         }
-
+        public bool Ispairprop { get { return pairprop != -1; } }
         private int pairprop;
         public int PropPair
         {
@@ -348,7 +344,8 @@ namespace ProjectX.Models
                 NotifyOfPropertyChange(() => PropPair);
             }
         }
-        private int twoPairsprop;
+        public bool IstwoPairsprop { get { return twoPairsprop != -1; } }
+        private int twoPairsprop = -1;
         public int PropTwoPairs
         {
             get { return twoPairsprop; }
@@ -359,6 +356,7 @@ namespace ProjectX.Models
                 NotifyOfPropertyChange(() => PropTwoPairs);
             }
         }
+        public bool IsthreeOfAKindprop;
         private int threeOfAKindprop;
         public int PropThreeOfAKind
         {
@@ -370,6 +368,7 @@ namespace ProjectX.Models
                 NotifyOfPropertyChange(() => PropThreeOfAKind);
             }
         }
+        public bool IsfourOfAKindprop;
         private int fourOfAKindprop;
         public int PropFourOfAKind
         {
@@ -381,6 +380,7 @@ namespace ProjectX.Models
                 NotifyOfPropertyChange(() => PropFourOfAKind);
             }
         }
+        public bool IssmallStraightprop;
         private int smallStraightprop;
         public int SmallStraightprop
         {
@@ -392,6 +392,7 @@ namespace ProjectX.Models
                 NotifyOfPropertyChange(() => SmallStraightprop);
             }
         }
+        public bool IsslargeStraightprop;
         private int largeStraightprop;
         public int PropLargeStraight
         {
@@ -403,6 +404,7 @@ namespace ProjectX.Models
                 NotifyOfPropertyChange(() => PropLargeStraight);
             }
         }
+        public bool IsfullHouseprop;
         private int fullHouseprop;
         public int PropFullHouse
         {
@@ -414,6 +416,8 @@ namespace ProjectX.Models
                 NotifyOfPropertyChange(() => PropFullHouse);
             }
         }
+
+        public bool Ischanceprop;
         private int chanceprop;
         public int PropChance
         {
@@ -425,6 +429,7 @@ namespace ProjectX.Models
                 NotifyOfPropertyChange(() => PropChance);
             }
         }
+        public bool Issyatzyprop;
         private int yatzyprop;
         public int PropYatzy
         {
@@ -436,6 +441,7 @@ namespace ProjectX.Models
                 NotifyOfPropertyChange(() => PropYatzy);
             }
         }
+        public bool Istotalprop;
         private int totalprop;
         public int PropTotal
         {

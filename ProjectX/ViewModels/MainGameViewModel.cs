@@ -154,7 +154,7 @@ namespace ProjectX.ViewModels
             }
             if (Pair(diceValues) > 0)
             {
-                PropScoreCard.PropSixes = 0;
+                PropScoreCard.PropPair = 0;
                 PropScoreCard.PropPair = Pair(diceValues);
             }
             if (TwoPair(diceValues) > 0)
