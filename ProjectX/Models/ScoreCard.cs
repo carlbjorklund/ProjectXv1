@@ -229,6 +229,7 @@ namespace ProjectX.Models
     }
 
         public bool _isonesprop;
+        public bool IsOnesProp { get { return onesprop != -1; } }
         public bool _istwosprop;
         public bool _isthreesprop;
         public bool _isfoursprop;
@@ -247,13 +248,13 @@ namespace ProjectX.Models
         public bool _isyatzyprop;
         public bool _istotalprop;
 
-        private int onesprop;
+        private int onesprop = -1;
         public int PropOnes
         {
             get { return onesprop; }
             set
             {
-                onesprop = value;
+                onesprop = value; _isonesprop = true;
 
                 NotifyOfPropertyChange(() => PropOnes);
             }

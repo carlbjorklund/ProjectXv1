@@ -677,7 +677,7 @@ namespace ProjectX.ViewModels
             // have to put it twice in order to get the results not duplicated...
             // sixes does not display proparly, they seem to disapear.
 
-         
+                  
             SaveDicesToEvaluationArrayForScoreCard();
             ScoreCardp1.Ones = One(diceValues);
             ClearDice();
