@@ -68,20 +68,20 @@ namespace ProjectX.ViewModels
 
         public void Enable()
         {
-        
+            GameSet.GameName = "Game Round 1";
+            DateTime today = DateTime.Now;
+
+            GameSet.Started_At = today;
+            GameSet.Started_At.ToShortDateString();
+
             RollDices();
             SaveDicesToEvaluationArray();
             EvaluateProposal();
 
-           
-            GameSet.GameName = "Game Round 1";
-            DateTime today = DateTime.Now;
-            
-            GameSet.Started_At = today;
-            GameSet.Started_At.ToShortDateString();
-            
-
         }
+        /// <summary>
+        /// Checking what score the end user can obtain based upon current dice values
+        /// </summary>
 
         private void EvaluateProposal()
         {
@@ -164,6 +164,13 @@ namespace ProjectX.ViewModels
 
 
         }
+
+        #region 
+        /// <summary>
+        /// Calculate dice values based upon ones, twos, threes etc....
+        /// </summary>
+        /// <param name="diceValue"></param>
+        /// <returns></returns>
         public int One(int[] diceValue)
 
         {
@@ -365,7 +372,7 @@ namespace ProjectX.ViewModels
                     result = 22;
             }
             return result;
-        } // ingen vacker lösning men fungerar!
+        } 
 
         public int ThreeOfKind(int[] diceValues)
 
@@ -600,7 +607,7 @@ namespace ProjectX.ViewModels
                     result = 28;
             }
             return result;
-        } // ingen vacker lösning men fungerar!
+        } 
         public int Yatzee(int[] diceValues)
         {
             int result = 0;
@@ -625,6 +632,7 @@ namespace ProjectX.ViewModels
             return result;
         }
 
+        #endregion
 
         /// <summary>
         /// Save the faces on the dices in an array..
@@ -660,6 +668,7 @@ namespace ProjectX.ViewModels
 
         }
 
+        #region //Functions
         /// <summary>
         /// RollDices, get the dices rolling. Assign to the object and the gameset. 
         /// </summary>
@@ -768,6 +777,8 @@ namespace ProjectX.ViewModels
             }
 
         }
+
+        #endregion
 
     }
 }
