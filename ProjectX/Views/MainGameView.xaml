@@ -92,13 +92,23 @@
             <TextBlock Grid.Row="1" Grid.Column="3" FontSize="15" Foreground="White" >Yatzy!</TextBlock>
             <TextBlock Grid.Row="2" Grid.Column="4" Foreground="White" Text="{Binding  player1.Name, Mode=TwoWay}" ></TextBlock>
             <TextBlock Margin="5,0,0,0" Grid.Row="2" Grid.Column="6" Foreground="White" Text="{Binding  player2.Name, Mode=TwoWay}" ></TextBlock>
-            <TextBlock Foreground="Red" Text="{Binding Path=PropOnes, Mode=TwoWay}" Grid.Row="3" Grid.Column="0"></TextBlock>  
+            
             <TextBlock Grid.Row="2" Grid.Column="3" FontWeight="Bold" Foreground="White" >Spelare</TextBlock>
-            <TextBlock Grid.Row="2" Grid.Column="0" FontWeight="Bold" Foreground="White" >Förslag</TextBlock>
+              
+                        
             <TextBlock Grid.Row="3" Grid.Column="3" Foreground="White" >Ettor</TextBlock>
+            <TextBlock Foreground="Red" Text="{Binding Path= PropScoreCard.PropOnes, Mode=TwoWay}" Grid.Row="3" Grid.Column="0"></TextBlock>
+
             <TextBlock Grid.Row="4" Grid.Column="3" Foreground="White" >Twåor</TextBlock>
+            <TextBlock Foreground="Red" Text="{Binding Path= PropScoreCard.PropTwos, Mode=TwoWay}" Grid.Row="4" Grid.Column="0"></TextBlock>
+
             <TextBlock Grid.Row="5" Grid.Column="3" Foreground="White" >Treor</TextBlock>
-            <TextBlock Grid.Row="6" Grid.Column="3" Foreground="White"  >Fyror</TextBlock>
+            <TextBlock Foreground="Red" Text="{Binding Path= PropScoreCard.PropThrees, Mode=TwoWay}" Grid.Row="5" Grid.Column="0"></TextBlock>
+              
+            <TextBlock Grid.Row="6" Grid.Column="3" Foreground="White" >Fyror</TextBlock>
+            <TextBlock Foreground="Red" Text="{Binding Path= PropScoreCard.PropFours, Mode=TwoWay}" Grid.Row="6" Grid.Column="0"></TextBlock>
+
+
             <TextBlock Grid.Row="7" Grid.Column="3" Foreground="White" >Femmor</TextBlock>
             <TextBlock Grid.Row="8" Grid.Column="3" Foreground="White" >Sexor</TextBlock>
             <TextBlock Grid.Row="9" Grid.Column="3" FontWeight="Bold" Foreground="Red" >Övre Summa</TextBlock>
