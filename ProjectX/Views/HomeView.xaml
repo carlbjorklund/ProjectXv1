@@ -1,13 +1,14 @@
-﻿<Window x:Class="ProjectX.Views.ShellView"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:ProjectX.Views"
-        mc:Ignorable="d"
-        Title="MainWindow" Width="1366" Height="768" WindowStartupLocation="CenterScreen">
+﻿<UserControl x:Class="ProjectX.Views.HomeView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ProjectX.Views"
+             mc:Ignorable="d" d:DesignHeight="750" d:DesignWidth="1200">
+    
+
     <Grid Background="Black">
-        
+
         <!--Grid definitions to ease the GUI design process-->
 
         <Grid.ColumnDefinitions>
@@ -25,30 +26,15 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        
+
         <!--Side Navigation bar-->
 
-        <DockPanel Grid.Row="1" Grid.Column="0" Grid.RowSpan="5">
-            <DockPanel.Background>
-                <LinearGradientBrush EndPoint="0.413,1.648" StartPoint="0.498,0.255">
-                    <GradientStop Color="Black"/>
-                    <GradientStop Color="White" Offset="0.999"/>
-                </LinearGradientBrush>
-            </DockPanel.Background>
+     
 
-            <StackPanel x:Name="Navbar" Margin="20">
-                <Button x:Name="LoadHelp" Foreground="White" Background="Red" Content="Hjälp" />
-                <Button x:Name="LoadHome" Foreground="Black" Background="White" Content="Första sidan" />
-                <Button x:Name="LoadStatistics" Foreground="White" Background="Blue" Content="Statistik" />
-            </StackPanel>
-        </DockPanel>
 
         <!--Title:-->
-        <StackPanel x:Name="TitlePanel" Margin="150,0,0,0" HorizontalAlignment="Center" Orientation="Horizontal" Background="Black" Grid.Column="3" Grid.ColumnSpan="3" >
-            <TextBlock VerticalAlignment="Center" Foreground="White" FontSize="50" >Projekt</TextBlock>
-            <TextBlock Padding="0, 0,0, 0" VerticalAlignment="Center" Foreground="Red" FontSize="80" >X</TextBlock>
-        </StackPanel>
-        
+    
+
         <!--Selection of game settings, players, type of game and start button.
         We need to figure out how to initiate the players, should we get it from the database? If there is a new player should we then add the register button.
         Type of game, how to implement it? Should we disable the buttons? IF that is the case we can do so by the bool property, or we can have if to check if sum upper is done? or should we open up
@@ -56,7 +42,7 @@
 
         <TextBlock Margin="20" VerticalAlignment="Center" Foreground="White" FontSize="40" Grid.Column="1" Grid.Row="1">Välkommen</TextBlock>
 
-        <StackPanel x:Name="Player" Margin="20,0,0,0"  Background="Black"  Grid.Column="1"  Grid.Row="2">          
+        <StackPanel x:Name="Player" Margin="20,0,0,0"  Background="Black"  Grid.Column="1"  Grid.Row="2">
             <TextBlock Foreground="White" FontSize="20" >Välj Antal Motspelare</TextBlock>
             <TextBlock Foreground="Red" FontSize="15" >Det måste vara två spelare i spelet<LineBreak/></TextBlock>
             <Button x:Name="ThreePlayers" Background="Green">3 Spelare</Button>
@@ -74,10 +60,10 @@
             <TextBlock Foreground="White" FontSize="20" >Starta Spelet</TextBlock>
             <TextBlock Foreground="Red" FontSize="15" >Tryck nedan för att starta spelet<LineBreak/></TextBlock>
             <Button x:Name="LoadMainGameWindow" Background="Green">Starta spelet</Button>
-          
+
         </StackPanel>
 
-        <ContentControl Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="4" Grid.RowSpan="4" x:Name="ActiveItem"/>
+        
 
     </Grid>
-</Window>
+</UserControl>

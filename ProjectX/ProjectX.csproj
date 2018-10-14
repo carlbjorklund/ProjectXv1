@@ -77,6 +77,7 @@
     <Compile Include="Models\Player.cs" />
     <Compile Include="Models\ScoreCard.cs" />
     <Compile Include="ViewModels\HelpViewModel.cs" />
+    <Compile Include="ViewModels\HomeViewModel.cs" />
     <Compile Include="ViewModels\MainGameViewModel.cs" />
     <Compile Include="ViewModels\ShellViewModel.cs" />
     <Compile Include="ShellView.xaml.cs">
@@ -84,6 +85,9 @@
     </Compile>
     <Compile Include="ViewModels\StatisticsViewModel.cs" />
     <Compile Include="Views\HelpView.xaml.cs" />
+    <Compile Include="Views\HomeView.xaml.cs">
+      <DependentUpon>HomeView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\MainGameView.xaml.cs">
       <DependentUpon>MainGameView.xaml</DependentUpon>
     </Compile>
@@ -134,6 +138,10 @@
     <Page Include="Views\HelpView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\HomeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\MainGameView.xaml">
       <SubType>Designer</SubType>
