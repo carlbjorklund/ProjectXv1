@@ -8,6 +8,7 @@ using System.Windows.Media.Imaging;
 using Caliburn.Micro;
 using ProjectX.Models;
 using static System.Net.Mime.MediaTypeNames;
+using static ProjectX.Models.ScoreCard;
 
 namespace ProjectX.ViewModels
 {
@@ -36,6 +37,8 @@ namespace ProjectX.ViewModels
         public ScoreCard ScoreCardp2 { get; private set; }
         public ScoreCard ScoreCardp3 { get; private set; }
         public ScoreCard ScoreCardp4 { get; private set; }
+       
+        public Player CurrentPlayer { get; private set; }
 
         Random r = new Random();
 
@@ -106,19 +109,22 @@ namespace ProjectX.ViewModels
         }
         public void Enable()
         {
-            // game ended when all properties are filled?
-            // do while loop until game is ended...GameEnded=ones, twos, threes, etc is populated(not -1)
-            //in while loop for each player in players [enable button click)
+            while (!player1.ScoreCard.HasGameEnded && !player2.ScoreCard.HasGameEnded && !player3.ScoreCard.HasGameEnded && !player4.ScoreCard.HasGameEnded)// game ended when all properties are filled?
+                                                                                      // do while loop until game is ended...GameEnded=ones, twos, threes, etc is populated(not -1)
 
-            if (GameSet.PlayerRoundCount != 0)  //current code stops user for pressing enable more than 3 times...
-            { 
-            ClearDice();
-            RollDices();
-            SaveDicesToEvaluationArray();
-            EvaluateProposal();
-            GameSet.PlayerRoundCount -= 1;
-            }
-
+                foreach (Player player in GameSet.Players)
+                {
+                    CurrentPlayer = player;
+                    //in while loop for each player in players [enable button click)
+                    if (GameSet.PlayerRoundCount != 0)  //current code stops user for pressing enable more than 3 times...
+                    {
+                        ClearDice();
+                        RollDices();
+                        SaveDicesToEvaluationArray();
+                        EvaluateProposal();
+                        GameSet.PlayerRoundCount -= 1;
+                    }
+                }
         }
         /// <summary>
         /// Checking what score the end user can obtain based upon current dice values
