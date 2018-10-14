@@ -1,0 +1,66 @@
+﻿<UserControl x:Class="YatzyCarl.Views.HelpView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:YatzyCarl.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+
+    <Grid>
+        <Grid Background="Black">
+            <StackPanel Orientation="Vertical" Margin="10">
+                <StackPanel Margin="20">
+                    <Label Foreground="White" x:Name="lblHelp" Content="Vad behöver du hjälp med?" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+            <Expander Foreground="White" Header="Vad är Yatzy?" HorizontalAlignment="Left" ExpandDirection="Down" IsExpanded="False"  VerticalAlignment="Top">
+                <TextBlock TextWrapping="Wrap" 
+            Text="Yatzy är ett tärningsspel med fem tärningar som uppfanns på 1950-talet. Vinnare blir den deltagare som uppnått högst poängsumma efter spelets slut." FontSize="10"/>
+            </Expander>
+            </StackPanel>
+                <StackPanel Margin="20">
+                    <Expander Foreground="White" Header="Hur många kan spela en omgång?" HorizontalAlignment="Left" ExpandDirection="Down" IsExpanded="False"  VerticalAlignment="Top">
+                <TextBlock TextWrapping="Wrap" 
+            Text="En omgång kan spelas av minst två och max fyra spelare. Du kan bara spela en omgång i taget." FontSize="10"/>
+            </Expander>
+            </StackPanel>
+                <StackPanel Margin="20">
+                    <Expander Foreground="White" Header="Registrera mig eller inte, vad är skillnaden?" HorizontalAlignment="Left" ExpandDirection="Down" IsExpanded="False"  VerticalAlignment="Top">
+                <TextBlock TextWrapping="Wrap" 
+            Text="Om du registrerar dig sparas dina resultat i en databas. Om du inte registrerar dig, eller spelar mot någon som inte är registrerad, sparas inte resultaten i databasen." FontSize="10"/>
+            </Expander>
+            </StackPanel>
+                <StackPanel Margin="20">
+                    <Expander Foreground="White" Header="Yatzy-varianter, vilken ska jag välja?" HorizontalAlignment="Left" ExpandDirection="Down" IsExpanded="False"  VerticalAlignment="Top">
+                        <ScrollViewer Height="35">
+                            <TextBlock TextWrapping="Wrap" 
+            Text="Yatzy kan spelas i två olika varianter och det är inte möjligt att ändra variant under spelets gång. Klassisk: Spelaren väljer själv till vilken kategori man vill spara sin poängsumma. Man har alltså hela protokollet till sitt förfogande. I klassisk Yatzy utfaller bonus om poängsumman på övre halvan blir 63 eller högre.
+Styrd:I den här spelformen måste kategorierna tas i ordningsföljd. Eftersom styrd Yatzy är svårare får man bonus om poängsumman på övre halvan är 42 eller högre." FontSize="10"/>
+                        </ScrollViewer>
+                    </Expander>
+                </StackPanel>
+                <StackPanel Margin="20">
+                    <Expander Foreground="White" Header="Regler" HorizontalAlignment="Left" ExpandDirection="Down" IsExpanded="False"  VerticalAlignment="Top">
+                <ScrollViewer Height="35">
+                    <TextBlock TextWrapping="Wrap" 
+            Text="Varje gång en spelare står i tur har denne rätt till tre tärningskast, dock behöver inte alla kast utnyttjas. Spelaren väljer själv vilka tärningar som skall kastas om, och poängsumman införs i ett protokoll. Varje rad i protokollet motsvarar en regel som tärningarna måste uppfylla för att räknas. Till exempel på raden femmor får man endast skriva in poängen från de tärningar som visar fem prickar." FontSize="10"/>
+                </ScrollViewer>
+            </Expander>
+            </StackPanel>
+            <Expander Foreground="White" Header="Poäng" HorizontalAlignment="Left" ExpandDirection="Down" IsExpanded="False" Margin="31,303,0,0" VerticalAlignment="Top">
+                <ScrollViewer Height="35">
+                    <TextBlock TextWrapping="Wrap" 
+            Text="För att få bonus måste spelaren få minst 63 poäng i de sex översta villkoren (detta motsvarar i genomsnitt tre av varje villkor). Bonus ger alltid 50 poäng oavsett poängsumman.
+För att få yatzy skall alla tärningarna visa lika siffror. Yatzy ger alltid 50 poäng oavsett vilken siffra som tärningarna visar.
+För att få liten stege skall tärningarna visa siffrorna 1, 2, 3, 4 och 5. Detta ger 15 poäng.
+För att få stor stege skall tärningarna visa siffrorna 2, 3, 4, 5 och 6. Detta ger 20 poäng.
+För att få kåk skall tre av tärningarna visa ett och samma tal, samtidigt som övriga två ska visa ett och samma tal. Exempelvis 6, 6, 6, 4 och 4.
+Chans innebär att man ska få så högt tal som möjligt när samtliga tärningsprickar räknas samman.
+Spelet har 15 villkor att uppfylla. Detta kan maximalt ge 374 poäng.
+" FontSize="10"/>
+                </ScrollViewer>
+            </Expander>
+            </StackPanel>
+        </Grid>
+
+    </Grid>
+</UserControl>

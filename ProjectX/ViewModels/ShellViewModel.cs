@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using YatzyCarl.ViewModels;
 
 namespace ProjectX.ViewModels
 {
@@ -13,5 +14,16 @@ namespace ProjectX.ViewModels
         {
             ActivateItem(new MainGameViewModel());
         }
+        public void LoadHelp()
+        {
+            ActivateItem(new HelpViewModel());
+        }
+        public void LoadStatistics()
+        {
+            ActivateItem(new StatisticsViewModel());
+        }
+       
+
+
     }
 }

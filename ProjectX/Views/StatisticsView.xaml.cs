@@ -10,19 +10,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ProjectX.Views
+namespace YatzyCarl.Views
 {
     /// <summary>
-    /// Interaction logic for ShellView.xaml
+    /// Interaction logic for StatisticsView.xaml
     /// </summary>
-    public partial class ShellView : Window
+    public partial class StatisticsView : UserControl
     {
-        public ShellView()
+        public StatisticsView()
         {
             InitializeComponent();
         }
-      
     }
 }

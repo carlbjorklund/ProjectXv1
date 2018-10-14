@@ -7,6 +7,8 @@
         mc:Ignorable="d"
         Title="MainWindow" Width="1366" Height="768" WindowStartupLocation="CenterScreen">
     <Grid Background="Black">
+        
+        <!--Grid definitions to ease the GUI design process-->
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -23,6 +25,8 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
+        
+        <!--Side Navigation bar-->
 
         <DockPanel Grid.Row="1" Grid.Column="0" Grid.RowSpan="5">
             <DockPanel.Background>
@@ -33,17 +37,21 @@
             </DockPanel.Background>
 
             <StackPanel x:Name="Navbar" Margin="20">
-                <Button x:Name="LoadHelp" Foreground="White" Background="Red" Content="Hjälp" />
-                <Button x:Name="LoadSettings" Background="White" Content="Inställningar" />
+                <Button x:Name="LoadHelp" Foreground="White" Background="Red" Content="Hjälp" />             
                 <Button x:Name="LoadStatistics" Foreground="White" Background="Blue" Content="Statistik" />
             </StackPanel>
         </DockPanel>
 
-
+        <!--Title:-->
         <StackPanel x:Name="TitlePanel" Margin="150,0,0,0" HorizontalAlignment="Center" Orientation="Horizontal" Background="Black" Grid.Column="3" Grid.ColumnSpan="3" >
             <TextBlock VerticalAlignment="Center" Foreground="White" FontSize="50" >Projekt</TextBlock>
             <TextBlock Padding="0, 0,0, 0" VerticalAlignment="Center" Foreground="Red" FontSize="80" >X</TextBlock>
         </StackPanel>
+        
+        <!--Selection of game settings, players, type of game and start button.
+        We need to figure out how to initiate the players, should we get it from the database? If there is a new player should we then add the register button.
+        Type of game, how to implement it? Should we disable the buttons? IF that is the case we can do so by the bool property, or we can have if to check if sum upper is done? or should we open up
+        the other options after sum is populated?-->
 
         <TextBlock Margin="20" VerticalAlignment="Center" Foreground="White" FontSize="40" Grid.Column="1" Grid.Row="1">Välkommen</TextBlock>
 
