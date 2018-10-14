@@ -690,10 +690,47 @@ namespace ProjectX.ViewModels
                 ClearDice();
                 SaveDicesToEvaluationArrayForScoreCard();
                 ScoreCardp1.Ones = One(diceValues);
+                player1.ScoreCard.Ones = ScoreCardp1.Ones;
                 ClearDice();
-            }    
+            }
             
-          
+            ///
+            ///idea of how it could look like
+            ///
+            //if (!ScoreCardp2.IsOnes /*&& CurrentPlayer == player2*/)
+            //{
+
+            //    SaveDicesToEvaluationArrayForScoreCard();
+            //    ScoreCardp2.Ones = One(diceValues);
+            //    ClearDice();
+            //    SaveDicesToEvaluationArrayForScoreCard();
+            //    ScoreCardp2.Ones = One(diceValues);
+            //    player2.ScoreCard.Ones = ScoreCardp2.Ones;
+            //    ClearDice();
+            //}
+            //if (!ScoreCardp3.IsOnes /*&& CurrentPlayer == player3*/)
+            //{
+
+            //    SaveDicesToEvaluationArrayForScoreCard();
+            //    ScoreCardp3.Ones = One(diceValues);
+            //    ClearDice();
+            //    SaveDicesToEvaluationArrayForScoreCard();
+            //    ScoreCardp3.Ones = One(diceValues);
+            //    player3.ScoreCard.Ones = ScoreCardp3.Ones;
+            //    ClearDice();
+            //}
+            //if (!ScoreCardp4.IsOnes /*&& CurrentPlayer == player3*/)
+            //{
+
+            //    SaveDicesToEvaluationArrayForScoreCard();
+            //    ScoreCardp4.Ones = One(diceValues);
+            //    ClearDice();
+            //    SaveDicesToEvaluationArrayForScoreCard();
+            //    ScoreCardp4.Ones = One(diceValues);
+            //    player4.ScoreCard.Ones = ScoreCardp4.Ones;
+            //    ClearDice();
+            //}
+
 
         }
 
