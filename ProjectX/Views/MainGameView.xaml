@@ -93,7 +93,7 @@
               <!--Headlines:-->
             <TextBlock Grid.Row="1" Grid.Column="3" FontSize="15" Foreground="White" >Yatzy!</TextBlock>
             <TextBlock Grid.Row="2" Grid.Column="0" FontWeight="Bold" Foreground="White" >Spelare:</TextBlock>
-            <TextBlock Grid.Row="2" Grid.Column="3" FontWeight="Bold" Foreground="White" Text="{Binding  CurrentPlayer, Mode=TwoWay}">Spelare</TextBlock>
+            <TextBlock Grid.Row="2" Grid.Column="3" FontWeight="Bold" Foreground="White" Text="{Binding  CurrentPlayer, Mode=OneWay}">Spelare</TextBlock>
 
             
 

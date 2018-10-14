@@ -66,6 +66,8 @@ namespace ProjectX.Models
         public bool HasGameEnded { get { return hasgameended; } }
 
 
+
+
         private bool hasgameended
         {
             get { return hasgameended; }
