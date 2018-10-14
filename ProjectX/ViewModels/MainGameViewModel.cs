@@ -106,6 +106,9 @@ namespace ProjectX.ViewModels
         }
         public void Enable()
         {
+            // game ended when all properties are filled.
+            // do while loop until game is ended...GameEnded=ones, twos, threes, etc is populated(not -1)
+            //in while loop for each player in players [enable button click)
 
             if (GameSet.PlayerRoundCount != 0)
             { 
