@@ -83,6 +83,12 @@ namespace ProjectX.ViewModels
             GameSet.Players.Add(player2);
             GameSet.Players.Add(player3);
             GameSet.Players.Add(player4);
+
+            GameSet.GameName = "Game Round 1";
+            DateTime today = DateTime.Now;
+
+            GameSet.Started_At = today;
+            GameSet.Started_At.ToShortDateString();
         }
         public void Revaluate()
         {
@@ -100,11 +106,7 @@ namespace ProjectX.ViewModels
         }
         public void Enable()
         {
-            GameSet.GameName = "Game Round 1";
-            DateTime today = DateTime.Now;
-
-            GameSet.Started_At = today;
-            GameSet.Started_At.ToShortDateString();
+            
 
             ClearDice();
             RollDices();
@@ -673,9 +675,13 @@ namespace ProjectX.ViewModels
         #region Populating scorecards
         public void PickOne()
         {
-            //make an if to see which player it is? and then fire the functions for each players scorecard???? how to do it???
+            // Make an if to see which player it is? and then fire the functions for each players scorecard???? how to do it???
+            // Make a dummy class to hold the currentplayer? 
+            // How to make the game loop? Counter or for loop?      
+            
+            
             // have to put it twice in order to get the results not duplicated...
-            // sixes does not display proparly, they seem to disapear.
+           
             if (!ScoreCardp1.IsOnes /*&& CurrentPlayer == player1*/)
             {
 
@@ -685,20 +691,15 @@ namespace ProjectX.ViewModels
                 SaveDicesToEvaluationArrayForScoreCard();
                 ScoreCardp1.Ones = One(diceValues);
                 ClearDice();
-            }
+            }    
             
-
-            
-            //PickOne();
+          
 
         }
 
         public void PickTwo()
         {
-            //SaveDicesToEvaluationArrayForScoreCard();
-
-            //ScoreCardp1.Twos = One(diceValues);
-            //ClearDice();
+           
             if (!ScoreCardp1.Istwos /*&& CurrentPlayer == player1*/)
             {
                 SaveDicesToEvaluationArrayForScoreCard();

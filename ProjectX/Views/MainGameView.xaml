@@ -73,6 +73,7 @@
             <RowDefinition Height="50" />
         </Grid.RowDefinitions>
 
+              <!--Chocies for end user to pick which score he or she wants-->
             <Button x:Name="PickOne" Grid.Row="3" Grid.Column="1" Foreground="White" Background="Green">Välj</Button>
             <Button x:Name="PickTwo" Grid.Row="4" Grid.Column="1" Foreground="White" Background="Green">Välj</Button>
             <Button x:Name="PickThree" Grid.Row="5" Grid.Column="1" Foreground="White" Background="Green" >Välj</Button>
@@ -88,23 +89,26 @@
             <Button x:Name="PickFullHouse" Grid.Row="17" Grid.Column="1" Foreground="White" Background="Green" >Välj</Button>
             <Button x:Name="PickChance" Grid.Row="18" Grid.Column="1" Foreground="White" Background="Green" >Välj</Button>
             <Button x:Name="PickYatzy" Grid.Row="19" Grid.Column="1" Foreground="White" Background="Green">Välj</Button>
-
+              
+              <!--Headlines:-->
             <TextBlock Grid.Row="1" Grid.Column="3" FontSize="15" Foreground="White" >Yatzy!</TextBlock>
             <TextBlock Grid.Row="2" Grid.Column="3" FontWeight="Bold" Foreground="White" >Spelare</TextBlock>
-
+              
+              <!--Plater name bar: informs the player of the participants-->
             <TextBlock Grid.Row="2" Grid.Column="4" Foreground="White" Text="{Binding  player1.Name, Mode=TwoWay}" ></TextBlock>
             <TextBlock Margin="5,0,0,0" Grid.Row="2" Grid.Column="5" Foreground="White" Text="{Binding  player2.Name, Mode=TwoWay}" ></TextBlock>
             <TextBlock Margin="5,0,0,0" Grid.Row="2" Grid.Column="6" Foreground="White" Text="{Binding  player3.Name, Mode=TwoWay}" ></TextBlock>
             <TextBlock Margin="5,0,0,0" Grid.Row="2" Grid.Column="7" Foreground="White" Text="{Binding  player4.Name, Mode=TwoWay}" ></TextBlock>
 
-                       
+             <!--Ones:-->           
             <TextBlock Grid.Row="3" Grid.Column="3" Foreground="White" >Ettor</TextBlock>
             <TextBlock Foreground="Red" Text="{Binding Path= PropScoreCard.PropOnes, Mode=TwoWay}" Grid.Row="3" Grid.Column="0"></TextBlock>
             <TextBlock Foreground="Red" Text="{Binding Path= ScoreCardp1.Ones, Mode=TwoWay}" Grid.Row="3" Grid.Column="4"></TextBlock>
             <TextBlock Foreground="Red" Text="{Binding Path= ScoreCardp2.Ones, Mode=TwoWay}" Grid.Row="3" Grid.Column="5"></TextBlock>
             <TextBlock Foreground="Red" Text="{Binding Path= ScoreCardp3.Ones, Mode=TwoWay}" Grid.Row="3" Grid.Column="6"></TextBlock>
             <TextBlock Foreground="Red" Text="{Binding Path= ScoreCardp4.Ones, Mode=TwoWay}" Grid.Row="3" Grid.Column="7"></TextBlock>
-
+              
+            <!--Twos:-->
             <TextBlock Grid.Row="4" Grid.Column="3" Foreground="White" >Tvåor</TextBlock>
             <TextBlock Foreground="Red" Text="{Binding Path= PropScoreCard.PropTwos, Mode=TwoWay}" Grid.Row="4" Grid.Column="0"></TextBlock>
             <TextBlock Foreground="Red" Text="{Binding Path= ScoreCardp1.Twos, Mode=TwoWay}" Grid.Row="4" Grid.Column="4"></TextBlock>
@@ -112,6 +116,7 @@
             <TextBlock Foreground="Red" Text="{Binding Path= ScoreCardp3.Twos, Mode=TwoWay}" Grid.Row="4" Grid.Column="6"></TextBlock>
             <TextBlock Foreground="Red" Text="{Binding Path= ScoreCardp4.Twos, Mode=TwoWay}" Grid.Row="4" Grid.Column="7"></TextBlock>
 
+            <!--Threes:-->
             <TextBlock Grid.Row="5" Grid.Column="3" Foreground="White" >Treor</TextBlock>
             <TextBlock Foreground="Red" Text="{Binding Path= PropScoreCard.PropThrees, Mode=TwoWay}" Grid.Row="5" Grid.Column="0"></TextBlock>
             <TextBlock Foreground="Red" Text="{Binding Path= ScoreCardp1.Threes, Mode=TwoWay}" Grid.Row="5" Grid.Column="4"></TextBlock>
@@ -119,6 +124,7 @@
             <TextBlock Foreground="Red" Text="{Binding Path= ScoreCardp3.Threes, Mode=TwoWay}" Grid.Row="5" Grid.Column="6"></TextBlock>
             <TextBlock Foreground="Red" Text="{Binding Path= ScoreCardp4.Threes, Mode=TwoWay}" Grid.Row="5" Grid.Column="7"></TextBlock>
 
+            <!--Fours:-->
             <TextBlock Grid.Row="6" Grid.Column="3" Foreground="White" >Fyror</TextBlock>
             <TextBlock Foreground="Red" Text="{Binding Path= PropScoreCard.PropFours, Mode=TwoWay}" Grid.Row="6" Grid.Column="0"></TextBlock>
             <TextBlock Foreground="Red" Text="{Binding Path= ScoreCardp1.Fours, Mode=TwoWay}" Grid.Row="6" Grid.Column="4"></TextBlock>
@@ -126,6 +132,7 @@
             <TextBlock Foreground="Red" Text="{Binding Path= ScoreCardp3.Fours, Mode=TwoWay}" Grid.Row="6" Grid.Column="6"></TextBlock>
             <TextBlock Foreground="Red" Text="{Binding Path= ScoreCardp4.Fours, Mode=TwoWay}" Grid.Row="6" Grid.Column="7"></TextBlock>
 
+            <!--Fives:-->
             <TextBlock Grid.Row="7" Grid.Column="3" Foreground="White" >Femmor</TextBlock>
             <TextBlock Foreground="Red" Text="{Binding Path= PropScoreCard.PropFives, Mode=TwoWay}" Grid.Row="7" Grid.Column="0"></TextBlock>
             <TextBlock Foreground="Red" Text="{Binding Path= ScoreCardp1.Fives, Mode=TwoWay}" Grid.Row="7" Grid.Column="4"></TextBlock>
@@ -133,6 +140,7 @@
             <TextBlock Foreground="Red" Text="{Binding Path= ScoreCardp3.Fives, Mode=TwoWay}" Grid.Row="7" Grid.Column="6"></TextBlock>
             <TextBlock Foreground="Red" Text="{Binding Path= ScoreCardp4.Fives, Mode=TwoWay}" Grid.Row="7" Grid.Column="7"></TextBlock>
 
+            <!--Sixes:-->
             <TextBlock Grid.Row="8" Grid.Column="3" Foreground="White" >Sexor</TextBlock>
             <TextBlock Foreground="Red" Text="{Binding Path= PropScoreCard.PropSixes, Mode=TwoWay}" Grid.Row="8" Grid.Column="0"></TextBlock>
             <TextBlock Foreground="Red" Text="{Binding Path= ScoreCardp1.Sixes, Mode=TwoWay}" Grid.Row="8" Grid.Column="4"></TextBlock>
@@ -142,21 +150,24 @@
 
             <TextBlock Grid.Row="9" Grid.Column="3" FontWeight="Bold" Foreground="Red" >Övre Summa</TextBlock>
             <TextBlock Grid.Row="10" Grid.Column="3" FontWeight="Bold" Foreground="Yellow" >Bonus</TextBlock>
-              
+
+            <!--One Pair:-->
             <TextBlock Grid.Row="11" Grid.Column="3" Foreground="White" >Par</TextBlock>
             <TextBlock Foreground="Red" Text="{Binding Path= PropScoreCard.PropPair, Mode=TwoWay}" Grid.Row="11" Grid.Column="0"></TextBlock>
             <TextBlock Foreground="Red" Text="{Binding Path= ScoreCardp1.Pair, Mode=TwoWay}" Grid.Row="11" Grid.Column="4"></TextBlock>
             <TextBlock Foreground="Red" Text="{Binding Path= ScoreCardp2.Pair, Mode=TwoWay}" Grid.Row="11" Grid.Column="5"></TextBlock>
             <TextBlock Foreground="Red" Text="{Binding Path= ScoreCardp3.Pair, Mode=TwoWay}" Grid.Row="11" Grid.Column="6"></TextBlock>
             <TextBlock Foreground="Red" Text="{Binding Path= ScoreCardp4.Pair, Mode=TwoWay}" Grid.Row="11" Grid.Column="7"></TextBlock>
-
+              
+            <!--Two Pair:-->
             <TextBlock Grid.Row="12" Grid.Column="3" Foreground="White" >Två Par</TextBlock>
             <TextBlock Foreground="Red" Text="{Binding Path= PropScoreCard.PropTwoPairs, Mode=TwoWay}" Grid.Row="12" Grid.Column="0"></TextBlock>
             <TextBlock Foreground="Red" Text="{Binding Path= ScoreCardp1.TwoPairs, Mode=TwoWay}" Grid.Row="12" Grid.Column="4"></TextBlock>
             <TextBlock Foreground="Red" Text="{Binding Path= ScoreCardp2.TwoPairs, Mode=TwoWay}" Grid.Row="12" Grid.Column="5"></TextBlock>
             <TextBlock Foreground="Red" Text="{Binding Path= ScoreCardp3.TwoPairs, Mode=TwoWay}" Grid.Row="12" Grid.Column="6"></TextBlock>
             <TextBlock Foreground="Red" Text="{Binding Path= ScoreCardp4.TwoPairs, Mode=TwoWay}" Grid.Row="12" Grid.Column="7"></TextBlock>
-              
+
+            <!--Three Of A Kind:-->
             <TextBlock Grid.Row="13" Grid.Column="3" Foreground="White" >Tretal</TextBlock>
             <TextBlock Foreground="Red" Text="{Binding Path=  PropScoreCard.PropThreeOfAKind, Mode=TwoWay}" Grid.Row="13" Grid.Column="0"></TextBlock>
             <TextBlock Foreground="Red" Text="{Binding Path= ScoreCardp1.ThreeOfAKind, Mode=TwoWay}" Grid.Row="13" Grid.Column="4"></TextBlock>
@@ -164,6 +175,7 @@
             <TextBlock Foreground="Red" Text="{Binding Path= ScoreCardp3.ThreeOfAKind, Mode=TwoWay}" Grid.Row="13" Grid.Column="6"></TextBlock>
             <TextBlock Foreground="Red" Text="{Binding Path= ScoreCardp4.ThreeOfAKind, Mode=TwoWay}" Grid.Row="13" Grid.Column="7"></TextBlock>
 
+            <!--Four Of A Kind:-->
             <TextBlock Grid.Row="14" Grid.Column="3" Foreground="White" >Fyrtal</TextBlock>
             <TextBlock Foreground="Red" Text="{Binding Path= PropScoreCard.PropFourOfAKind, Mode=TwoWay}" Grid.Row="14" Grid.Column="0"></TextBlock>
             <TextBlock Foreground="Red" Text="{Binding Path= ScoreCardp1.FourOfAKind, Mode=TwoWay}" Grid.Row="14" Grid.Column="4"></TextBlock>
@@ -171,6 +183,7 @@
             <TextBlock Foreground="Red" Text="{Binding Path= ScoreCardp3.FourOfAKind, Mode=TwoWay}" Grid.Row="14" Grid.Column="6"></TextBlock>
             <TextBlock Foreground="Red" Text="{Binding Path= ScoreCardp4.FourOfAKind, Mode=TwoWay}" Grid.Row="14" Grid.Column="7"></TextBlock>
 
+            <!--Small Straight:-->
             <TextBlock Grid.Row="15" Grid.Column="3" Foreground="White" >Liten stege</TextBlock>
             <TextBlock Foreground="Red" Text="{Binding Path= PropScoreCard.SmallStraightprop , Mode=TwoWay}" Grid.Row="15" Grid.Column="0"></TextBlock>
             <TextBlock Foreground="Red" Text="{Binding Path= ScoreCardp1.SmallStraight, Mode=TwoWay}" Grid.Row="15" Grid.Column="4"></TextBlock>
@@ -178,6 +191,7 @@
             <TextBlock Foreground="Red" Text="{Binding Path= ScoreCardp3.SmallStraight, Mode=TwoWay}" Grid.Row="15" Grid.Column="6"></TextBlock>
             <TextBlock Foreground="Red" Text="{Binding Path= ScoreCardp4.SmallStraight, Mode=TwoWay}" Grid.Row="15" Grid.Column="7"></TextBlock>
 
+            <!--Large Straight:-->
             <TextBlock Grid.Row="16" Grid.Column="3" Foreground="White" >Stor stege</TextBlock>
             <TextBlock Foreground="Red" Text="{Binding Path= PropScoreCard.PropLargeStraight, Mode=TwoWay}" Grid.Row="16" Grid.Column="0"></TextBlock>
             <TextBlock Foreground="Red" Text="{Binding Path= ScoreCardp1.LargeStraight, Mode=TwoWay}" Grid.Row="16" Grid.Column="4"></TextBlock>
@@ -185,6 +199,7 @@
             <TextBlock Foreground="Red" Text="{Binding Path= ScoreCardp3.LargeStraight, Mode=TwoWay}" Grid.Row="16" Grid.Column="6"></TextBlock>
             <TextBlock Foreground="Red" Text="{Binding Path= ScoreCardp4.LargeStraight, Mode=TwoWay}" Grid.Row="16" Grid.Column="7"></TextBlock>
 
+            <!--Full House:-->
             <TextBlock Grid.Row="17" Grid.Column="3" Foreground="White" >Kåk</TextBlock>
             <TextBlock Foreground="Red" Text="{Binding Path= PropScoreCard.PropFullHouse, Mode=TwoWay}" Grid.Row="17" Grid.Column="0"></TextBlock>
             <TextBlock Foreground="Red" Text="{Binding Path= ScoreCardp1.FullHouse, Mode=TwoWay}" Grid.Row="17" Grid.Column="4"></TextBlock>
@@ -192,6 +207,7 @@
             <TextBlock Foreground="Red" Text="{Binding Path= ScoreCardp3.FullHouse, Mode=TwoWay}" Grid.Row="17" Grid.Column="6"></TextBlock>
             <TextBlock Foreground="Red" Text="{Binding Path= ScoreCardp4.FullHouse, Mode=TwoWay}" Grid.Row="17" Grid.Column="7"></TextBlock>
 
+            <!--Chance:-->
             <TextBlock Grid.Row="18" Grid.Column="3" Foreground="Yellow" >Chans</TextBlock>
             <TextBlock Foreground="Red" Text="{Binding Path= PropScoreCard.PropChance, Mode=TwoWay}" Grid.Row="18" Grid.Column="0"></TextBlock>
             <TextBlock Foreground="Red" Text="{Binding Path= ScoreCardp1.Chance, Mode=TwoWay}" Grid.Row="18" Grid.Column="4"></TextBlock>
@@ -199,6 +215,7 @@
             <TextBlock Foreground="Red" Text="{Binding Path= ScoreCardp3.Chance, Mode=TwoWay}" Grid.Row="18" Grid.Column="6"></TextBlock>
             <TextBlock Foreground="Red" Text="{Binding Path= ScoreCardp4.Chance, Mode=TwoWay}" Grid.Row="18" Grid.Column="7"></TextBlock>
 
+            <!--Yatzy:-->
             <TextBlock Grid.Row="19" Grid.Column="3" Foreground="Yellow" >Yatzy</TextBlock>
             <TextBlock Foreground="Red" Text="{Binding Path=  PropScoreCard.PropYatzy,  Mode=TwoWay}" Grid.Row="19" Grid.Column="0"></TextBlock>
             <TextBlock Foreground="Red" Text="{Binding Path= ScoreCardp1.Yatzy, Mode=TwoWay}" Grid.Row="19" Grid.Column="4"></TextBlock>
@@ -212,12 +229,11 @@
         </Grid>    
 
         <StackPanel Orientation="Horizontal" Grid.Column="2" Grid.Row="0">
-        <TextBlock Text="{Binding GameSet.GameName, Mode=OneWay}"  Foreground="Black" FontSize="30"/>
-        <TextBlock Text="{Binding GameSet.Started_At, Mode=OneWay}" Foreground="Black" FontSize="30"/>          
+        <TextBlock Text="{Binding GameSet.GameName, Mode=OneWay}"  Foreground="Black" FontSize="15"/>
+        <TextBlock Text="{Binding GameSet.Started_At, Mode=OneWay}" Foreground="Black" FontSize="15"/>          
         </StackPanel>
 
-        
-        <!--<Image Grid.Row="2" Grid.Column="1"  Height="95" HorizontalAlignment="Left" Margin="19,56,0,0" Name="image1"  Source="{Binding dice.Img}" Stretch="Uniform" VerticalAlignment="Top" Width="95" />-->
+        <!--Dice Panel:-->
         <StackPanel  Grid.Column="1" Grid.Row="2"  Orientation="Horizontal">
         <Image Grid.Row="2" Grid.Column="1"  Height="95" HorizontalAlignment="Left" Margin="0,60,0,0" Source="{Binding dice.Img}" Stretch="Uniform" VerticalAlignment="Top" Width="95" />
         <Image Grid.Row="2" Grid.Column="1"  Height="95" HorizontalAlignment="Left" Margin="10,60,0,0" Source="{Binding dice1.Img}" Stretch="Uniform" VerticalAlignment="Top" Width="95" />
