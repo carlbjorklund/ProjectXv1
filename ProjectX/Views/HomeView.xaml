@@ -40,20 +40,20 @@
         Type of game, how to implement it? Should we disable the buttons? IF that is the case we can do so by the bool property, or we can have if to check if sum upper is done? or should we open up
         the other options after sum is populated?-->
 
-        <TextBlock Margin="20" VerticalAlignment="Center" Foreground="White" FontSize="40" Grid.Column="1" Grid.Row="1">Välkommen</TextBlock>
+        <TextBlock Margin="0" VerticalAlignment="Center" Foreground="White" FontSize="40" Grid.Column="1" Grid.Row="1">Välkommen</TextBlock>
 
-        <StackPanel x:Name="Player" Margin="20,0,0,0"  Background="Black"  Grid.Column="1"  Grid.Row="2">
+        <StackPanel x:Name="Player" Margin="0,0,0,0"  Background="Black"  Grid.Column="1"  Grid.Row="2">
             <TextBlock Foreground="White" FontSize="20" >Välj antal motspelare</TextBlock>
-            <TextBlock Foreground="Red" FontSize="15" >Det måste vara minst två spelare i spelet<LineBreak/></TextBlock>
+            <TextBlock Foreground="Red" FontSize="15" >Det måste vara två spelare i spelet<LineBreak/></TextBlock>
             <Button x:Name="ThreePlayers" Background="Green">3 spelare</Button>
             <Button x:Name="FourPlayers" Background="Green">4 spelare</Button>
         </StackPanel>
 
         <StackPanel x:Name="GameStyle" Margin="20,0,0,0"  Background="Black"  Grid.Column="2"  Grid.Row="2">
             <TextBlock Foreground="White" FontSize="20" >Välj typ av spel</TextBlock>
-            <TextBlock Foreground="Red" FontSize="15" >Klassisk: fritt val eller <LineBreak/> Tvingande: bestämd turordning</TextBlock>
+            <TextBlock Foreground="Red" FontSize="15" >Klassisk: Frittval <LineBreak/> Tvingande: Bestämd turordning</TextBlock>
             <Button x:Name="Classic" Background="Green">Klassiskt</Button>
-            <Button x:Name="Restricted" Background="Green">Tvingande</Button>
+            <Button x:Name="Restricted" Background="Green">Tvingende</Button>
         </StackPanel>
 
         <StackPanel x:Name="StartGameButtonNav" Margin="20,0,0,0"  Background="Black"  Grid.Column="3"  Grid.Row="2">

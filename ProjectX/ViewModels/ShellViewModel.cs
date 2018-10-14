@@ -22,7 +22,7 @@ namespace ProjectX.ViewModels
         {
             ActivateItem(new StatisticsViewModel());
         }
-        public void LoadStaLoadHometistics()
+        public void LoadHome()
         {
             ActivateItem(new HomeViewModel());
         }
