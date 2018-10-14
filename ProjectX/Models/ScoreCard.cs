@@ -9,95 +9,105 @@ namespace ProjectX.Models
 {
     public class ScoreCard:Screen
     {
-        private int ones;
+        public bool IsOnes { get { return ones != -1; } }
+        private bool isones;
+        private int ones=-1;
         public int Ones
         {
             get { return ones; }
             set
             {
-                ones = value;
+                ones = value; isones = true;
 
                 NotifyOfPropertyChange(() => Ones);
             }
         }
-        private int twos;
+        public bool Istwos { get { return twos != 0; } }
+        private bool istwos;
+        private int twos=-1;
         public int Twos
         {
             get { return twos; }
             set
             {
-                twos = value;
+                twos = value; istwos = true;
 
                 NotifyOfPropertyChange(() => Twos);
             }
         }
-
-        private int threes;
+        public bool Isthrees { get { return threes != -1; } }
+        public bool isthrees;
+        private int threes = -1;
         public int Threes
         {
             get { return threes; }
             set
             {
-                threes = value;
+                threes = value; isthrees = true;
 
                 NotifyOfPropertyChange(() => Threes);
             }
         }
 
-
-        private int fours;
+        public bool Isfours { get { return fours != -1; } }
+        private bool isfours;
+        private int fours=-1;
         public int Fours
         {
             get { return fours; }
             set
             {
-                fours = value;
+                fours = value; isfours = true;
 
                 NotifyOfPropertyChange(() => Fours);
             }
         }
 
-
-        private int fives;
+        public bool Isfives { get { return fives != -1; } }
+        private bool isfives;
+        private int fives=-1;
         public int Fives
         {
             get { return fives; }
             set
             {
-                fives = value;
+                fives = value; isfives = true;
 
                 NotifyOfPropertyChange(() => Fives);
             }
         }
 
 
-
-        private int sixes;
+        public bool Issixes { get { return sixes != -1; } }
+        private bool issixes;
+        private int sixes=-1;
         public int Sixes
         {
             get { return sixes; }
             set
             {
-                sixes = value;
+                sixes = value; issixes = true;
 
                 NotifyOfPropertyChange(() => Sixes);
             }
         }
-
-        private int sum;
+        public bool Issum { get { return sum != -1; } }
+        private bool issum;
+        private int sum=-1;
         public int Sum
         {
             get { return sum; }
             set
             {
-                sum = value;
+                sum = value; issum = true;
 
                 NotifyOfPropertyChange(() => Sum);
             }
         }
 
-
-        private int bonus;
+        public bool Isbonus { get { return bonus !=-1; } }
+        private bool isbonus;
+        private int bonus = -1;
         public int Bonus
         {
             get { return bonus; }
@@ -110,41 +120,48 @@ namespace ProjectX.Models
         }
 
 
-
-        private int pair;
+        public bool Ispair { get { return pair != -1; } }
+        private bool ispair;
+        private int pair = -1;
         public int Pair
         {
             get { return pair; }
             set
             {
-                pair = value;
+                pair = value; ispair = true;
 
                 NotifyOfPropertyChange(() => Pair);
             }
         }
-        private int twoPairs;
+        public bool Itwospair { get { return twoPairs!=-1; } }
+        private bool istwopair;
+        private int twoPairs=-1;
         public int TwoPairs
         {
             get { return twoPairs; }
             set
             {
-                twoPairs = value;
+                twoPairs = value; istwopair = true;
 
                 NotifyOfPropertyChange(() => TwoPairs);
             }
         }
-        private int threeOfAKind;
+        public bool IsThreeOfAKind { get { return threeOfAKind != -1; } }
+        private bool isthreeofakind;
+        private int threeOfAKind = -1;
         public int ThreeOfAKind
         {
             get { return threeOfAKind; }
             set
             {
-                threeOfAKind = value;
+                threeOfAKind = value; isthreeofakind = true;
 
                 NotifyOfPropertyChange(() => ThreeOfAKind);
             }
         }
-        private int fourOfAKind;
+        public bool IsFourOfAKind { get { return fourOfAKind != -1; } }
+        private bool isfoursofakind;
+        private int fourOfAKind=-1;
         public int FourOfAKind
         {
             get { return fourOfAKind; }
@@ -155,68 +172,80 @@ namespace ProjectX.Models
                 NotifyOfPropertyChange(() => FourOfAKind);
             }
         }
-        private int smallStraight;
+        public bool Ismallstraight { get { return smallStraight != -1; } }
+        private bool issmallstraight;
+        private int smallStraight = -1;
         public int SmallStraight
         {
             get { return smallStraight; }
             set
             {
-                smallStraight = value;
+                smallStraight = value;  issmallstraight = true;
 
                 NotifyOfPropertyChange(() => SmallStraight);
             }
         }
-        private int largeStraight;
+        public bool IsLargeStraight { get { return largeStraight != -1; } }
+        private bool islargestraight;
+        private int largeStraight=-1;
         public int LargeStraight
         {
             get { return largeStraight; }
             set
             {
-                largeStraight = value;
+                largeStraight = value; islargestraight = true;
 
                 NotifyOfPropertyChange(() => LargeStraight);
             }
         }
-        private int fullHouse;
+        public bool IsFullHouse { get { return fullHouse != -1; } }
+        private bool isfullhouse;    
+        private int fullHouse=-1;
         public int FullHouse
         {
             get { return fullHouse; }
             set
             {
-                fullHouse = value;
+                fullHouse = value; isfullhouse = true;
 
                 NotifyOfPropertyChange(() => FullHouse);
             }
         }
-        private int chance;
+        public bool IsChance { get { return chance != -1; } }
+        private bool ischance;
+        private int chance = -1;
         public int Chance
         {
             get { return chance; }
             set
             {
-                chance = value;
+                chance = value; ischance = true;
 
                 NotifyOfPropertyChange(() => Chance);
             }
         }
-        private int yatzy;
+        public bool IsYatzy { get { return yatzy != -1; } }
+        private bool isyatzy;
+        private int yatzy=-1;
         public int Yatzy
         {
             get { return yatzy; }
             set
             {
-                yatzy = value;
+                yatzy = value; isyatzy = true;
 
                 NotifyOfPropertyChange(() => Yatzy);
             }
         }
-        private int total;
+        public bool IsTotal { get { return total != -1; } }
+        private bool istotal;
+        private int total=-1;
         public int Total
         {
             get { return total; }
             set
             {
-                total = value;
+                total = value; istotal = true;
 
                 NotifyOfPropertyChange(() => Total);
             }
@@ -293,15 +322,15 @@ namespace ProjectX.Models
                 NotifyOfPropertyChange(() => PropFives);
             }
         }
-        public bool Issixesprop { get { return sixesprop != -1; } }
-        private bool issixesprop;
+        public bool Isixesprop { get { return sixesprop != -1; } }
+        private bool isixesprop;
         private int sixesprop=-1;
         public int PropSixes
         {
             get { return sixesprop; }
             set
             {
-                sixesprop = value; issixesprop = true;
+                sixesprop = value; isixesprop = true;
 
                 NotifyOfPropertyChange(() => PropSixes);
             }
@@ -333,13 +362,14 @@ namespace ProjectX.Models
             }
         }
         public bool Ispairprop { get { return pairprop != -1; } }
-        private int pairprop;
+        private bool ispair;
+        private int pairprop=-1;
         public int PropPair
         {
             get { return pairprop; }
             set
             {
-                pairprop = value;
+                pairprop = value; ispair = true;
 
                 NotifyOfPropertyChange(() => PropPair);
             }
@@ -351,104 +381,112 @@ namespace ProjectX.Models
             get { return twoPairsprop; }
             set
             {
-                twoPairsprop = value;
+                twoPairsprop = value; istwoprop = true;
 
                 NotifyOfPropertyChange(() => PropTwoPairs);
             }
         }
-        public bool IsthreeOfAKindprop;
-        private int threeOfAKindprop;
+        public bool IsthreeOfAKindprop { get { return threeOfAKindprop != -1; } }
+        private bool isthreeofakindprop;
+        private int threeOfAKindprop=-1;
         public int PropThreeOfAKind
         {
             get { return threeOfAKindprop; }
             set
             {
-                threeOfAKindprop = value;
+                threeOfAKindprop = value; isthreeofakindprop = true;
 
                 NotifyOfPropertyChange(() => PropThreeOfAKind);
             }
         }
-        public bool IsfourOfAKindprop;
-        private int fourOfAKindprop;
+        public bool IsfourOfAKindprop { get { return fourOfAKindprop != -1; } }
+        private bool isfourofakindpop;
+        private int fourOfAKindprop=-1;
         public int PropFourOfAKind
         {
             get { return fourOfAKindprop; }
             set
             {
-                fourOfAKindprop = value;
+                fourOfAKindprop = value; isfourofakindpop = true;
 
                 NotifyOfPropertyChange(() => PropFourOfAKind);
             }
         }
-        public bool IssmallStraightprop;
-        private int smallStraightprop;
+        public bool IssmallStraightprop { get { return smallStraightprop != -1; } }
+        private bool issmallstraightprop;
+        private int smallStraightprop=-1;
         public int SmallStraightprop
         {
             get { return smallStraightprop; }
             set
             {
-                smallStraightprop = value;
+                smallStraightprop = value; issmallstraightprop = true;
 
                 NotifyOfPropertyChange(() => SmallStraightprop);
             }
         }
-        public bool IsslargeStraightprop;
-        private int largeStraightprop;
+        public bool IslargeStraightprop { get { return largeStraightprop != -1; } }
+        private bool islargeStraightprop;
+        private int largeStraightprop=-1;
         public int PropLargeStraight
         {
             get { return largeStraightprop; }
             set
             {
-                largeStraightprop = value;
+                largeStraightprop = value; islargeStraightprop = true;
 
                 NotifyOfPropertyChange(() => PropLargeStraight);
             }
         }
-        public bool IsfullHouseprop;
-        private int fullHouseprop;
+        public bool IsfullHouseprop { get { return fullHouseprop != -1; } }
+        private bool isfullhouseprop;
+        private int fullHouseprop=-1;
         public int PropFullHouse
         {
             get { return fullHouseprop; }
             set
             {
-                fullHouseprop = value;
+                fullHouseprop = value; isfullhouseprop = true;
 
                 NotifyOfPropertyChange(() => PropFullHouse);
             }
         }
 
-        public bool Ischanceprop;
-        private int chanceprop;
+        public bool Ischanceprop { get { return chanceprop != -1; } }
+        private bool ischanceprop;
+        private int chanceprop=-1;
         public int PropChance
         {
             get { return chanceprop; }
             set
             {
-                chanceprop = value;
+                chanceprop = value; ischanceprop = true;
 
                 NotifyOfPropertyChange(() => PropChance);
             }
         }
-        public bool Issyatzyprop;
-        private int yatzyprop;
+        public bool Isyatzyprop { get { return yatzyprop != -1; } }
+        private bool isyatzyprop;
+        private int yatzyprop=-1;
         public int PropYatzy
         {
             get { return yatzyprop; }
             set
             {
-                yatzyprop = value;
+                yatzyprop = value; isyatzyprop = true;
 
                 NotifyOfPropertyChange(() => PropYatzy);
             }
         }
-        public bool Istotalprop;
-        private int totalprop;
+        public bool Istotalprop { get { return totalprop != -1; } }
+        private bool istotalprop;
+        private int totalprop=-1;
         public int PropTotal
         {
             get { return totalprop; }
             set
             {
-                totalprop = value;
+                totalprop = value; istotalprop = true;
 
                 NotifyOfPropertyChange(() => PropTotal);
             }

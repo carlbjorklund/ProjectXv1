@@ -123,78 +123,78 @@ namespace ProjectX.ViewModels
 
             if (One(diceValues) > 0)
             {
-                PropScoreCard.PropOnes = 0;
+                PropScoreCard.PropOnes = -1;
                 PropScoreCard.PropOnes = One(diceValues);
             }
             if (Two(diceValues) > 0)
             {
-                PropScoreCard.PropTwos = 0;
+                PropScoreCard.PropTwos = -1;
                 PropScoreCard.PropTwos = Two(diceValues);
                
             }
             if (Three(diceValues) > 0)
             {
-                PropScoreCard.PropThrees = 0;
+                PropScoreCard.PropThrees = -1;
                 PropScoreCard.PropThrees = Three(diceValues);
             }
             if (Four(diceValues) > 0)
             {
-                PropScoreCard.PropFours = 0;
+                PropScoreCard.PropFours = -1;
                 PropScoreCard.PropFours = Four(diceValues);
             }
             if (Five(diceValues) > 0)
             {
-                PropScoreCard.PropFives = 0;
+                PropScoreCard.PropFives = -1;
                 PropScoreCard.PropFives = Five(diceValues);
             }
             if (Six(diceValues) > 0)
             {
-                PropScoreCard.PropSixes = 0;
+                PropScoreCard.PropSixes = -1;
                 PropScoreCard.PropSixes = Six(diceValues);
             }
             if (Pair(diceValues) > 0)
             {
-                PropScoreCard.PropPair = 0;
+                PropScoreCard.PropPair = -1;
                 PropScoreCard.PropPair = Pair(diceValues);
             }
             if (TwoPair(diceValues) > 0)
             {
-                PropScoreCard.PropTwoPairs = 0;
+                PropScoreCard.PropTwoPairs = -1;
                 PropScoreCard.PropTwoPairs = TwoPair(diceValues);
             }
             if (ThreeOfKind(diceValues) > 0)
             {
-                PropScoreCard.PropThreeOfAKind = 0;
+                PropScoreCard.PropThreeOfAKind = -1;
                 PropScoreCard.PropThreeOfAKind = ThreeOfKind(diceValues);
             }
             if (FourOfKind(diceValues) > 0)
             {
-                PropScoreCard.PropFourOfAKind = 0;
+                PropScoreCard.PropFourOfAKind = -1;
                 PropScoreCard.PropFourOfAKind = FourOfKind(diceValues);
             }
             if (SmallStraight(diceValues) > 0)
             {
-                PropScoreCard.SmallStraightprop = 0;
+                PropScoreCard.SmallStraightprop = -1;
                 PropScoreCard.SmallStraightprop = SmallStraight(diceValues);
             }
             if (BigStraight(diceValues) > 0)
             {
-                PropScoreCard.PropLargeStraight = 0;
+                PropScoreCard.PropLargeStraight = -1;
                 PropScoreCard.PropLargeStraight = BigStraight(diceValues);
             }
             if (FullHouse(diceValues) > 0)
             {
-                PropScoreCard.PropFullHouse = 0;
+                PropScoreCard.PropFullHouse = -1;
                 PropScoreCard.PropFullHouse = FullHouse(diceValues);
             }
             if (Chance(diceValues) > 0)
             {
-                PropScoreCard.PropChance = 0;
+                PropScoreCard.PropChance = -1;
                 PropScoreCard.PropChance = Chance(diceValues);
             }
             if (Yatzee(diceValues) > 0)
             {
-                PropScoreCard.PropYatzy = 0;
+                PropScoreCard.PropYatzy = -1;
                 PropScoreCard.PropYatzy = Yatzee(diceValues);
             }
          
