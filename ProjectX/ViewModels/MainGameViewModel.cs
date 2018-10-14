@@ -109,12 +109,12 @@ namespace ProjectX.ViewModels
         }
         public void Enable()
         {
-            while (!player1.ScoreCard.HasGameEnded && !player2.ScoreCard.HasGameEnded && !player3.ScoreCard.HasGameEnded && !player4.ScoreCard.HasGameEnded)// game ended when all properties are filled?
-                                                                                      // do while loop until game is ended...GameEnded=ones, twos, threes, etc is populated(not -1)
+            //  /*  while (!player1.ScoreCard.HasGameEnded && !player2.ScoreCard.HasGameEnded && !player3.ScoreCard.HasGameEnded && !player4.ScoreCard.HasGameEnded)/*// game ended when all properties are filled?
+            //                                                                              // do while loop until game is ended...GameEnded=ones, twos, threes, etc is populated(not -1)
 
-                foreach (Player player in GameSet.Players)
-                {
-                    CurrentPlayer = player;
+            //foreach (Player player in GameSet.Players)
+            //    {
+                   /* CurrentPlayer.Name = player.Name;*/ // must set alla players or we get null referens----
                     //in while loop for each player in players [enable button click)
                     if (GameSet.PlayerRoundCount != 0)  //current code stops user for pressing enable more than 3 times...
                     {
@@ -124,7 +124,7 @@ namespace ProjectX.ViewModels
                         EvaluateProposal();
                         GameSet.PlayerRoundCount -= 1;
                     }
-                }
+                //}
         }
         /// <summary>
         /// Checking what score the end user can obtain based upon current dice values
