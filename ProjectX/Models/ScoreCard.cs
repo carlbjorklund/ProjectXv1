@@ -10,7 +10,7 @@ namespace ProjectX.Models
     public class ScoreCard : Screen
     {
         /// <summary>
-        /// Need to scheck if this logic is valid;
+        /// Need to check if this logic is valid;
         /// </summary>
         public bool HasUpperScore { get { return hasupperscore == IsOnes && Istwos && Isthrees && Isfours && Isfives && Issixes; } }
 
@@ -82,6 +82,10 @@ namespace ProjectX.Models
 
             }
         }
+
+        /// <summary>
+        /// Scorecard and its values, such as ones, twos three of a kind....
+        /// </summary>
 
         public bool IsOnes { get { return ones != -1; } }
         private bool isones;
