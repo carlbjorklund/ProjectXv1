@@ -22,7 +22,7 @@ namespace ProjectX.Models
                 NotifyOfPropertyChange(() => Ones);
             }
         }
-        public bool Istwos { get { return twos != 0; } }
+        public bool Istwos { get { return twos != -1; } }
         private bool istwos;
         private int twos=-1;
         public int Twos

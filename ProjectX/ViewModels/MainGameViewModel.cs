@@ -708,6 +708,7 @@ namespace ProjectX.ViewModels
 
                 SaveDicesToEvaluationArrayForScoreCard();
                 ScoreCardp1.Twos = Two(diceValues);
+                player1.ScoreCard.Twos = ScoreCardp1.Twos;                
                 ClearDice();
             }
 
