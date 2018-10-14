@@ -46,7 +46,7 @@ namespace ProjectX.ViewModels
 
             // creating players
             player1 = new Player();
-            player1.Name = "Cecelia";
+            player1.Name = "Cecilia";
             player2 = new Player();
             player2.Name = "Ulrich";
             player3 = new Player();
