@@ -106,13 +106,15 @@ namespace ProjectX.ViewModels
         }
         public void Enable()
         {
-            
 
+            if (GameSet.PlayerRoundCount != 0)
+            { 
             ClearDice();
             RollDices();
             SaveDicesToEvaluationArray();
-            EvaluateProposal();         
-
+            EvaluateProposal();
+            GameSet.PlayerRoundCount -= 1;
+            }
 
         }
         /// <summary>

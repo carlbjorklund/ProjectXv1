@@ -110,7 +110,7 @@
               
             <!--Twos:-->
             <TextBlock Grid.Row="4" Grid.Column="3" Foreground="White" >Tvåor</TextBlock>
-            <TextBlock Foreground="Red" Text="{Binding Path= PropScoreCard.PropTwos, Mode=TwoWay}" Grid.Row="4" Grid.Column="0"></TextBlock>
+            <TextBlock Foreground="Red" Text="{Binding Path= PropScoreCard.PropTwos, Mode=OneWay}" Grid.Row="4" Grid.Column="0"></TextBlock>
             <TextBlock Foreground="Red" Text="{Binding Path= ScoreCardp1.Twos, Mode=TwoWay}" Grid.Row="4" Grid.Column="4"></TextBlock>
             <TextBlock Foreground="Red" Text="{Binding Path= ScoreCardp2.Twos, Mode=TwoWay}" Grid.Row="4" Grid.Column="5"></TextBlock>
             <TextBlock Foreground="Red" Text="{Binding Path= ScoreCardp3.Twos, Mode=TwoWay}" Grid.Row="4" Grid.Column="6"></TextBlock>
