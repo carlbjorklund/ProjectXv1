@@ -106,13 +106,18 @@ namespace ProjectX.ViewModels
         }
         public void Enable()
         {
-            
+            // game ended when all properties are filled?
+            // do while loop until game is ended...GameEnded=ones, twos, threes, etc is populated(not -1)
+            //in while loop for each player in players [enable button click)
 
+            if (GameSet.PlayerRoundCount != 0)  //current code stops user for pressing enable more than 3 times...
+            { 
             ClearDice();
             RollDices();
             SaveDicesToEvaluationArray();
-            EvaluateProposal();         
-
+            EvaluateProposal();
+            GameSet.PlayerRoundCount -= 1;
+            }
 
         }
         /// <summary>
@@ -690,10 +695,48 @@ namespace ProjectX.ViewModels
                 ClearDice();
                 SaveDicesToEvaluationArrayForScoreCard();
                 ScoreCardp1.Ones = One(diceValues);
+                player1.ScoreCard.Ones = ScoreCardp1.Ones;
                 ClearDice();
-            }    
+                ClearKeepDices();
+            }
             
-          
+            ///
+            ///idea of how it could look like
+            ///
+            //if (!ScoreCardp2.IsOnes /*&& CurrentPlayer == player2*/)
+            //{
+
+            //    SaveDicesToEvaluationArrayForScoreCard();
+            //    ScoreCardp2.Ones = One(diceValues);
+            //    ClearDice();
+            //    SaveDicesToEvaluationArrayForScoreCard();
+            //    ScoreCardp2.Ones = One(diceValues);
+            //    player2.ScoreCard.Ones = ScoreCardp2.Ones;
+            //    ClearDice();
+            //}
+            //if (!ScoreCardp3.IsOnes /*&& CurrentPlayer == player3*/)
+            //{
+
+            //    SaveDicesToEvaluationArrayForScoreCard();
+            //    ScoreCardp3.Ones = One(diceValues);
+            //    ClearDice();
+            //    SaveDicesToEvaluationArrayForScoreCard();
+            //    ScoreCardp3.Ones = One(diceValues);
+            //    player3.ScoreCard.Ones = ScoreCardp3.Ones;
+            //    ClearDice();
+            //}
+            //if (!ScoreCardp4.IsOnes /*&& CurrentPlayer == player3*/)
+            //{
+
+            //    SaveDicesToEvaluationArrayForScoreCard();
+            //    ScoreCardp4.Ones = One(diceValues);
+            //    ClearDice();
+            //    SaveDicesToEvaluationArrayForScoreCard();
+            //    ScoreCardp4.Ones = One(diceValues);
+            //    player4.ScoreCard.Ones = ScoreCardp4.Ones;
+            //    ClearDice();
+            //}
+
 
         }
 
@@ -710,6 +753,7 @@ namespace ProjectX.ViewModels
                 ScoreCardp1.Twos = Two(diceValues);
                 player1.ScoreCard.Twos = ScoreCardp1.Twos;                
                 ClearDice();
+                ClearKeepDices();
             }
 
         }
@@ -724,6 +768,7 @@ namespace ProjectX.ViewModels
                 SaveDicesToEvaluationArrayForScoreCard();
                 ScoreCardp1.Threes = Three(diceValues);
                 ClearDice();
+                ClearKeepDices();
             }
                 
         }
@@ -738,6 +783,7 @@ namespace ProjectX.ViewModels
                 SaveDicesToEvaluationArrayForScoreCard();
                 ScoreCardp1.Fours = Four(diceValues);
                 ClearDice();
+                ClearKeepDices();
             }
                
         }
@@ -752,6 +798,7 @@ namespace ProjectX.ViewModels
                 SaveDicesToEvaluationArrayForScoreCard();
                 ScoreCardp1.Fives = Five(diceValues);
                 ClearDice();
+                ClearKeepDices();
             }
                 
         }
@@ -762,11 +809,14 @@ namespace ProjectX.ViewModels
                 SaveDicesToEvaluationArrayForScoreCard();
                 ScoreCardp1.Sixes = Six(diceValues);
                 ClearDice();
+                
 
 
                 SaveDicesToEvaluationArrayForScoreCard();
                 ScoreCardp1.Sixes = Six(diceValues);
                 ClearDice();
+                ClearKeepDices();
+
             }
 
                 
@@ -782,6 +832,7 @@ namespace ProjectX.ViewModels
                 SaveDicesToEvaluationArrayForScoreCard();
                 ScoreCardp1.Pair = Pair(diceValues);
                 ClearDice();
+                ClearKeepDices();
             }
                
         }
@@ -796,6 +847,7 @@ namespace ProjectX.ViewModels
                 SaveDicesToEvaluationArrayForScoreCard();
                 ScoreCardp1.TwoPairs = TwoPair(diceValues);
                 ClearDice();
+                ClearKeepDices();
             }
              
         }
@@ -807,9 +859,11 @@ namespace ProjectX.ViewModels
                 ScoreCardp1.ThreeOfAKind = ThreeOfKind(diceValues);
                 ClearDice();
 
+
                 SaveDicesToEvaluationArrayForScoreCard();
                 ScoreCardp1.ThreeOfAKind = ThreeOfKind(diceValues);
                 ClearDice();
+                ClearKeepDices();
             }
                
         }
@@ -824,6 +878,7 @@ namespace ProjectX.ViewModels
                 SaveDicesToEvaluationArrayForScoreCard();
                 ScoreCardp1.FourOfAKind = FourOfKind(diceValues);
                 ClearDice();
+                ClearKeepDices();
             }
                
         }
@@ -838,6 +893,7 @@ namespace ProjectX.ViewModels
                 SaveDicesToEvaluationArrayForScoreCard();
                 ScoreCardp1.SmallStraight = SmallStraight(diceValues);
                 ClearDice();
+                ClearKeepDices();
             }
                
         }
@@ -852,6 +908,7 @@ namespace ProjectX.ViewModels
                 SaveDicesToEvaluationArrayForScoreCard();
                 ScoreCardp1.LargeStraight = BigStraight(diceValues);
                 ClearDice();
+                ClearKeepDices();
             }
                 
         }
@@ -866,6 +923,7 @@ namespace ProjectX.ViewModels
                 SaveDicesToEvaluationArrayForScoreCard();
                 ScoreCardp1.FullHouse = FullHouse(diceValues);
                 ClearDice();
+                ClearKeepDices();
             }
                
         }
@@ -880,6 +938,7 @@ namespace ProjectX.ViewModels
                 SaveDicesToEvaluationArrayForScoreCard();
                 ScoreCardp1.Chance = Chance(diceValues);
                 ClearDice();
+                ClearKeepDices();
 
             }
                
@@ -1059,7 +1118,14 @@ namespace ProjectX.ViewModels
             }
 
         }
-
+        public void ClearKeepDices()
+        {
+            dice1.Keep = false;
+            dice2.Keep = false;
+            dice3.Keep = false;
+            dice4.Keep = false;
+            dice.Keep = false;
+        }
         #endregion
 
     }

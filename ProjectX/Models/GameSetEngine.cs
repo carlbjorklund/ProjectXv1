@@ -9,6 +9,22 @@ namespace ProjectX.Models
 {
     public class GameSetEngine:Screen
     {
+        private int playerRoundCount=3;
+        public int PlayerRoundCount
+        {
+            get
+            {
+                return playerRoundCount;
+
+            }
+            set
+            {
+                playerRoundCount = value;
+                NotifyOfPropertyChange(() => Game_ID);
+
+
+            }
+        }
         private int gameID;
         public int Game_ID
         {
