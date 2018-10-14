@@ -133,7 +133,7 @@ namespace ProjectX.Models
                 NotifyOfPropertyChange(() => Pair);
             }
         }
-        public bool Itwospair { get { return twoPairs!=-1; } }
+        public bool Istwospair { get { return twoPairs!=-1; } }
         private bool istwopair;
         private int twoPairs=-1;
         public int TwoPairs

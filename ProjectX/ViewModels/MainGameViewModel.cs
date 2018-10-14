@@ -676,14 +676,19 @@ namespace ProjectX.ViewModels
             //make an if to see which player it is? and then fire the functions for each players scorecard???? how to do it???
             // have to put it twice in order to get the results not duplicated...
             // sixes does not display proparly, they seem to disapear.
+            if (!ScoreCardp1.IsOnes /*&& CurrentPlayer == player1*/)
+            {
 
-                  
-            SaveDicesToEvaluationArrayForScoreCard();
-            ScoreCardp1.Ones = One(diceValues);
-            ClearDice();
-            SaveDicesToEvaluationArrayForScoreCard();
-            ScoreCardp1.Ones = One(diceValues);
-            ClearDice();
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp1.Ones = One(diceValues);
+                ClearDice();
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp1.Ones = One(diceValues);
+                ClearDice();
+            }
+            
+
+            
             //PickOne();
 
         }
@@ -694,137 +699,188 @@ namespace ProjectX.ViewModels
 
             //ScoreCardp1.Twos = One(diceValues);
             //ClearDice();
+            if (!ScoreCardp1.Istwos /*&& CurrentPlayer == player1*/)
+            {
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp1.Twos = Two(diceValues);
+                ClearDice();
 
-            SaveDicesToEvaluationArrayForScoreCard();
-            ScoreCardp1.Twos = Two(diceValues);
-            ClearDice();
-
-            SaveDicesToEvaluationArrayForScoreCard();
-            ScoreCardp1.Twos = Two(diceValues);
-            ClearDice();
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp1.Twos = Two(diceValues);
+                ClearDice();
+            }
 
         }
         public void PickThree()
         {
-            SaveDicesToEvaluationArrayForScoreCard();
-            ScoreCardp1.Threes = Three(diceValues);
-            ClearDice();
+            if (!ScoreCardp1.Isthrees /*&& CurrentPlayer == player1*/)
+            {
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp1.Threes = Three(diceValues);
+                ClearDice();
 
-            SaveDicesToEvaluationArrayForScoreCard();
-            ScoreCardp1.Threes = Three(diceValues);
-            ClearDice();
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp1.Threes = Three(diceValues);
+                ClearDice();
+            }
+                
         }
         public void PickFour()
         {
-            SaveDicesToEvaluationArrayForScoreCard();
-            ScoreCardp1.Fours = Four(diceValues);
-            ClearDice();
+            if (!ScoreCardp1.Isfours /*&& CurrentPlayer == player1*/)
+            {
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp1.Fours = Four(diceValues);
+                ClearDice();
 
-            SaveDicesToEvaluationArrayForScoreCard();
-            ScoreCardp1.Fours = Four(diceValues);
-            ClearDice();
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp1.Fours = Four(diceValues);
+                ClearDice();
+            }
+               
         }
         public void PickFive()
         {
-            SaveDicesToEvaluationArrayForScoreCard();
-            ScoreCardp1.Fives = Five(diceValues);
-            ClearDice();
+            if (!ScoreCardp1.Isfives /*&& CurrentPlayer == player1*/)
+            {
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp1.Fives = Five(diceValues);
+                ClearDice();
 
-            SaveDicesToEvaluationArrayForScoreCard();
-            ScoreCardp1.Fives = Five(diceValues);
-            ClearDice();
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp1.Fives = Five(diceValues);
+                ClearDice();
+            }
+                
         }
         public void PickSix()
         {
-            SaveDicesToEvaluationArrayForScoreCard();
-            ScoreCardp1.Sixes = Six(diceValues);
-            ClearDice();
+            if (!ScoreCardp1.Issixes /*&& CurrentPlayer == player1*/)
+            {
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp1.Sixes = Six(diceValues);
+                ClearDice();
 
 
-            SaveDicesToEvaluationArrayForScoreCard();
-            ScoreCardp1.Sixes = Six(diceValues);
-            ClearDice();
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp1.Sixes = Six(diceValues);
+                ClearDice();
+            }
+
+                
         }
         public void PickPair()
         {
-            SaveDicesToEvaluationArrayForScoreCard();
-            ScoreCardp1.Pair = Pair(diceValues);
-            ClearDice();
+            if (!ScoreCardp1.Ispair /*&& CurrentPlayer == player1*/)
+            {
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp1.Pair = Pair(diceValues);
+                ClearDice();
 
-            SaveDicesToEvaluationArrayForScoreCard();
-            ScoreCardp1.Pair = Pair(diceValues);
-            ClearDice();
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp1.Pair = Pair(diceValues);
+                ClearDice();
+            }
+               
         }
         public void PickTwoPair()
         {
-            SaveDicesToEvaluationArrayForScoreCard();
-            ScoreCardp1.TwoPairs = TwoPair(diceValues);
-            ClearDice();
+            if (!ScoreCardp1.Istwospair /*&& CurrentPlayer == player1*/)
+            {
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp1.TwoPairs = TwoPair(diceValues);
+                ClearDice();
 
-            SaveDicesToEvaluationArrayForScoreCard();
-            ScoreCardp1.TwoPairs = TwoPair(diceValues);
-            ClearDice();
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp1.TwoPairs = TwoPair(diceValues);
+                ClearDice();
+            }
+             
         }
         public void PickThreeOfKind()
         {
-            SaveDicesToEvaluationArrayForScoreCard();
-            ScoreCardp1.ThreeOfAKind = ThreeOfKind(diceValues);
-            ClearDice();
+            if (!ScoreCardp1.IsThreeOfAKind /*&& CurrentPlayer == player1*/)
+            {
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp1.ThreeOfAKind = ThreeOfKind(diceValues);
+                ClearDice();
 
-            SaveDicesToEvaluationArrayForScoreCard();
-            ScoreCardp1.ThreeOfAKind = ThreeOfKind(diceValues);
-            ClearDice();
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp1.ThreeOfAKind = ThreeOfKind(diceValues);
+                ClearDice();
+            }
+               
         }
         public void PickFourOfKInd()
         {
-            SaveDicesToEvaluationArrayForScoreCard();
-            ScoreCardp1.FourOfAKind = FourOfKind(diceValues);
-            ClearDice();
+            if (!ScoreCardp1.IsFourOfAKind /*&& CurrentPlayer == player1*/)
+            {
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp1.FourOfAKind = FourOfKind(diceValues);
+                ClearDice();
 
-            SaveDicesToEvaluationArrayForScoreCard();
-            ScoreCardp1.FourOfAKind = FourOfKind(diceValues);
-            ClearDice();
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp1.FourOfAKind = FourOfKind(diceValues);
+                ClearDice();
+            }
+               
         }
         public void PickSmallStraight()
         {
-            SaveDicesToEvaluationArrayForScoreCard();
-            ScoreCardp1.SmallStraight = SmallStraight(diceValues);
-            ClearDice();
+            if (!ScoreCardp1.Ismallstraight /*&& CurrentPlayer == player1*/)
+            {
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp1.SmallStraight = SmallStraight(diceValues);
+                ClearDice();
 
-            SaveDicesToEvaluationArrayForScoreCard();
-            ScoreCardp1.SmallStraight = SmallStraight(diceValues);
-            ClearDice();
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp1.SmallStraight = SmallStraight(diceValues);
+                ClearDice();
+            }
+               
         }
         public void PickLargeStraight()
         {
-            SaveDicesToEvaluationArrayForScoreCard();
-            ScoreCardp1.LargeStraight =BigStraight(diceValues);
-            ClearDice();
+            if (!ScoreCardp1.Ismallstraight /*&& CurrentPlayer == player1*/)
+            {
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp1.LargeStraight = BigStraight(diceValues);
+                ClearDice();
 
-            SaveDicesToEvaluationArrayForScoreCard();
-            ScoreCardp1.LargeStraight = BigStraight(diceValues);
-            ClearDice();
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp1.LargeStraight = BigStraight(diceValues);
+                ClearDice();
+            }
+                
         }
         public void PickFullHouse()
         {
-            SaveDicesToEvaluationArrayForScoreCard();
-            ScoreCardp1.FullHouse = FullHouse(diceValues);
-            ClearDice();
+            if (!ScoreCardp1.IsFullHouse /*&& CurrentPlayer == player1*/)
+            {
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp1.FullHouse = FullHouse(diceValues);
+                ClearDice();
 
-            SaveDicesToEvaluationArrayForScoreCard();
-            ScoreCardp1.FullHouse = FullHouse(diceValues);
-            ClearDice();
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp1.FullHouse = FullHouse(diceValues);
+                ClearDice();
+            }
+               
         }
         public void PickChance()
         {
-            SaveDicesToEvaluationArrayForScoreCard();
-            ScoreCardp1.Chance = Chance(diceValues);
-            ClearDice();
+            if (!ScoreCardp1.IsChance/*&& CurrentPlayer == player1*/)
+            {
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp1.Chance = Chance(diceValues);
+                ClearDice();
 
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp1.Chance = Chance(diceValues);
+                ClearDice();
 
-            SaveDicesToEvaluationArrayForScoreCard();
-            ScoreCardp1.Chance = Chance(diceValues);
-            ClearDice();
+            }
+               
         }
         #endregion
 
