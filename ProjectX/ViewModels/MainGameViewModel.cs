@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media.Imaging;
 using Caliburn.Micro;
@@ -744,6 +745,9 @@ namespace ProjectX.ViewModels
         #endregion
 
         #region Populating scorecards
+        /// <summary>
+        /// Populating scorecards, TODO how to let user know if it is taken...
+        /// </summary>
         public void PickOne()
         {
             // Make an if to see which player it is? and then fire the functions for each players scorecard???? how to do it???
@@ -767,6 +771,7 @@ namespace ProjectX.ViewModels
 
                 
             }
+         
             ///
             /// 
             ///
@@ -796,6 +801,7 @@ namespace ProjectX.ViewModels
                 ClearDice();
                 ClearKeepDices();
             }
+        
             if (!ScoreCardp4.IsOnes && CurrentPlayer == player4)
             {
 
@@ -811,6 +817,7 @@ namespace ProjectX.ViewModels
 
 
             }
+          
             Next();
             ResetDices();
             ClearKeepDices();
