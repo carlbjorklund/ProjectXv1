@@ -769,8 +769,10 @@ namespace ProjectX.ViewModels
                 ClearDice();
                 ClearKeepDices();
                 UpperScore();
+                TotalScore();
 
-                
+
+
             }
          
             ///
@@ -788,6 +790,7 @@ namespace ProjectX.ViewModels
                 ClearDice();
                 ClearKeepDices();
                 UpperScore();
+                TotalScore();
 
             }
             if (!ScoreCardp3.IsOnes && CurrentPlayer == player3)
@@ -803,6 +806,7 @@ namespace ProjectX.ViewModels
                 ClearDice();
                 ClearKeepDices();
                 UpperScore();
+                TotalScore();
             }
         
             if (!ScoreCardp4.IsOnes && CurrentPlayer == player4)
@@ -818,6 +822,7 @@ namespace ProjectX.ViewModels
                 ClearDice();
                 ClearKeepDices();
                 UpperScore();
+                TotalScore();
 
 
 
@@ -843,6 +848,7 @@ namespace ProjectX.ViewModels
                 ClearDice();
                 ClearKeepDices();
                 UpperScore();
+                TotalScore();
 
             }
             if (!ScoreCardp2.Istwos && CurrentPlayer == player2)
@@ -858,6 +864,7 @@ namespace ProjectX.ViewModels
                 ClearDice();
                 ClearKeepDices();
                 UpperScore();
+                TotalScore();
             }
             if (!ScoreCardp3.Istwos && CurrentPlayer == player3)
             {
@@ -872,6 +879,7 @@ namespace ProjectX.ViewModels
                 ClearDice();
                 ClearKeepDices();
                 UpperScore();
+                TotalScore();
             }
             if (!ScoreCardp4.Istwos && CurrentPlayer == player4)
             {
@@ -886,6 +894,7 @@ namespace ProjectX.ViewModels
                 ClearDice();
                 ClearKeepDices();
                 UpperScore();
+                TotalScore();
             }
             Next();
             ResetDices();
@@ -906,6 +915,7 @@ namespace ProjectX.ViewModels
                 ClearDice();
                 ClearKeepDices();
                 UpperScore();
+                TotalScore();
             }
             if (!ScoreCardp2.Isthrees && CurrentPlayer == player2)
             {
@@ -919,6 +929,7 @@ namespace ProjectX.ViewModels
                 ClearDice();
                 ClearKeepDices();
                 UpperScore();
+                TotalScore();
             }
             if (!ScoreCardp3.Isthrees && CurrentPlayer == player3)
             {
@@ -932,6 +943,7 @@ namespace ProjectX.ViewModels
                 ClearDice();
                 ClearKeepDices();
                 UpperScore();
+                TotalScore();
             }
             if (!ScoreCardp4.Isthrees && CurrentPlayer == player4)
             {
@@ -944,6 +956,7 @@ namespace ProjectX.ViewModels
                 ClearDice();
                 ClearKeepDices();
                 UpperScore();
+                TotalScore();
             }
             Next();
             ResetDices();
@@ -962,6 +975,7 @@ namespace ProjectX.ViewModels
                 ClearDice();
                 ClearKeepDices();
                 UpperScore();
+                TotalScore();
             }
             if (!ScoreCardp2.Isfours && CurrentPlayer == player2)
             {
@@ -975,6 +989,7 @@ namespace ProjectX.ViewModels
                 ClearDice();
                 ClearKeepDices();
                 UpperScore();
+                TotalScore();
             }
             if (!ScoreCardp3.Isfours && CurrentPlayer == player3)
             {
@@ -988,6 +1003,7 @@ namespace ProjectX.ViewModels
                 ClearDice();
                 ClearKeepDices();
                 UpperScore();
+                TotalScore();
             }
             if (!ScoreCardp4.Isfours && CurrentPlayer == player4)
             {
@@ -1001,6 +1017,7 @@ namespace ProjectX.ViewModels
                 ClearDice();
                 ClearKeepDices();
                 UpperScore();
+                TotalScore();
             }
             Next();
             ResetDices();
@@ -1020,6 +1037,7 @@ namespace ProjectX.ViewModels
                 ClearDice();
                 ClearKeepDices();
                 UpperScore();
+                TotalScore();
             }
             if (!ScoreCardp2.Isfives && CurrentPlayer == player2)
             {
@@ -1033,6 +1051,7 @@ namespace ProjectX.ViewModels
                 ClearDice();
                 ClearKeepDices();
                 UpperScore();
+                TotalScore();
             }
             if (!ScoreCardp3.Isfives && CurrentPlayer == player3)
             {
@@ -1046,6 +1065,7 @@ namespace ProjectX.ViewModels
                 ClearDice();
                 ClearKeepDices();
                 UpperScore();
+                TotalScore();
             }
             if (!ScoreCardp4.Isfives && CurrentPlayer == player4)
             {
@@ -1059,6 +1079,7 @@ namespace ProjectX.ViewModels
                 ClearDice();
                 ClearKeepDices();
                 UpperScore();
+                TotalScore();
             }
             Next();
             ResetDices();
@@ -1078,6 +1099,7 @@ namespace ProjectX.ViewModels
                 ClearDice();
                 ClearKeepDices();
                 UpperScore();
+                TotalScore();
             }
             if (!ScoreCardp2.Issixes && CurrentPlayer == player2)
             {
@@ -1091,6 +1113,7 @@ namespace ProjectX.ViewModels
                 ClearDice();
                 ClearKeepDices();
                 UpperScore();
+                TotalScore();
             }
             if (!ScoreCardp3.Issixes && CurrentPlayer == player3)
             {
@@ -1104,6 +1127,7 @@ namespace ProjectX.ViewModels
                 ClearDice();
                 ClearKeepDices();
                 UpperScore();
+                TotalScore();
             }
             if (!ScoreCardp4.Issixes && CurrentPlayer == player4)
             {
@@ -1117,6 +1141,7 @@ namespace ProjectX.ViewModels
                 ClearDice();
                 ClearKeepDices();
                 UpperScore();
+                TotalScore();
             }
 
             Next();
@@ -1145,6 +1170,7 @@ namespace ProjectX.ViewModels
                 ScoreCardp1.Pair = Pair(diceValues);
                 ClearDice();
                 ClearKeepDices();
+                TotalScore();
             }
             if (!ScoreCardp1.Ispair && CurrentPlayer == player2)
             {
@@ -1157,6 +1183,7 @@ namespace ProjectX.ViewModels
                 ScoreCardp2.Pair = Pair(diceValues);
                 ClearDice();
                 ClearKeepDices();
+                TotalScore();
             }
             if (!ScoreCardp3.Ispair && CurrentPlayer == player3)
             {
@@ -1169,8 +1196,9 @@ namespace ProjectX.ViewModels
                 ScoreCardp3.Pair = Pair(diceValues);
                 ClearDice();
                 ClearKeepDices();
+                TotalScore();
 
-              
+
             }
             if (!ScoreCardp4.Ispair && CurrentPlayer == player4)
             {
@@ -1183,6 +1211,7 @@ namespace ProjectX.ViewModels
                 ScoreCardp4.Pair = Pair(diceValues);
                 ClearDice();
                 ClearKeepDices();
+                TotalScore();
             }
             Next();
             ResetDices();
@@ -1201,6 +1230,7 @@ namespace ProjectX.ViewModels
                 ClearDice();
                 ClearKeepDices();
                 ClearKeepDices();
+                TotalScore();
             }
             if (!ScoreCardp2.Istwospair && CurrentPlayer == player2)
             {
@@ -1212,6 +1242,7 @@ namespace ProjectX.ViewModels
                 ScoreCardp2.TwoPairs = TwoPair(diceValues);
                 ClearDice();
                 ClearKeepDices();
+                TotalScore();
             }
             if (!ScoreCardp3.Istwospair && CurrentPlayer == player3)
             {
@@ -1223,6 +1254,7 @@ namespace ProjectX.ViewModels
                 ScoreCardp3.TwoPairs = TwoPair(diceValues);
                 ClearDice();
                 ClearKeepDices();
+                TotalScore();
             }
             if (!ScoreCardp4.Istwospair && CurrentPlayer == player4)
             {
@@ -1234,6 +1266,7 @@ namespace ProjectX.ViewModels
                 ScoreCardp4.TwoPairs = TwoPair(diceValues);
                 ClearDice();
                 ClearKeepDices();
+                TotalScore();
             }
             Next();
             ResetDices();
@@ -1252,6 +1285,7 @@ namespace ProjectX.ViewModels
                 ScoreCardp1.ThreeOfAKind = ThreeOfKind(diceValues);
                 ClearDice();
                 ClearKeepDices();
+                TotalScore();
             }
             if (!ScoreCardp2.IsThreeOfAKind && CurrentPlayer == player2)
             {
@@ -1264,6 +1298,7 @@ namespace ProjectX.ViewModels
                 ScoreCardp2.ThreeOfAKind = ThreeOfKind(diceValues);
                 ClearDice();
                 ClearKeepDices();
+                TotalScore();
             }
             if (!ScoreCardp3.IsThreeOfAKind && CurrentPlayer == player3)
             {
@@ -1276,8 +1311,8 @@ namespace ProjectX.ViewModels
                 ScoreCardp3.ThreeOfAKind = ThreeOfKind(diceValues);
                 ClearDice();
                 ClearKeepDices();
+                TotalScore();
 
-               
             }
             if (!ScoreCardp4.IsThreeOfAKind && CurrentPlayer == player4)
             {
@@ -1290,6 +1325,7 @@ namespace ProjectX.ViewModels
                 ScoreCardp4.ThreeOfAKind = ThreeOfKind(diceValues);
                 ClearDice();
                 ClearKeepDices();
+                TotalScore();
             }
             Next();
             ResetDices();
@@ -1307,6 +1343,7 @@ namespace ProjectX.ViewModels
                 ScoreCardp1.FourOfAKind = FourOfKind(diceValues);
                 ClearDice();
                 ClearKeepDices();
+                TotalScore();
             }
             if (!ScoreCardp2.IsFourOfAKind && CurrentPlayer == player2)
             {
@@ -1318,6 +1355,7 @@ namespace ProjectX.ViewModels
                 ScoreCardp2.FourOfAKind = FourOfKind(diceValues);
                 ClearDice();
                 ClearKeepDices();
+                TotalScore();
             }
             if (!ScoreCardp3.IsFourOfAKind && CurrentPlayer == player3)
             {
@@ -1329,6 +1367,7 @@ namespace ProjectX.ViewModels
                 ScoreCardp3.FourOfAKind = FourOfKind(diceValues);
                 ClearDice();
                 ClearKeepDices();
+                TotalScore();
             }
             Next();
             ResetDices();
@@ -1346,6 +1385,7 @@ namespace ProjectX.ViewModels
                 ScoreCardp1.SmallStraight = SmallStraight(diceValues);
                 ClearDice();
                 ClearKeepDices();
+                TotalScore();
             }
             if (!ScoreCardp2.Ismallstraight && CurrentPlayer == player2)
             {
@@ -1357,6 +1397,7 @@ namespace ProjectX.ViewModels
                 ScoreCardp2.SmallStraight = SmallStraight(diceValues);
                 ClearDice();
                 ClearKeepDices();
+                TotalScore();
             }
             if (!ScoreCardp3.Ismallstraight && CurrentPlayer == player3)
             {
@@ -1368,6 +1409,7 @@ namespace ProjectX.ViewModels
                 ScoreCardp3.SmallStraight = SmallStraight(diceValues);
                 ClearDice();
                 ClearKeepDices();
+                TotalScore();
             }
             if (!ScoreCardp4.Ismallstraight && CurrentPlayer == player4)
             {
@@ -1379,6 +1421,7 @@ namespace ProjectX.ViewModels
                 ScoreCardp4.SmallStraight = SmallStraight(diceValues);
                 ClearDice();
                 ClearKeepDices();
+                TotalScore();
             }
             Next();
             ResetDices();
@@ -1397,6 +1440,7 @@ namespace ProjectX.ViewModels
                 ClearDice();
                 ClearKeepDices();
                 ClearKeepDices();
+                TotalScore();
             }
             if (!ScoreCardp2.Ismallstraight && CurrentPlayer == player2)
             {
@@ -1409,6 +1453,7 @@ namespace ProjectX.ViewModels
                 ClearDice();
                 ClearKeepDices();
                 ClearKeepDices();
+                TotalScore();
             }
             if (!ScoreCardp3.Ismallstraight && CurrentPlayer == player3)
             {
@@ -1420,6 +1465,7 @@ namespace ProjectX.ViewModels
                 ScoreCardp3.LargeStraight = BigStraight(diceValues);
                 ClearDice();
                 ClearKeepDices();
+                TotalScore();
             }
             if (!ScoreCardp4.Ismallstraight && CurrentPlayer == player4)
             {
@@ -1431,6 +1477,7 @@ namespace ProjectX.ViewModels
                 ScoreCardp4.LargeStraight = BigStraight(diceValues);
                 ClearDice();
                 ClearKeepDices();
+                TotalScore();
             }
             Next();
             ResetDices();
@@ -1448,6 +1495,7 @@ namespace ProjectX.ViewModels
                 ScoreCardp1.FullHouse = FullHouse(diceValues);
                 ClearDice();
                 ClearKeepDices();
+                TotalScore();
             }
             if (!ScoreCardp2.IsFullHouse && CurrentPlayer == player2)
             {
@@ -1459,6 +1507,7 @@ namespace ProjectX.ViewModels
                 ScoreCardp2.FullHouse = FullHouse(diceValues);
                 ClearDice();
                 ClearKeepDices();
+                TotalScore();
             }
             if (!ScoreCardp3.IsFullHouse && CurrentPlayer == player3)
             {
@@ -1470,6 +1519,8 @@ namespace ProjectX.ViewModels
                 ScoreCardp3.FullHouse = FullHouse(diceValues);
                 ClearDice();
                 ClearKeepDices();
+                TotalScore();
+
             }
             if (!ScoreCardp4.IsFullHouse && CurrentPlayer == player4)
             {
@@ -1481,6 +1532,7 @@ namespace ProjectX.ViewModels
                 ScoreCardp4.FullHouse = FullHouse(diceValues);
                 ClearDice();
                 ClearKeepDices();
+                TotalScore();
             }
             Next();
             ResetDices();
@@ -1498,6 +1550,7 @@ namespace ProjectX.ViewModels
                 ScoreCardp1.Chance = Chance(diceValues);
                 ClearDice();
                 ClearKeepDices();
+                TotalScore();
             }
             if (!ScoreCardp2.IsChance && CurrentPlayer == player2)
             {
@@ -1509,6 +1562,7 @@ namespace ProjectX.ViewModels
                 ScoreCardp2.Chance = Chance(diceValues);
                 ClearDice();
                 ClearKeepDices();
+                TotalScore();
             }
             if (!ScoreCardp3.IsChance && CurrentPlayer == player3)
             {
@@ -1520,6 +1574,7 @@ namespace ProjectX.ViewModels
                 ScoreCardp3.Chance = Chance(diceValues);
                 ClearDice();
                 ClearKeepDices();
+                TotalScore();
             }
             if (!ScoreCardp4.IsChance && CurrentPlayer == player4)
             {
@@ -1531,11 +1586,21 @@ namespace ProjectX.ViewModels
                 ScoreCardp4.Chance = Chance(diceValues);
                 ClearDice();
                 ClearKeepDices();
+                TotalScore();
             }
             Next();
             ResetDices();
             ClearKeepDices();
         }
+
+        public void TotalScore()
+        {
+            ScoreCardp1.Total = ScoreCardp1.Sum + ScoreCardp1.Pair + ScoreCardp1.TwoPairs + ScoreCardp1.ThreeOfAKind + ScoreCardp1.FourOfAKind + ScoreCardp1.SmallStraight + ScoreCardp1.LargeStraight + ScoreCardp1.Chance + ScoreCardp1.Yatzy;
+            ScoreCardp2.Total = ScoreCardp2.Sum + ScoreCardp2.Pair + ScoreCardp2.TwoPairs + ScoreCardp2.ThreeOfAKind + ScoreCardp2.FourOfAKind + ScoreCardp2.SmallStraight + ScoreCardp2.LargeStraight + ScoreCardp2.Chance + ScoreCardp2.Yatzy;
+            ScoreCardp3.Total = ScoreCardp3.Sum + ScoreCardp3.Pair + ScoreCardp3.TwoPairs + ScoreCardp3.ThreeOfAKind + ScoreCardp3.FourOfAKind + ScoreCardp3.SmallStraight + ScoreCardp3.LargeStraight + ScoreCardp3.Chance + ScoreCardp3.Yatzy;
+            ScoreCardp4.Total = ScoreCardp4.Sum + ScoreCardp4.Pair + ScoreCardp4.TwoPairs + ScoreCardp4.ThreeOfAKind + ScoreCardp4.FourOfAKind + ScoreCardp4.SmallStraight + ScoreCardp4.LargeStraight + ScoreCardp4.Chance + ScoreCardp4.Yatzy;
+        }
+
         #endregion
 
         /// <summary>
