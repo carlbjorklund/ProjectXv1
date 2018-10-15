@@ -175,7 +175,6 @@ namespace ProjectX.ViewModels
         public void Back()
         {
             position--;
-            // Check current position is not past the begining of list
             if (position < 0) position = 0;
             CurrentPlayer = GameSet.Players[position];
             CurrentPlayer.Name = GameSet.Players[position].Name;
@@ -769,7 +768,7 @@ namespace ProjectX.ViewModels
                 
             }
             ///
-            /// idea of how it could look like
+            /// 
             ///
             if (!ScoreCardp2.IsOnes && CurrentPlayer == player2)
             {
@@ -1129,6 +1128,8 @@ namespace ProjectX.ViewModels
                 ScoreCardp3.Pair = Pair(diceValues);
                 ClearDice();
                 ClearKeepDices();
+
+              
             }
             if (!ScoreCardp4.Ispair && CurrentPlayer == player4)
             {
@@ -1234,6 +1235,8 @@ namespace ProjectX.ViewModels
                 ScoreCardp3.ThreeOfAKind = ThreeOfKind(diceValues);
                 ClearDice();
                 ClearKeepDices();
+
+               
             }
             if (!ScoreCardp4.IsThreeOfAKind && CurrentPlayer == player4)
             {

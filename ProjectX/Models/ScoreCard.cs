@@ -262,6 +262,7 @@ namespace ProjectX.Models
                 NotifyOfPropertyChange(() => ThreeOfAKind);
             }
         }
+   
         public bool IsFourOfAKind { get { return fourOfAKind != -1; } }
         private bool isfoursofakind;
         private int fourOfAKind = -1;
