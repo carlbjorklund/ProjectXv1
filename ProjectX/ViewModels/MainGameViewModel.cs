@@ -1719,23 +1719,23 @@ namespace ProjectX.ViewModels
         }
         public void ClearKeepDices()
         {
-            dice.Keep = false;            
-            dice1.Keep = false;
-            dice2.Keep = false;
-            dice3.Keep = false;
-            dice4.Keep = false;
+                        //dice.Keep = false;            
+            //dice1.Keep = false;
+            //dice2.Keep = false;
+            //dice3.Keep = false;
+            //dice4.Keep = false;
 
-            Dicepanel.Dice1.Keep = false;
-            Dicepanel.Dice2.Keep = false;
-            Dicepanel.Dice3.Keep = false;
-            Dicepanel.Dice4.Keep = false;
-            Dicepanel.Dice5.Keep = false;
+            //Dicepanel.Dice1.Keep = false;
+            //Dicepanel.Dice2.Keep = false;
+            //Dicepanel.Dice3.Keep = false;
+            //Dicepanel.Dice4.Keep = false;
+            //Dicepanel.Dice5.Keep = false;
 
-            GameSet.DicePanel.Dice1.Keep = false;
-            GameSet.DicePanel.Dice2.Keep = false;
-            GameSet.DicePanel.Dice3.Keep = false;
-            GameSet.DicePanel.Dice4.Keep = false;
-            GameSet.DicePanel.Dice5.Keep = false;
+            //GameSet.DicePanel.Dice1.Keep = false;
+            //GameSet.DicePanel.Dice2.Keep = false;
+            //GameSet.DicePanel.Dice3.Keep = false;
+            //GameSet.DicePanel.Dice4.Keep = false;
+            //GameSet.DicePanel.Dice5.Keep = false;
 
 
         }
