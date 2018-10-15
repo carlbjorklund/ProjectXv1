@@ -1657,8 +1657,8 @@ namespace ProjectX.ViewModels
         /// <summary>
         /// Set Keep on or off
         /// </summary>
-            public void KeepDiceOne()
-            {
+       public void KeepDiceOne()
+       {
             if (dice.Keep == false)
                 dice.Keep = true;
             else
@@ -1666,7 +1666,7 @@ namespace ProjectX.ViewModels
                 dice.Keep = false;
             }
        
-            }
+       }
         public void KeepDiceTwo()
         {
             if (dice1.Keep == false)
