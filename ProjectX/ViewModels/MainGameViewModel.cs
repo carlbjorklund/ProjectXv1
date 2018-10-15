@@ -765,6 +765,8 @@ namespace ProjectX.ViewModels
                 player1.ScoreCard.Ones = ScoreCardp1.Ones;
                 ClearDice();
                 ClearKeepDices();
+
+                
             }
             ///
             /// idea of how it could look like
@@ -779,6 +781,8 @@ namespace ProjectX.ViewModels
                 ScoreCardp2.Ones = One(diceValues);
                 player2.ScoreCard.Ones = ScoreCardp2.Ones;
                 ClearDice();
+                ClearKeepDices();
+
             }
             if (!ScoreCardp3.IsOnes && CurrentPlayer == player3)
             {
@@ -786,10 +790,12 @@ namespace ProjectX.ViewModels
                 SaveDicesToEvaluationArrayForScoreCard();
                 ScoreCardp3.Ones = One(diceValues);
                 ClearDice();
+                ClearKeepDices();
                 SaveDicesToEvaluationArrayForScoreCard();
                 ScoreCardp3.Ones = One(diceValues);
                 player3.ScoreCard.Ones = ScoreCardp3.Ones;
                 ClearDice();
+                ClearKeepDices();
             }
             if (!ScoreCardp4.IsOnes && CurrentPlayer == player4)
             {
@@ -797,14 +803,18 @@ namespace ProjectX.ViewModels
                 SaveDicesToEvaluationArrayForScoreCard();
                 ScoreCardp4.Ones = One(diceValues);
                 ClearDice();
+                ClearKeepDices();
                 SaveDicesToEvaluationArrayForScoreCard();
                 ScoreCardp4.Ones = One(diceValues);
                 player4.ScoreCard.Ones = ScoreCardp4.Ones;
-                ClearDice();
+                ClearDice(); ClearKeepDices();
 
 
 
             }
+            Next();
+            ResetDices();
+            ClearKeepDices();
         }
 
             public void PickTwo()
@@ -815,18 +825,20 @@ namespace ProjectX.ViewModels
                 SaveDicesToEvaluationArrayForScoreCard();
                 ScoreCardp1.Twos = Two(diceValues);
                 ClearDice();
-
+                ClearKeepDices();
                 SaveDicesToEvaluationArrayForScoreCard();
                 ScoreCardp1.Twos = Two(diceValues);
                 player1.ScoreCard.Twos = ScoreCardp1.Twos;                
                 ClearDice();
                 ClearKeepDices();
+                
             }
             if (!ScoreCardp2.Istwos && CurrentPlayer == player2)
             {
                 SaveDicesToEvaluationArrayForScoreCard();
                 ScoreCardp2.Twos = Two(diceValues);
                 ClearDice();
+                ClearKeepDices();
 
                 SaveDicesToEvaluationArrayForScoreCard();
                 ScoreCardp2.Twos = Two(diceValues);
@@ -839,6 +851,7 @@ namespace ProjectX.ViewModels
                 SaveDicesToEvaluationArrayForScoreCard();
                 ScoreCardp3.Twos = Two(diceValues);
                 ClearDice();
+                ClearKeepDices();
 
                 SaveDicesToEvaluationArrayForScoreCard();
                 ScoreCardp3.Twos = Two(diceValues);
@@ -851,6 +864,7 @@ namespace ProjectX.ViewModels
                 SaveDicesToEvaluationArrayForScoreCard();
                 ScoreCardp4.Twos = Two(diceValues);
                 ClearDice();
+                ClearKeepDices();
 
                 SaveDicesToEvaluationArrayForScoreCard();
                 ScoreCardp4.Twos = Two(diceValues);
@@ -858,6 +872,9 @@ namespace ProjectX.ViewModels
                 ClearDice();
                 ClearKeepDices();
             }
+            Next();
+            ResetDices();
+            ClearKeepDices();
 
         }
         public void PickThree()
@@ -867,6 +884,7 @@ namespace ProjectX.ViewModels
                 SaveDicesToEvaluationArrayForScoreCard();
                 ScoreCardp1.Threes = Three(diceValues);
                 ClearDice();
+                ClearKeepDices();
 
                 SaveDicesToEvaluationArrayForScoreCard();
                 ScoreCardp1.Threes = Three(diceValues);
@@ -878,6 +896,7 @@ namespace ProjectX.ViewModels
                 SaveDicesToEvaluationArrayForScoreCard();
                 ScoreCardp2.Threes = Three(diceValues);
                 ClearDice();
+                ClearKeepDices();
 
                 SaveDicesToEvaluationArrayForScoreCard();
                 ScoreCardp2.Threes = Three(diceValues);
@@ -889,6 +908,7 @@ namespace ProjectX.ViewModels
                 SaveDicesToEvaluationArrayForScoreCard();
                 ScoreCardp3.Threes = Three(diceValues);
                 ClearDice();
+                ClearKeepDices();
 
                 SaveDicesToEvaluationArrayForScoreCard();
                 ScoreCardp3.Threes = Three(diceValues);
@@ -900,13 +920,15 @@ namespace ProjectX.ViewModels
                 SaveDicesToEvaluationArrayForScoreCard();
                 ScoreCardp4.Threes = Three(diceValues);
                 ClearDice();
-
+                ClearKeepDices();
                 SaveDicesToEvaluationArrayForScoreCard();
                 ScoreCardp4.Threes = Three(diceValues);
                 ClearDice();
                 ClearKeepDices();
             }
-
+            Next();
+            ResetDices();
+            ClearKeepDices();
         }
         public void PickFour()
         {
@@ -915,7 +937,7 @@ namespace ProjectX.ViewModels
                 SaveDicesToEvaluationArrayForScoreCard();
                 ScoreCardp1.Fours = Four(diceValues);
                 ClearDice();
-
+                ClearKeepDices();
                 SaveDicesToEvaluationArrayForScoreCard();
                 ScoreCardp1.Fours = Four(diceValues);
                 ClearDice();
@@ -926,6 +948,7 @@ namespace ProjectX.ViewModels
                 SaveDicesToEvaluationArrayForScoreCard();
                 ScoreCardp2.Fours = Four(diceValues);
                 ClearDice();
+                ClearKeepDices();
 
                 SaveDicesToEvaluationArrayForScoreCard();
                 ScoreCardp2.Fours = Four(diceValues);
@@ -937,6 +960,7 @@ namespace ProjectX.ViewModels
                 SaveDicesToEvaluationArrayForScoreCard();
                 ScoreCardp3.Fours = Four(diceValues);
                 ClearDice();
+                ClearKeepDices();
 
                 SaveDicesToEvaluationArrayForScoreCard();
                 ScoreCardp3.Fours = Four(diceValues);
@@ -948,12 +972,16 @@ namespace ProjectX.ViewModels
                 SaveDicesToEvaluationArrayForScoreCard();
                 ScoreCardp4.Fours = Four(diceValues);
                 ClearDice();
+                ClearKeepDices();
 
                 SaveDicesToEvaluationArrayForScoreCard();
                 ScoreCardp4.Fours = Four(diceValues);
                 ClearDice();
                 ClearKeepDices();
             }
+            Next();
+            ResetDices();
+            ClearKeepDices();
         }
         public void PickFive()
         {
@@ -962,6 +990,7 @@ namespace ProjectX.ViewModels
                 SaveDicesToEvaluationArrayForScoreCard();
                 ScoreCardp1.Fives = Five(diceValues);
                 ClearDice();
+                ClearKeepDices();
 
                 SaveDicesToEvaluationArrayForScoreCard();
                 ScoreCardp1.Fives = Five(diceValues);
@@ -973,6 +1002,7 @@ namespace ProjectX.ViewModels
                 SaveDicesToEvaluationArrayForScoreCard();
                 ScoreCardp2.Fives = Five(diceValues);
                 ClearDice();
+                ClearKeepDices();
 
                 SaveDicesToEvaluationArrayForScoreCard();
                 ScoreCardp2.Fives = Five(diceValues);
@@ -984,6 +1014,7 @@ namespace ProjectX.ViewModels
                 SaveDicesToEvaluationArrayForScoreCard();
                 ScoreCardp3.Fives = Five(diceValues);
                 ClearDice();
+                ClearKeepDices();
 
                 SaveDicesToEvaluationArrayForScoreCard();
                 ScoreCardp3.Fives = Five(diceValues);
@@ -995,13 +1026,16 @@ namespace ProjectX.ViewModels
                 SaveDicesToEvaluationArrayForScoreCard();
                 ScoreCardp4.Fives = Five(diceValues);
                 ClearDice();
+                ClearKeepDices();
 
                 SaveDicesToEvaluationArrayForScoreCard();
                 ScoreCardp4.Fives = Five(diceValues);
                 ClearDice();
                 ClearKeepDices();
             }
-
+            Next();
+            ResetDices();
+            ClearKeepDices();
         }
         public void PickSix()
         {
@@ -1010,7 +1044,8 @@ namespace ProjectX.ViewModels
                 SaveDicesToEvaluationArrayForScoreCard();
                 ScoreCardp1.Sixes = Six(diceValues);
                 ClearDice();
-                
+                ClearKeepDices();
+
                 SaveDicesToEvaluationArrayForScoreCard();
                 ScoreCardp1.Sixes = Six(diceValues);
                 ClearDice();
@@ -1021,6 +1056,7 @@ namespace ProjectX.ViewModels
                 SaveDicesToEvaluationArrayForScoreCard();
                 ScoreCardp2.Sixes = Six(diceValues);
                 ClearDice();
+                ClearKeepDices();
 
                 SaveDicesToEvaluationArrayForScoreCard();
                 ScoreCardp2.Sixes = Six(diceValues);
@@ -1032,6 +1068,7 @@ namespace ProjectX.ViewModels
                 SaveDicesToEvaluationArrayForScoreCard();
                 ScoreCardp3.Sixes = Six(diceValues);
                 ClearDice();
+                ClearKeepDices();
 
                 SaveDicesToEvaluationArrayForScoreCard();
                 ScoreCardp3.Sixes = Six(diceValues);
@@ -1043,6 +1080,7 @@ namespace ProjectX.ViewModels
                 SaveDicesToEvaluationArrayForScoreCard();
                 ScoreCardp4.Sixes = Six(diceValues);
                 ClearDice();
+                ClearKeepDices();
 
                 SaveDicesToEvaluationArrayForScoreCard();
                 ScoreCardp4.Sixes = Six(diceValues);
@@ -1050,7 +1088,9 @@ namespace ProjectX.ViewModels
                 ClearKeepDices();
             }
 
-
+            Next();
+            ResetDices();
+            ClearKeepDices();
         }
         public void PickPair()
         {
@@ -1059,17 +1099,56 @@ namespace ProjectX.ViewModels
                 SaveDicesToEvaluationArrayForScoreCard();
                 ScoreCardp1.Pair = Pair(diceValues);
                 ClearDice();
+                ClearKeepDices();
 
                 SaveDicesToEvaluationArrayForScoreCard();
                 ScoreCardp1.Pair = Pair(diceValues);
                 ClearDice();
                 ClearKeepDices();
             }
-               
+            if (!ScoreCardp1.Ispair && CurrentPlayer == player2)
+            {
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp2.Pair = Pair(diceValues);
+                ClearDice();
+                ClearKeepDices();
+
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp2.Pair = Pair(diceValues);
+                ClearDice();
+                ClearKeepDices();
+            }
+            if (!ScoreCardp3.Ispair && CurrentPlayer == player3)
+            {
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp3.Pair = Pair(diceValues);
+                ClearDice();
+                ClearKeepDices();
+
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp3.Pair = Pair(diceValues);
+                ClearDice();
+                ClearKeepDices();
+            }
+            if (!ScoreCardp4.Ispair && CurrentPlayer == player4)
+            {
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp4.Pair = Pair(diceValues);
+                ClearDice();
+                ClearKeepDices();
+
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp4.Pair = Pair(diceValues);
+                ClearDice();
+                ClearKeepDices();
+            }
+            Next();
+            ResetDices();
+            ClearKeepDices();
         }
         public void PickTwoPair()
         {
-            if (!ScoreCardp1.Istwospair /*&& CurrentPlayer == player1*/)
+            if (!ScoreCardp1.Istwospair && CurrentPlayer == player1)
             {
                 SaveDicesToEvaluationArrayForScoreCard();
                 ScoreCardp1.TwoPairs = TwoPair(diceValues);
@@ -1079,12 +1158,48 @@ namespace ProjectX.ViewModels
                 ScoreCardp1.TwoPairs = TwoPair(diceValues);
                 ClearDice();
                 ClearKeepDices();
+                ClearKeepDices();
             }
-             
+            if (!ScoreCardp2.Istwospair && CurrentPlayer == player2)
+            {
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp2.TwoPairs = TwoPair(diceValues);
+                ClearDice();
+
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp2.TwoPairs = TwoPair(diceValues);
+                ClearDice();
+                ClearKeepDices();
+            }
+            if (!ScoreCardp3.Istwospair && CurrentPlayer == player3)
+            {
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp3.TwoPairs = TwoPair(diceValues);
+                ClearDice();
+
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp3.TwoPairs = TwoPair(diceValues);
+                ClearDice();
+                ClearKeepDices();
+            }
+            if (!ScoreCardp4.Istwospair && CurrentPlayer == player4)
+            {
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp4.TwoPairs = TwoPair(diceValues);
+                ClearDice();
+
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp4.TwoPairs = TwoPair(diceValues);
+                ClearDice();
+                ClearKeepDices();
+            }
+            Next();
+            ResetDices();
+            ClearKeepDices();
         }
         public void PickThreeOfKind()
         {
-            if (!ScoreCardp1.IsThreeOfAKind /*&& CurrentPlayer == player1*/)
+            if (!ScoreCardp1.IsThreeOfAKind && CurrentPlayer == player1)
             {
                 SaveDicesToEvaluationArrayForScoreCard();
                 ScoreCardp1.ThreeOfAKind = ThreeOfKind(diceValues);
@@ -1096,11 +1211,49 @@ namespace ProjectX.ViewModels
                 ClearDice();
                 ClearKeepDices();
             }
-               
+            if (!ScoreCardp2.IsThreeOfAKind && CurrentPlayer == player2)
+            {
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp2.ThreeOfAKind = ThreeOfKind(diceValues);
+                ClearDice();
+
+
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp2.ThreeOfAKind = ThreeOfKind(diceValues);
+                ClearDice();
+                ClearKeepDices();
+            }
+            if (!ScoreCardp3.IsThreeOfAKind && CurrentPlayer == player3)
+            {
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp3.ThreeOfAKind = ThreeOfKind(diceValues);
+                ClearDice();
+
+
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp3.ThreeOfAKind = ThreeOfKind(diceValues);
+                ClearDice();
+                ClearKeepDices();
+            }
+            if (!ScoreCardp4.IsThreeOfAKind && CurrentPlayer == player4)
+            {
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp4.ThreeOfAKind = ThreeOfKind(diceValues);
+                ClearDice();
+
+
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp4.ThreeOfAKind = ThreeOfKind(diceValues);
+                ClearDice();
+                ClearKeepDices();
+            }
+            Next();
+            ResetDices();
+            ClearKeepDices();
         }
         public void PickFourOfKInd()
         {
-            if (!ScoreCardp1.IsFourOfAKind /*&& CurrentPlayer == player1*/)
+            if (!ScoreCardp1.IsFourOfAKind && CurrentPlayer == player1)
             {
                 SaveDicesToEvaluationArrayForScoreCard();
                 ScoreCardp1.FourOfAKind = FourOfKind(diceValues);
@@ -1111,11 +1264,35 @@ namespace ProjectX.ViewModels
                 ClearDice();
                 ClearKeepDices();
             }
-               
+            if (!ScoreCardp2.IsFourOfAKind && CurrentPlayer == player2)
+            {
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp2.FourOfAKind = FourOfKind(diceValues);
+                ClearDice();
+
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp2.FourOfAKind = FourOfKind(diceValues);
+                ClearDice();
+                ClearKeepDices();
+            }
+            if (!ScoreCardp3.IsFourOfAKind && CurrentPlayer == player3)
+            {
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp3.FourOfAKind = FourOfKind(diceValues);
+                ClearDice();
+
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp3.FourOfAKind = FourOfKind(diceValues);
+                ClearDice();
+                ClearKeepDices();
+            }
+            Next();
+            ResetDices();
+            ClearKeepDices();
         }
         public void PickSmallStraight()
         {
-            if (!ScoreCardp1.Ismallstraight /*&& CurrentPlayer == player1*/)
+            if (!ScoreCardp1.Ismallstraight && CurrentPlayer == player1)
             {
                 SaveDicesToEvaluationArrayForScoreCard();
                 ScoreCardp1.SmallStraight = SmallStraight(diceValues);
@@ -1126,11 +1303,46 @@ namespace ProjectX.ViewModels
                 ClearDice();
                 ClearKeepDices();
             }
-               
+            if (!ScoreCardp2.Ismallstraight && CurrentPlayer == player2)
+            {
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp2.SmallStraight = SmallStraight(diceValues);
+                ClearDice();
+
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp2.SmallStraight = SmallStraight(diceValues);
+                ClearDice();
+                ClearKeepDices();
+            }
+            if (!ScoreCardp3.Ismallstraight && CurrentPlayer == player3)
+            {
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp3.SmallStraight = SmallStraight(diceValues);
+                ClearDice();
+
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp3.SmallStraight = SmallStraight(diceValues);
+                ClearDice();
+                ClearKeepDices();
+            }
+            if (!ScoreCardp4.Ismallstraight && CurrentPlayer == player4)
+            {
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp4.SmallStraight = SmallStraight(diceValues);
+                ClearDice();
+
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp4.SmallStraight = SmallStraight(diceValues);
+                ClearDice();
+                ClearKeepDices();
+            }
+            Next();
+            ResetDices();
+            ClearKeepDices();
         }
         public void PickLargeStraight()
         {
-            if (!ScoreCardp1.Ismallstraight /*&& CurrentPlayer == player1*/)
+            if (!ScoreCardp1.Ismallstraight && CurrentPlayer == player1)
             {
                 SaveDicesToEvaluationArrayForScoreCard();
                 ScoreCardp1.LargeStraight = BigStraight(diceValues);
@@ -1140,12 +1352,49 @@ namespace ProjectX.ViewModels
                 ScoreCardp1.LargeStraight = BigStraight(diceValues);
                 ClearDice();
                 ClearKeepDices();
+                ClearKeepDices();
             }
-                
+            if (!ScoreCardp2.Ismallstraight && CurrentPlayer == player2)
+            {
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp2.LargeStraight = BigStraight(diceValues);
+                ClearDice();
+
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp2.LargeStraight = BigStraight(diceValues);
+                ClearDice();
+                ClearKeepDices();
+                ClearKeepDices();
+            }
+            if (!ScoreCardp3.Ismallstraight && CurrentPlayer == player3)
+            {
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp3.LargeStraight = BigStraight(diceValues);
+                ClearDice();
+
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp3.LargeStraight = BigStraight(diceValues);
+                ClearDice();
+                ClearKeepDices();
+            }
+            if (!ScoreCardp4.Ismallstraight && CurrentPlayer == player4)
+            {
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp4.LargeStraight = BigStraight(diceValues);
+                ClearDice();
+
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp4.LargeStraight = BigStraight(diceValues);
+                ClearDice();
+                ClearKeepDices();
+            }
+            Next();
+            ResetDices();
+            ClearKeepDices();
         }
         public void PickFullHouse()
         {
-            if (!ScoreCardp1.IsFullHouse /*&& CurrentPlayer == player1*/)
+            if (!ScoreCardp1.IsFullHouse && CurrentPlayer == player1)
             {
                 SaveDicesToEvaluationArrayForScoreCard();
                 ScoreCardp1.FullHouse = FullHouse(diceValues);
@@ -1156,11 +1405,46 @@ namespace ProjectX.ViewModels
                 ClearDice();
                 ClearKeepDices();
             }
-               
+            if (!ScoreCardp2.IsFullHouse && CurrentPlayer == player2)
+            {
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp2.FullHouse = FullHouse(diceValues);
+                ClearDice();
+
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp2.FullHouse = FullHouse(diceValues);
+                ClearDice();
+                ClearKeepDices();
+            }
+            if (!ScoreCardp3.IsFullHouse && CurrentPlayer == player3)
+            {
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp3.FullHouse = FullHouse(diceValues);
+                ClearDice();
+
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp3.FullHouse = FullHouse(diceValues);
+                ClearDice();
+                ClearKeepDices();
+            }
+            if (!ScoreCardp4.IsFullHouse && CurrentPlayer == player4)
+            {
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp4.FullHouse = FullHouse(diceValues);
+                ClearDice();
+
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp4.FullHouse = FullHouse(diceValues);
+                ClearDice();
+                ClearKeepDices();
+            }
+            Next();
+            ResetDices();
+            ClearKeepDices();
         }
         public void PickChance()
         {
-            if (!ScoreCardp1.IsChance/*&& CurrentPlayer == player1*/)
+            if (!ScoreCardp1.IsChance && CurrentPlayer == player1)
             {
                 SaveDicesToEvaluationArrayForScoreCard();
                 ScoreCardp1.Chance = Chance(diceValues);
@@ -1170,9 +1454,43 @@ namespace ProjectX.ViewModels
                 ScoreCardp1.Chance = Chance(diceValues);
                 ClearDice();
                 ClearKeepDices();
-
             }
-               
+            if (!ScoreCardp2.IsChance && CurrentPlayer == player2)
+            {
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp2.Chance = Chance(diceValues);
+                ClearDice();
+
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp2.Chance = Chance(diceValues);
+                ClearDice();
+                ClearKeepDices();
+            }
+            if (!ScoreCardp3.IsChance && CurrentPlayer == player3)
+            {
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp3.Chance = Chance(diceValues);
+                ClearDice();
+
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp3.Chance = Chance(diceValues);
+                ClearDice();
+                ClearKeepDices();
+            }
+            if (!ScoreCardp4.IsChance && CurrentPlayer == player4)
+            {
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp4.Chance = Chance(diceValues);
+                ClearDice();
+
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp4.Chance = Chance(diceValues);
+                ClearDice();
+                ClearKeepDices();
+            }
+            Next();
+            ResetDices();
+            ClearKeepDices();
         }
         #endregion
 
@@ -1244,6 +1562,29 @@ namespace ProjectX.ViewModels
         /// <summary>
         /// RollDices, get the dices rolling. Assign to the object and the gameset. 
         /// </summary>
+        /// 
+        public void ResetDices()
+        {
+            dice.DiceValue = 0;
+            dice.Img = new BitmapImage(new Uri(@"\" + dice.DiceValue.ToString() + ".png", UriKind.Relative));
+            GameSet.DicePanel.Dice1 = dice;
+
+            dice1.DiceValue = 0;
+            dice1.Img = new BitmapImage(new Uri(@"\" + dice1.DiceValue.ToString() + ".png", UriKind.Relative));
+            GameSet.DicePanel.Dice2 = dice1;
+
+            dice2.DiceValue = 0;
+            dice2.Img = new BitmapImage(new Uri(@"\" + dice1.DiceValue.ToString() + ".png", UriKind.Relative));
+            GameSet.DicePanel.Dice3 = dice2;
+
+            dice3.DiceValue = 0;
+            dice3.Img = new BitmapImage(new Uri(@"\" + dice1.DiceValue.ToString() + ".png", UriKind.Relative));
+            GameSet.DicePanel.Dice4 = dice3;
+
+            dice4.DiceValue = 0;
+            dice4.Img = new BitmapImage(new Uri(@"\" + dice1.DiceValue.ToString() + ".png", UriKind.Relative));
+            GameSet.DicePanel.Dice5 = dice4;
+        }
 
         public void RollDices()
         {
@@ -1306,7 +1647,9 @@ namespace ProjectX.ViewModels
             CurrentPlayer.Rolles -= 1;
             SaveDicesToEvaluationArray();
             EvaluateProposal();
+
             ClearDice();
+            
 
 
 
@@ -1366,11 +1709,25 @@ namespace ProjectX.ViewModels
         }
         public void ClearKeepDices()
         {
+            dice.Keep = false;            
             dice1.Keep = false;
             dice2.Keep = false;
             dice3.Keep = false;
             dice4.Keep = false;
-            dice.Keep = false;
+
+            Dicepanel.Dice1.Keep = false;
+            Dicepanel.Dice2.Keep = false;
+            Dicepanel.Dice3.Keep = false;
+            Dicepanel.Dice4.Keep = false;
+            Dicepanel.Dice5.Keep = false;
+
+            GameSet.DicePanel.Dice1.Keep = false;
+            GameSet.DicePanel.Dice2.Keep = false;
+            GameSet.DicePanel.Dice3.Keep = false;
+            GameSet.DicePanel.Dice4.Keep = false;
+            GameSet.DicePanel.Dice5.Keep = false;
+
+
         }
         #endregion
 
