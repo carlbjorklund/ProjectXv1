@@ -768,6 +768,7 @@ namespace ProjectX.ViewModels
                 player1.ScoreCard.Ones = ScoreCardp1.Ones;
                 ClearDice();
                 ClearKeepDices();
+                UpperScore();
 
                 
             }
@@ -786,6 +787,7 @@ namespace ProjectX.ViewModels
                 player2.ScoreCard.Ones = ScoreCardp2.Ones;
                 ClearDice();
                 ClearKeepDices();
+                UpperScore();
 
             }
             if (!ScoreCardp3.IsOnes && CurrentPlayer == player3)
@@ -800,6 +802,7 @@ namespace ProjectX.ViewModels
                 player3.ScoreCard.Ones = ScoreCardp3.Ones;
                 ClearDice();
                 ClearKeepDices();
+                UpperScore();
             }
         
             if (!ScoreCardp4.IsOnes && CurrentPlayer == player4)
@@ -812,7 +815,9 @@ namespace ProjectX.ViewModels
                 SaveDicesToEvaluationArrayForScoreCard();
                 ScoreCardp4.Ones = One(diceValues);
                 player4.ScoreCard.Ones = ScoreCardp4.Ones;
-                ClearDice(); ClearKeepDices();
+                ClearDice();
+                ClearKeepDices();
+                UpperScore();
 
 
 
@@ -837,7 +842,8 @@ namespace ProjectX.ViewModels
                 player1.ScoreCard.Twos = ScoreCardp1.Twos;                
                 ClearDice();
                 ClearKeepDices();
-                
+                UpperScore();
+
             }
             if (!ScoreCardp2.Istwos && CurrentPlayer == player2)
             {
@@ -851,6 +857,7 @@ namespace ProjectX.ViewModels
                 player2.ScoreCard.Twos = ScoreCardp2.Twos;
                 ClearDice();
                 ClearKeepDices();
+                UpperScore();
             }
             if (!ScoreCardp3.Istwos && CurrentPlayer == player3)
             {
@@ -864,6 +871,7 @@ namespace ProjectX.ViewModels
                 player3.ScoreCard.Twos = ScoreCardp3.Twos;
                 ClearDice();
                 ClearKeepDices();
+                UpperScore();
             }
             if (!ScoreCardp4.Istwos && CurrentPlayer == player4)
             {
@@ -877,6 +885,7 @@ namespace ProjectX.ViewModels
                 player4.ScoreCard.Twos = ScoreCardp4.Twos;
                 ClearDice();
                 ClearKeepDices();
+                UpperScore();
             }
             Next();
             ResetDices();
@@ -896,6 +905,7 @@ namespace ProjectX.ViewModels
                 ScoreCardp1.Threes = Three(diceValues);
                 ClearDice();
                 ClearKeepDices();
+                UpperScore();
             }
             if (!ScoreCardp2.Isthrees && CurrentPlayer == player2)
             {
@@ -908,6 +918,7 @@ namespace ProjectX.ViewModels
                 ScoreCardp2.Threes = Three(diceValues);
                 ClearDice();
                 ClearKeepDices();
+                UpperScore();
             }
             if (!ScoreCardp3.Isthrees && CurrentPlayer == player3)
             {
@@ -920,6 +931,7 @@ namespace ProjectX.ViewModels
                 ScoreCardp3.Threes = Three(diceValues);
                 ClearDice();
                 ClearKeepDices();
+                UpperScore();
             }
             if (!ScoreCardp4.Isthrees && CurrentPlayer == player4)
             {
@@ -931,6 +943,7 @@ namespace ProjectX.ViewModels
                 ScoreCardp4.Threes = Three(diceValues);
                 ClearDice();
                 ClearKeepDices();
+                UpperScore();
             }
             Next();
             ResetDices();
@@ -948,6 +961,7 @@ namespace ProjectX.ViewModels
                 ScoreCardp1.Fours = Four(diceValues);
                 ClearDice();
                 ClearKeepDices();
+                UpperScore();
             }
             if (!ScoreCardp2.Isfours && CurrentPlayer == player2)
             {
@@ -960,6 +974,7 @@ namespace ProjectX.ViewModels
                 ScoreCardp2.Fours = Four(diceValues);
                 ClearDice();
                 ClearKeepDices();
+                UpperScore();
             }
             if (!ScoreCardp3.Isfours && CurrentPlayer == player3)
             {
@@ -972,6 +987,7 @@ namespace ProjectX.ViewModels
                 ScoreCardp3.Fours = Four(diceValues);
                 ClearDice();
                 ClearKeepDices();
+                UpperScore();
             }
             if (!ScoreCardp4.Isfours && CurrentPlayer == player4)
             {
@@ -984,6 +1000,7 @@ namespace ProjectX.ViewModels
                 ScoreCardp4.Fours = Four(diceValues);
                 ClearDice();
                 ClearKeepDices();
+                UpperScore();
             }
             Next();
             ResetDices();
@@ -1002,6 +1019,7 @@ namespace ProjectX.ViewModels
                 ScoreCardp1.Fives = Five(diceValues);
                 ClearDice();
                 ClearKeepDices();
+                UpperScore();
             }
             if (!ScoreCardp2.Isfives && CurrentPlayer == player2)
             {
@@ -1014,6 +1032,7 @@ namespace ProjectX.ViewModels
                 ScoreCardp2.Fives = Five(diceValues);
                 ClearDice();
                 ClearKeepDices();
+                UpperScore();
             }
             if (!ScoreCardp3.Isfives && CurrentPlayer == player3)
             {
@@ -1026,6 +1045,7 @@ namespace ProjectX.ViewModels
                 ScoreCardp3.Fives = Five(diceValues);
                 ClearDice();
                 ClearKeepDices();
+                UpperScore();
             }
             if (!ScoreCardp4.Isfives && CurrentPlayer == player4)
             {
@@ -1038,6 +1058,7 @@ namespace ProjectX.ViewModels
                 ScoreCardp4.Fives = Five(diceValues);
                 ClearDice();
                 ClearKeepDices();
+                UpperScore();
             }
             Next();
             ResetDices();
@@ -1056,6 +1077,7 @@ namespace ProjectX.ViewModels
                 ScoreCardp1.Sixes = Six(diceValues);
                 ClearDice();
                 ClearKeepDices();
+                UpperScore();
             }
             if (!ScoreCardp2.Issixes && CurrentPlayer == player2)
             {
@@ -1068,6 +1090,7 @@ namespace ProjectX.ViewModels
                 ScoreCardp2.Sixes = Six(diceValues);
                 ClearDice();
                 ClearKeepDices();
+                UpperScore();
             }
             if (!ScoreCardp3.Issixes && CurrentPlayer == player3)
             {
@@ -1080,6 +1103,7 @@ namespace ProjectX.ViewModels
                 ScoreCardp3.Sixes = Six(diceValues);
                 ClearDice();
                 ClearKeepDices();
+                UpperScore();
             }
             if (!ScoreCardp4.Issixes && CurrentPlayer == player4)
             {
@@ -1092,12 +1116,22 @@ namespace ProjectX.ViewModels
                 ScoreCardp4.Sixes = Six(diceValues);
                 ClearDice();
                 ClearKeepDices();
+                UpperScore();
             }
 
             Next();
             ResetDices();
             ClearKeepDices();
         }
+
+        public void UpperScore()
+        {
+            ScoreCardp1.Sum = ScoreCardp1.Ones + ScoreCardp1.Twos + ScoreCardp1.Threes + ScoreCardp1.Fours + ScoreCardp1.Fives + ScoreCardp1.Sixes;
+            ScoreCardp2.Sum = ScoreCardp2.Ones + ScoreCardp2.Twos + ScoreCardp2.Threes + ScoreCardp2.Fours + ScoreCardp2.Fives + ScoreCardp2.Sixes;
+            ScoreCardp3.Sum = ScoreCardp3.Ones + ScoreCardp3.Twos + ScoreCardp3.Threes + ScoreCardp3.Fours + ScoreCardp3.Fives + ScoreCardp3.Sixes;
+            ScoreCardp4.Sum = ScoreCardp4.Ones + ScoreCardp4.Twos + ScoreCardp4.Threes + ScoreCardp4.Fours + ScoreCardp4.Fives + ScoreCardp4.Sixes;
+        }
+
         public void PickPair()
         {
             if (!ScoreCardp1.Ispair && CurrentPlayer == player1)
