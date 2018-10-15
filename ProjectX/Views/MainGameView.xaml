@@ -166,6 +166,11 @@
             <TextBlock Foreground="Red" Text="{Binding Path= ScoreCardp3.Sum, Mode=TwoWay}" Grid.Row="9" Grid.Column="6"></TextBlock>
             <TextBlock Foreground="Red" Text="{Binding Path= ScoreCardp4.Sum, Mode=TwoWay}" Grid.Row="9" Grid.Column="7"></TextBlock>
 
+            <TextBlock Foreground="Red" Text="{Binding Path= ScoreCardp1.Bonus, Mode=TwoWay}" Grid.Row="10" Grid.Column="4"></TextBlock>
+            <TextBlock Foreground="Red" Text="{Binding Path= ScoreCardp2.Bonus, Mode=TwoWay}" Grid.Row="10" Grid.Column="5"></TextBlock>
+            <TextBlock Foreground="Red" Text="{Binding Path= ScoreCardp3.Bonus, Mode=TwoWay}" Grid.Row="10" Grid.Column="6"></TextBlock>
+            <TextBlock Foreground="Red" Text="{Binding Path= ScoreCardp4.Bonus, Mode=TwoWay}" Grid.Row="10" Grid.Column="7"></TextBlock>
+
 
             <TextBlock Grid.Row="9" Grid.Column="3" FontWeight="Bold" Foreground="Red" >Övre Summa</TextBlock>
             <TextBlock Grid.Row="10" Grid.Column="3" FontWeight="Bold" Foreground="Yellow" >Bonus</TextBlock>
