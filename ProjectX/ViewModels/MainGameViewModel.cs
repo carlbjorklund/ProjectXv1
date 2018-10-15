@@ -20,7 +20,13 @@ namespace ProjectX.ViewModels
         public int[] dices = new int[5] { 0, 0, 0, 0, 0 };
         public int[] diceValues = new int[6] { 0, 0, 0, 0, 0, 0 };
 
+        public bool Isbuttonrolldicespushed { get; private set; }
+        int rolles = 3;
+
+       
+
         public GameSetEngine GameSet { get; private set; }
+
         public Dice dice { get; private set; }
         public Dice dice1 { get; private set; }
         public Dice dice2 { get; private set; }
@@ -32,13 +38,16 @@ namespace ProjectX.ViewModels
         public Player player4 { get; private set; }
         public DicePanel Dicepanel { get; private set; }
         public ScoreCardProp PropScoreCard { get; private set; }
+        int position = 0;
+        int size;
+
 
         public ScoreCard ScoreCardp1 { get; private set; }
         public ScoreCard ScoreCardp2 { get; private set; }
         public ScoreCard ScoreCardp3 { get; private set; }
         public ScoreCard ScoreCardp4 { get; private set; }
        
-        public Player CurrentPlayer { get; private set; }
+        public Player CurrentPlayer { get; set; }
 
         Random r = new Random();
 
@@ -53,9 +62,13 @@ namespace ProjectX.ViewModels
             player2 = new Player();
             player2.Name = "Ulrich";
             player3 = new Player();
+            player3.Name = "Daniel";
             player4 = new Player();
+            player4.Name = "Carl";
 
-                   
+            CurrentPlayer = new Player();
+
+
             // Create the dices.
             dice = new Dice();
             dice1 = new Dice();
@@ -87,8 +100,10 @@ namespace ProjectX.ViewModels
             GameSet.Players.Add(player3);
             GameSet.Players.Add(player4);
 
+            int size = GameSet.Players.Count;
             GameSet.GameName = "Game Round 1";
             DateTime today = DateTime.Now;
+
 
             GameSet.Started_At = today;
             GameSet.Started_At.ToShortDateString();
@@ -108,30 +123,70 @@ namespace ProjectX.ViewModels
 
         }
         /// <summary>
-        /// To do gaming order, classic or restricted, player list, points calculations...
+        /// To do gaming order, assign points to correct scorecard, classic or restricted, player list, points calculations...
         /// </summary>
         public void Enable()
         {
-            //  /*  while (!player1.ScoreCard.HasGameEnded && !player2.ScoreCard.HasGameEnded && !player3.ScoreCard.HasGameEnded && !player4.ScoreCard.HasGameEnded)/*
-            // game ended when all properties are filled?
-            //
-            // do while loop until game is ended...GameEnded=ones, twos, threes, etc is populated(not -1
 
+            CurrentPlayer.Name = GameSet.Players[0].Name;
+            CurrentPlayer = GameSet.Players[position];
+            
+            //play();
 
-            //foreach (Player player in GameSet.Players)
-            //    {
-                   /* CurrentPlayer.Name = player.Name;*/ // must set alla players or we get null referens----
-                    //in while loop for each player in players [enable button click)
-                    if (GameSet.PlayerRoundCount != 0)  //current code stops user for pressing enable more than 3 times...
-                    {
-                        ClearDice();
-                        RollDices();
-                        SaveDicesToEvaluationArray();
-                        EvaluateProposal();
-                        GameSet.PlayerRoundCount -= 1;
-                    }
-                //}
+            //    CurrentPlayer.Name = player2.Name;
+            //    CurrentPlayer.Rolles = 3;
+
+            //        ClearDice();
+            //        SaveDicesToEvaluationArray();
+            //        EvaluateProposal();
+            //    CurrentPlayer.Name = player3.Name;
+            //    CurrentPlayer.Rolles = 3;
+            //    ClearDice();
+            //    SaveDicesToEvaluationArray();
+            //    EvaluateProposal();
+
+            //    CurrentPlayer.Name = player4.Name;
+            //    CurrentPlayer.Rolles = 3;
+            //    ClearDice();
+            //    SaveDicesToEvaluationArray();
+            //    EvaluateProposal();
         }
+        private void play()
+        {
+            //ClearDice();
+            //SaveDicesToEvaluationArray();
+            //EvaluateProposal();
+        }
+
+        public void Next()
+        {
+
+            position++;
+            if (position > 4 - 1) position = 4 - 1;
+           
+            CurrentPlayer.Name = GameSet.Players[position].Name;
+            CurrentPlayer = GameSet.Players[position];
+            CurrentPlayer.Rolles = 3;
+            ClearDice();
+            ClearKeepDices();
+       
+
+        }
+        public void Back()
+        {
+            position--;
+            // Check current position is not past the begining of list
+            if (position < 0) position = 0;
+            CurrentPlayer = GameSet.Players[position];
+            CurrentPlayer.Name = GameSet.Players[position].Name;
+           
+            
+        }
+
+
+        
+
+
         /// <summary>
         /// Checking what score the end user can obtain based upon current dice values
         /// </summary>
@@ -695,11 +750,11 @@ namespace ProjectX.ViewModels
             // Make an if to see which player it is? and then fire the functions for each players scorecard???? how to do it???
             // Make a dummy class to hold the currentplayer? 
             // How to make the game loop? Counter or for loop?      
-            
-            
+
+
             // have to put it twice in order to get the results not duplicated...
-           
-            if (!ScoreCardp1.IsOnes /*&& CurrentPlayer == player1*/)
+
+            if (!ScoreCardp1.IsOnes && CurrentPlayer == player1)
             {
 
                 SaveDicesToEvaluationArrayForScoreCard();
@@ -711,51 +766,51 @@ namespace ProjectX.ViewModels
                 ClearDice();
                 ClearKeepDices();
             }
-            
             ///
-            ///idea of how it could look like
+            /// idea of how it could look like
             ///
-            //if (!ScoreCardp2.IsOnes /*&& CurrentPlayer == player2*/)
-            //{
+            if (!ScoreCardp2.IsOnes && CurrentPlayer == player2)
+            {
 
-            //    SaveDicesToEvaluationArrayForScoreCard();
-            //    ScoreCardp2.Ones = One(diceValues);
-            //    ClearDice();
-            //    SaveDicesToEvaluationArrayForScoreCard();
-            //    ScoreCardp2.Ones = One(diceValues);
-            //    player2.ScoreCard.Ones = ScoreCardp2.Ones;
-            //    ClearDice();
-            //}
-            //if (!ScoreCardp3.IsOnes /*&& CurrentPlayer == player3*/)
-            //{
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp2.Ones = One(diceValues);
+                ClearDice();
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp2.Ones = One(diceValues);
+                player2.ScoreCard.Ones = ScoreCardp2.Ones;
+                ClearDice();
+            }
+            if (!ScoreCardp3.IsOnes && CurrentPlayer == player3)
+            {
 
-            //    SaveDicesToEvaluationArrayForScoreCard();
-            //    ScoreCardp3.Ones = One(diceValues);
-            //    ClearDice();
-            //    SaveDicesToEvaluationArrayForScoreCard();
-            //    ScoreCardp3.Ones = One(diceValues);
-            //    player3.ScoreCard.Ones = ScoreCardp3.Ones;
-            //    ClearDice();
-            //}
-            //if (!ScoreCardp4.IsOnes /*&& CurrentPlayer == player3*/)
-            //{
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp3.Ones = One(diceValues);
+                ClearDice();
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp3.Ones = One(diceValues);
+                player3.ScoreCard.Ones = ScoreCardp3.Ones;
+                ClearDice();
+            }
+            if (!ScoreCardp4.IsOnes && CurrentPlayer == player4)
+            {
 
-            //    SaveDicesToEvaluationArrayForScoreCard();
-            //    ScoreCardp4.Ones = One(diceValues);
-            //    ClearDice();
-            //    SaveDicesToEvaluationArrayForScoreCard();
-            //    ScoreCardp4.Ones = One(diceValues);
-            //    player4.ScoreCard.Ones = ScoreCardp4.Ones;
-            //    ClearDice();
-            //}
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp4.Ones = One(diceValues);
+                ClearDice();
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp4.Ones = One(diceValues);
+                player4.ScoreCard.Ones = ScoreCardp4.Ones;
+                ClearDice();
 
 
+
+            }
         }
 
-        public void PickTwo()
-        {
-           
-            if (!ScoreCardp1.Istwos /*&& CurrentPlayer == player1*/)
+            public void PickTwo()
+            {
+
+            if (!ScoreCardp1.Istwos && CurrentPlayer == player1)
             {
                 SaveDicesToEvaluationArrayForScoreCard();
                 ScoreCardp1.Twos = Two(diceValues);
@@ -767,11 +822,47 @@ namespace ProjectX.ViewModels
                 ClearDice();
                 ClearKeepDices();
             }
+            if (!ScoreCardp2.Istwos && CurrentPlayer == player2)
+            {
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp2.Twos = Two(diceValues);
+                ClearDice();
+
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp2.Twos = Two(diceValues);
+                player2.ScoreCard.Twos = ScoreCardp2.Twos;
+                ClearDice();
+                ClearKeepDices();
+            }
+            if (!ScoreCardp3.Istwos && CurrentPlayer == player3)
+            {
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp3.Twos = Two(diceValues);
+                ClearDice();
+
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp3.Twos = Two(diceValues);
+                player3.ScoreCard.Twos = ScoreCardp3.Twos;
+                ClearDice();
+                ClearKeepDices();
+            }
+            if (!ScoreCardp4.Istwos && CurrentPlayer == player4)
+            {
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp4.Twos = Two(diceValues);
+                ClearDice();
+
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp4.Twos = Two(diceValues);
+                player4.ScoreCard.Twos = ScoreCardp4.Twos;
+                ClearDice();
+                ClearKeepDices();
+            }
 
         }
         public void PickThree()
         {
-            if (!ScoreCardp1.Isthrees /*&& CurrentPlayer == player1*/)
+            if (!ScoreCardp1.Isthrees && CurrentPlayer == player1)
             {
                 SaveDicesToEvaluationArrayForScoreCard();
                 ScoreCardp1.Threes = Three(diceValues);
@@ -782,11 +873,44 @@ namespace ProjectX.ViewModels
                 ClearDice();
                 ClearKeepDices();
             }
-                
+            if (!ScoreCardp2.Isthrees && CurrentPlayer == player2)
+            {
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp2.Threes = Three(diceValues);
+                ClearDice();
+
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp2.Threes = Three(diceValues);
+                ClearDice();
+                ClearKeepDices();
+            }
+            if (!ScoreCardp3.Isthrees && CurrentPlayer == player3)
+            {
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp3.Threes = Three(diceValues);
+                ClearDice();
+
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp3.Threes = Three(diceValues);
+                ClearDice();
+                ClearKeepDices();
+            }
+            if (!ScoreCardp4.Isthrees && CurrentPlayer == player4)
+            {
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp4.Threes = Three(diceValues);
+                ClearDice();
+
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp4.Threes = Three(diceValues);
+                ClearDice();
+                ClearKeepDices();
+            }
+
         }
         public void PickFour()
         {
-            if (!ScoreCardp1.Isfours /*&& CurrentPlayer == player1*/)
+            if (!ScoreCardp1.Isfours && CurrentPlayer == player1)
             {
                 SaveDicesToEvaluationArrayForScoreCard();
                 ScoreCardp1.Fours = Four(diceValues);
@@ -797,11 +921,43 @@ namespace ProjectX.ViewModels
                 ClearDice();
                 ClearKeepDices();
             }
-               
+            if (!ScoreCardp2.Isfours && CurrentPlayer == player2)
+            {
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp2.Fours = Four(diceValues);
+                ClearDice();
+
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp2.Fours = Four(diceValues);
+                ClearDice();
+                ClearKeepDices();
+            }
+            if (!ScoreCardp3.Isfours && CurrentPlayer == player3)
+            {
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp3.Fours = Four(diceValues);
+                ClearDice();
+
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp3.Fours = Four(diceValues);
+                ClearDice();
+                ClearKeepDices();
+            }
+            if (!ScoreCardp4.Isfours && CurrentPlayer == player4)
+            {
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp4.Fours = Four(diceValues);
+                ClearDice();
+
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp4.Fours = Four(diceValues);
+                ClearDice();
+                ClearKeepDices();
+            }
         }
         public void PickFive()
         {
-            if (!ScoreCardp1.Isfives /*&& CurrentPlayer == player1*/)
+            if (!ScoreCardp1.Isfives && CurrentPlayer == player1)
             {
                 SaveDicesToEvaluationArrayForScoreCard();
                 ScoreCardp1.Fives = Five(diceValues);
@@ -812,30 +968,93 @@ namespace ProjectX.ViewModels
                 ClearDice();
                 ClearKeepDices();
             }
-                
+            if (!ScoreCardp2.Isfives && CurrentPlayer == player2)
+            {
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp2.Fives = Five(diceValues);
+                ClearDice();
+
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp2.Fives = Five(diceValues);
+                ClearDice();
+                ClearKeepDices();
+            }
+            if (!ScoreCardp3.Isfives && CurrentPlayer == player3)
+            {
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp3.Fives = Five(diceValues);
+                ClearDice();
+
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp3.Fives = Five(diceValues);
+                ClearDice();
+                ClearKeepDices();
+            }
+            if (!ScoreCardp4.Isfives && CurrentPlayer == player4)
+            {
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp4.Fives = Five(diceValues);
+                ClearDice();
+
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp4.Fives = Five(diceValues);
+                ClearDice();
+                ClearKeepDices();
+            }
+
         }
         public void PickSix()
         {
-            if (!ScoreCardp1.Issixes /*&& CurrentPlayer == player1*/)
+            if (!ScoreCardp1.Issixes && CurrentPlayer == player1)
             {
                 SaveDicesToEvaluationArrayForScoreCard();
                 ScoreCardp1.Sixes = Six(diceValues);
                 ClearDice();
                 
-
-
                 SaveDicesToEvaluationArrayForScoreCard();
                 ScoreCardp1.Sixes = Six(diceValues);
                 ClearDice();
                 ClearKeepDices();
+            }
+            if (!ScoreCardp2.Issixes && CurrentPlayer == player2)
+            {
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp2.Sixes = Six(diceValues);
+                ClearDice();
 
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp2.Sixes = Six(diceValues);
+                ClearDice();
+                ClearKeepDices();
+            }
+            if (!ScoreCardp3.Issixes && CurrentPlayer == player3)
+            {
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp3.Sixes = Six(diceValues);
+                ClearDice();
+
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp3.Sixes = Six(diceValues);
+                ClearDice();
+                ClearKeepDices();
+            }
+            if (!ScoreCardp4.Issixes && CurrentPlayer == player4)
+            {
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp4.Sixes = Six(diceValues);
+                ClearDice();
+
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp4.Sixes = Six(diceValues);
+                ClearDice();
+                ClearKeepDices();
             }
 
-                
+
         }
         public void PickPair()
         {
-            if (!ScoreCardp1.Ispair /*&& CurrentPlayer == player1*/)
+            if (!ScoreCardp1.Ispair && CurrentPlayer == player1)
             {
                 SaveDicesToEvaluationArrayForScoreCard();
                 ScoreCardp1.Pair = Pair(diceValues);
@@ -1026,11 +1245,13 @@ namespace ProjectX.ViewModels
         /// RollDices, get the dices rolling. Assign to the object and the gameset. 
         /// </summary>
 
-        private void RollDices()
+        public void RollDices()
         {
+            
             int temp1, temp2, temp3, temp4, temp5;
-            if (dice.Keep == false)
-            {
+            if (dice.Keep == false && CurrentPlayer.Rolles != 0) /// test 
+                //if (dice.Keep == false)
+                {
                 
                 temp1 = r.Next(1, 7);
                 dices[0] = temp1;
@@ -1039,7 +1260,8 @@ namespace ProjectX.ViewModels
                 GameSet.DicePanel.Dice1 = dice;
                
             }
-            if (dice1.Keep == false)
+            if(dice1.Keep == false && CurrentPlayer.Rolles != 0) //test
+            //if (dice1.Keep == false)
             {
                 
                 temp2= r.Next(1, 7);
@@ -1049,7 +1271,8 @@ namespace ProjectX.ViewModels
                 GameSet.DicePanel.Dice2 = dice1;
                 
             }
-            if (dice2.Keep == false)
+            if (dice2.Keep == false && CurrentPlayer.Rolles != 0) //test
+                //if (dice2.Keep == false)
             {
                 temp3 = r.Next(1, 7);
                 dices[2] = temp3;
@@ -1058,7 +1281,8 @@ namespace ProjectX.ViewModels
                 GameSet.DicePanel.Dice3 = dice2;
                 
             }
-            if (dice3.Keep == false)
+            if (dice3.Keep == false && CurrentPlayer.Rolles != 0) //test
+                //if (dice3.Keep == false)
             {
                 temp4 = r.Next(1, 7);
                 dices[3] = temp4;
@@ -1067,15 +1291,25 @@ namespace ProjectX.ViewModels
                 GameSet.DicePanel.Dice4 = dice3;
                 
             }
-            if (dice4.Keep == false)
+            if (dice4.Keep == false && CurrentPlayer.Rolles != 0) //test
+                //if (dice4.Keep == false)
             {
                 temp5 = r.Next(1, 7);
                 dices[4] = temp5;
                 dice4.DiceValue = temp5;
                 dice4.Img = new BitmapImage(new Uri(@"\" + dice4.DiceValue.ToString() + ".png", UriKind.Relative));
                 GameSet.DicePanel.Dice5 = dice4;
-               
-            }
+
+
+
+          }
+            CurrentPlayer.Rolles -= 1;
+            SaveDicesToEvaluationArray();
+            EvaluateProposal();
+            ClearDice();
+
+
+
         }
         /// <summary>
         /// Set Keep on or off

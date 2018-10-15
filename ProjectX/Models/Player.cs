@@ -10,6 +10,17 @@ namespace ProjectX.Models
 {
     public class Player:Screen
     {
+        private int _rolles=3;
+        public int Rolles
+        {
+            get { return _rolles; }
+            set
+            {
+                _rolles = value;
+                NotifyOfPropertyChange(() => Rolles);
+            }
+
+        }
 
         private string _name;
         public string Name

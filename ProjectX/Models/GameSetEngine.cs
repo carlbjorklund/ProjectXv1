@@ -13,7 +13,7 @@ namespace ProjectX.Models
     {
 
 
-        private int playerRoundCount=3;
+        private int playerRoundCount=15;
         public int PlayerRoundCount
         {
             get

@@ -12,58 +12,83 @@ namespace ProjectX.Models
         /// <summary>
         /// Need to check if this logic is valid;
         /// </summary>
-        public bool HasUpperScore { get { return hasupperscore == IsOnes && Istwos && Isthrees && Isfours && Isfives && Issixes; } }
+        //public bool HasUpperScore { get { return hasupperscore == IsOnes && Istwos && Isthrees && Isfours && Isfives && Issixes; } }
+       
+        public bool HasUpperScore { get; private set; }
 
-        private bool hasupperscore
+        public bool Checkhasupperscore()
         {
-            get { return hasupperscore; }
-            set
+            if (IsOnes && Istwos && Isthrees && Isfours && Isfives && Issixes == true)
             {
-                if (IsOnes && Istwos && Isthrees && Isfours && Isfives && Issixes == true)
-                {
-                    hasupperscore = true;
-                }
-                else
-                    hasupperscore = false;
+                return HasUpperScore= true;
+            }
+            else
+            { 
+                return HasUpperScore=false;
 
             }
         }
         /// <summary>
         /// test is upper and lower score is populated
         /// </summary>
-        public bool HasLowerScore { get { return hasupperscore == Ispair && Istwospair && IsThreeOfAKind && IsFourOfAKind && IsLargeStraight && Ismallstraight && IsFullHouse && IsChance && IsYatzy; } }
-
-        private bool haslowerscore
+        //public bool HasLowerScore { get { return hasupperscore == Ispair && Istwospair && IsThreeOfAKind && IsFourOfAKind && IsLargeStraight && Ismallstraight && IsFullHouse && IsChance && IsYatzy; } }
+        public bool HasLowerScore { get; private set; }
+        public bool Checkhaslowerscore()
         {
-            get { return hasupperscore; }
-            set
+            if (Ispair && Istwospair && IsThreeOfAKind && IsFourOfAKind && IsLargeStraight && Ismallstraight && IsFullHouse && IsChance && IsYatzy == true)
             {
-                if (Ispair && Istwospair && IsThreeOfAKind && IsFourOfAKind && IsLargeStraight && Ismallstraight && IsFullHouse && IsChance && IsYatzy == true)
-                {
-                    hasupperscore = true;
-                }
-                else
-                    hasupperscore = false;
-
+                return HasLowerScore =true;
             }
-        }
-        public bool HasLowerScorev2 { get { return haslowerscorev2; } }
-        private bool haslowerscorev2
-        {
-            get { return haslowerscorev2; }
-            set
+            else
             {
-                if (Ispair && Istwospair && IsThreeOfAKind && IsFourOfAKind && IsLargeStraight && Ismallstraight && IsFullHouse && IsChance && IsYatzy == true)
-                {
-                    haslowerscorev2 = true;
-                }
-                else
-                    haslowerscorev2 = false;
-
+                return HasLowerScore= false;
             }
         }
 
-        public bool HasGameEnded { get { return hasgameended; } }
+        public bool GameHasEnded { get; private set; }
+
+        public bool CheckhasgameEnded()
+        {
+            if (HasLowerScore && HasUpperScore == true)
+            {
+                return GameHasEnded=true;
+            }
+            else
+            {
+                return GameHasEnded=false;
+            }
+        }
+
+        //private bool haslowerscore
+        //{
+        //    get { return hasupperscore; }
+        //    set
+        //    {
+        //        if (Ispair && Istwospair && IsThreeOfAKind && IsFourOfAKind && IsLargeStraight && Ismallstraight && IsFullHouse && IsChance && IsYatzy == true)
+        //        {
+        //            hasupperscore = true;
+        //        }
+        //        else
+        //            hasupperscore = false;
+
+        //    }
+        //}
+        //public bool HasLowerScorev2 { get { return haslowerscorev2; } }
+        //private bool haslowerscorev2
+        //{
+        //    get { return haslowerscorev2; }
+        //    set
+        //    {
+        //        if (Ispair && Istwospair && IsThreeOfAKind && IsFourOfAKind && IsLargeStraight && Ismallstraight && IsFullHouse && IsChance && IsYatzy == true)
+        //        {
+        //            haslowerscorev2 = true;
+        //        }
+        //        else
+        //            haslowerscorev2 = false;
+
+        //    }
+        //}
+  
 
 
 
@@ -328,6 +353,8 @@ namespace ProjectX.Models
                 NotifyOfPropertyChange(() => Total);
             }
         }
+
+   
 
         public class ScoreCardProp : Screen
         {
