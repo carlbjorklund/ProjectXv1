@@ -131,7 +131,9 @@ namespace ProjectX.ViewModels
 
             CurrentPlayer.Name = GameSet.Players[0].Name;
             CurrentPlayer = GameSet.Players[position];
-            
+           
+
+
         }
      
 

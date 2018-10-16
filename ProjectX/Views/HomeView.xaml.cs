@@ -23,6 +23,8 @@ namespace ProjectX.Views
         public HomeView()
         {
             InitializeComponent();
+
+           
         }
     }
 }
