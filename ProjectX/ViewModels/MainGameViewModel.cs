@@ -746,15 +746,10 @@ namespace ProjectX.ViewModels
 
         #region Populating scorecards
         /// <summary>
-        /// Populating scorecards, TODO how to let user know if it is taken...
+        /// take the ones option,populating the scorecard, depening on player and scorecard
         /// </summary>
         public void PickOne()
         {
-            // Make an if to see which player it is? and then fire the functions for each players scorecard???? how to do it???
-            // Make a dummy class to hold the currentplayer? 
-            // How to make the game loop? Counter or for loop?      
-
-
             // have to put it twice in order to get the results not duplicated...
 
             if (!ScoreCardp1.IsOnes && CurrentPlayer == player1)
@@ -775,10 +770,6 @@ namespace ProjectX.ViewModels
 
 
             }
-         
-            ///
-            /// 
-            ///
             if (!ScoreCardp2.IsOnes && CurrentPlayer == player2)
             {
 
@@ -836,6 +827,9 @@ namespace ProjectX.ViewModels
             ResetDices();
             ClearKeepDices();
         }
+        /// <summary>
+        /// take the two options
+        /// </summary>
 
             public void PickTwo()
             {
@@ -909,6 +903,9 @@ namespace ProjectX.ViewModels
             ClearKeepDices();
 
         }
+        /// <summary>
+        /// take the three options
+        /// </summary>
         public void PickThree()
         {
             if (!ScoreCardp1.Isthrees && CurrentPlayer == player1)
@@ -974,6 +971,9 @@ namespace ProjectX.ViewModels
             ResetDices();
             ClearKeepDices();
         }
+        /// <summary>
+        /// take the fours option
+        /// </summary>
         public void PickFour()
         {
             if (!ScoreCardp1.Isfours && CurrentPlayer == player1)
@@ -1039,6 +1039,9 @@ namespace ProjectX.ViewModels
             ResetDices();
             ClearKeepDices();
         }
+        /// <summary>
+        /// take the fives option
+        /// </summary>
         public void PickFive()
         {
             if (!ScoreCardp1.Isfives && CurrentPlayer == player1)
@@ -1105,6 +1108,10 @@ namespace ProjectX.ViewModels
             ResetDices();
             ClearKeepDices();
         }
+
+        /// <summary>
+        /// take the sixes option
+        /// </summary>
         public void PickSix()
         {
             if (!ScoreCardp1.Issixes && CurrentPlayer == player1)
@@ -1173,6 +1180,9 @@ namespace ProjectX.ViewModels
             ClearKeepDices();
         }
 
+        /// <summary>
+        /// Calculates the upper score...
+        /// </summary>
         public void UpperScore()
         {
             ScoreCardp1.Sum = ScoreCardp1.Ones + ScoreCardp1.Twos + ScoreCardp1.Threes + ScoreCardp1.Fours + ScoreCardp1.Fives + ScoreCardp1.Sixes;
@@ -1181,6 +1191,9 @@ namespace ProjectX.ViewModels
             ScoreCardp4.Sum = ScoreCardp4.Ones + ScoreCardp4.Twos + ScoreCardp4.Threes + ScoreCardp4.Fours + ScoreCardp4.Fives + ScoreCardp4.Sixes;
         }
 
+        /// <summary>
+        /// Calculates if there is a bonus
+        /// </summary>
         public void Bonus()
         {
             if (ScoreCardp1.Ones != -1 && ScoreCardp1.Twos != -1 && ScoreCardp1.Threes != -1 && ScoreCardp1.Fours != -1 && ScoreCardp1.Fives != -1 && ScoreCardp1.Sixes != -1)
@@ -1210,7 +1223,9 @@ namespace ProjectX.ViewModels
 
 
         }
-
+        /// <summary>
+        /// Take pair option
+        /// </summary>
         public void PickPair()
         {
             if (!ScoreCardp1.Ispair && CurrentPlayer == player1)
@@ -1272,6 +1287,10 @@ namespace ProjectX.ViewModels
             ResetDices();
             ClearKeepDices();
         }
+
+        /// <summary>
+        /// take two pair option
+        /// </summary>
         public void PickTwoPair()
         {
             if (!ScoreCardp1.Istwospair && CurrentPlayer == player1)
@@ -1326,7 +1345,9 @@ namespace ProjectX.ViewModels
             Next();
             ResetDices();
             ClearKeepDices();
-        }
+        }/// <summary>
+        /// Take the three of a kind option
+        /// </summary>
         public void PickThreeOfKind()
         {
             if (!ScoreCardp1.IsThreeOfAKind && CurrentPlayer == player1)
@@ -1386,6 +1407,9 @@ namespace ProjectX.ViewModels
             ResetDices();
             ClearKeepDices();
         }
+        /// <summary>
+        /// take four of a kind option
+        /// </summary>
         public void PickFourOfKInd()
         {
             if (!ScoreCardp1.IsFourOfAKind && CurrentPlayer == player1)
@@ -1428,6 +1452,9 @@ namespace ProjectX.ViewModels
             ResetDices();
             ClearKeepDices();
         }
+        /// <summary>
+        /// Take small straight function
+        /// </summary>
         public void PickSmallStraight()
         {
             if (!ScoreCardp1.Ismallstraight && CurrentPlayer == player1)
@@ -1482,6 +1509,9 @@ namespace ProjectX.ViewModels
             ResetDices();
             ClearKeepDices();
         }
+        /// <summary>
+        /// Take large straight, function
+        /// </summary>
         public void PickLargeStraight()
         {
             if (!ScoreCardp1.Ismallstraight && CurrentPlayer == player1)
@@ -1538,6 +1568,9 @@ namespace ProjectX.ViewModels
             ResetDices();
             ClearKeepDices();
         }
+        /// <summary>
+        /// Take the fullhousse, function
+        /// </summary>
         public void PickFullHouse()
         {
             if (!ScoreCardp1.IsFullHouse && CurrentPlayer == player1)
@@ -1593,6 +1626,9 @@ namespace ProjectX.ViewModels
             ResetDices();
             ClearKeepDices();
         }
+        /// <summary>
+        /// Take the chance option function
+        /// </summary>
         public void PickChance()
         {
             if (!ScoreCardp1.IsChance && CurrentPlayer == player1)
@@ -1647,7 +1683,9 @@ namespace ProjectX.ViewModels
             ResetDices();
             ClearKeepDices();
         }
-
+        /// <summary>
+        /// Calculates total score
+        /// </summary>
         public void TotalScore()
         {
             ScoreCardp1.Total = ScoreCardp1.Sum + ScoreCardp1.Pair + ScoreCardp1.TwoPairs + ScoreCardp1.ThreeOfAKind + ScoreCardp1.FourOfAKind + ScoreCardp1.SmallStraight + ScoreCardp1.LargeStraight + ScoreCardp1.Chance + ScoreCardp1.Yatzy;

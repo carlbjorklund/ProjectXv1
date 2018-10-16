@@ -30,12 +30,12 @@
             <ColumnDefinition Width="50" />
             <ColumnDefinition Width="50" />
             <ColumnDefinition Width="50" />
-            <ColumnDefinition Width="50" />
+            <ColumnDefinition Width="80" />
             <ColumnDefinition Width="70" />
             <ColumnDefinition Width="70" />
             <ColumnDefinition Width="70" />
             <ColumnDefinition Width="70" />
-            <ColumnDefinition Width="50" />
+            <ColumnDefinition Width="70" />
             <ColumnDefinition Width="20" />
             <ColumnDefinition Width="auto" />
             <ColumnDefinition Width="auto" />
@@ -46,7 +46,7 @@
             <ColumnDefinition Width="auto" />
             <ColumnDefinition Width="auto" />
             <ColumnDefinition Width="auto" />
-            <ColumnDefinition Width="50" />
+            <ColumnDefinition Width="20" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="10" />
@@ -93,7 +93,7 @@
               <!--Headlines:-->
             <TextBlock Grid.Row="1" Grid.Column="3" FontSize="15" Foreground="White" >Yatzy!</TextBlock>
             <TextBlock Grid.Row="2" Grid.Column="0" FontWeight="Bold" Foreground="White" >Spelare:</TextBlock>
-            <TextBlock Grid.Row="1" Grid.Column="4" FontWeight="Bold" Foreground="White" Text="{Binding CurrentPlayer.Name, Mode=TwoWay}"></TextBlock>
+            <TextBlock Grid.Row="2" Grid.Column="1" FontWeight="Bold" Foreground="White" Text="{Binding CurrentPlayer.Name, Mode=TwoWay}"></TextBlock>
             <TextBlock Grid.Row="1" Grid.Column="7" FontWeight="Bold" Foreground="White" Text="{Binding Player4.Name, Mode=TwoWay}"></TextBlock>
             <TextBlock Grid.Row="1" Grid.Column="6" FontWeight="Bold" Foreground="White" Text="{Binding Player3.Name, Mode=TwoWay}"></TextBlock>
             <TextBlock Grid.Row="1" Grid.Column="5" FontWeight="Bold" Foreground="White" Text="{Binding player2.Name, Mode=TwoWay}"></TextBlock>
@@ -252,11 +252,11 @@
             <TextBlock Foreground="Red" Text="{Binding Path= ScoreCardp3.Total, Mode=TwoWay}" Grid.Row="20" Grid.Column="6"></TextBlock>
             <TextBlock Foreground="Red" Text="{Binding Path= ScoreCardp4.Total, Mode=TwoWay}" Grid.Row="20" Grid.Column="7"></TextBlock>
 
-            <TextBlock Grid.Row="20" Grid.Column="3" FontWeight="Bold" Foreground="Red" >Total Summa</TextBlock>
-            <Button Foreground="White" Grid.Column="5" Grid.Row="21" x:Name="Enable"  Background="Red" Margin="1" >Starta!</Button>
-            <Button Foreground="White" Grid.Column="6" Grid.Row="21" x:Name="Rolldices"  Background="Red" Margin="1" >Kasta!</Button>
-            <Button Foreground="White" Grid.Column="7" Grid.Row="21" x:Name="Next"  Background="Red" Margin="1" >Nästa!</Button>
-            <Button Foreground="White" Grid.Column="8" Grid.Row="21" x:Name="Back"  Background="Red" Margin="1" >Bakåt!</Button>
+            <TextBlock Grid.Row="20" Grid.Column="3" FontWeight="Bold" Foreground="Red" >Total summa</TextBlock>
+            <Button Foreground="White" Grid.Column="3" Grid.Row="21" x:Name="Enable"  Background="Red" Margin="1" >Starta!</Button>
+            <Button Foreground="White" Grid.Column="4" Grid.Row="21" x:Name="Rolldices"  Background="Red" Margin="1" >Kasta!</Button>
+            <Button Foreground="White" Grid.Column="6" Grid.Row="21" x:Name="Next"  Background="Red" Margin="1" >Nästa!</Button>
+            <Button Foreground="White" Grid.Column="7" Grid.Row="21" x:Name="Back"  Background="Red" Margin="1" >Bakåt!</Button>
         </Grid>    
 
         <StackPanel Orientation="Horizontal" Grid.Column="2" Grid.Row="0">
