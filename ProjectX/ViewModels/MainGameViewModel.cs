@@ -40,7 +40,7 @@ namespace ProjectX.ViewModels
         public DicePanel Dicepanel { get; private set; }
         public ScoreCardProp PropScoreCard { get; private set; }
         int position = 0;
-        int size;
+     
 
 
         public ScoreCard ScoreCardp1 { get; private set; }
@@ -132,32 +132,8 @@ namespace ProjectX.ViewModels
             CurrentPlayer.Name = GameSet.Players[0].Name;
             CurrentPlayer = GameSet.Players[position];
             
-            //play();
-
-            //    CurrentPlayer.Name = player2.Name;
-            //    CurrentPlayer.Rolles = 3;
-
-            //        ClearDice();
-            //        SaveDicesToEvaluationArray();
-            //        EvaluateProposal();
-            //    CurrentPlayer.Name = player3.Name;
-            //    CurrentPlayer.Rolles = 3;
-            //    ClearDice();
-            //    SaveDicesToEvaluationArray();
-            //    EvaluateProposal();
-
-            //    CurrentPlayer.Name = player4.Name;
-            //    CurrentPlayer.Rolles = 3;
-            //    ClearDice();
-            //    SaveDicesToEvaluationArray();
-            //    EvaluateProposal();
         }
-        private void play()
-        {
-            //ClearDice();
-            //SaveDicesToEvaluationArray();
-            //EvaluateProposal();
-        }
+     
 
         public void Next()
         {
@@ -275,7 +251,7 @@ namespace ProjectX.ViewModels
 
         }
 
-        #region 
+        #region  
         /// <summary>
         /// Calculate dice values based upon ones, twos, threes etc....
         /// </summary>
