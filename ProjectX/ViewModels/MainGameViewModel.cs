@@ -117,11 +117,8 @@ namespace ProjectX.ViewModels
         {
             ClearDice();
         }
-
+           
        
-
-
-
         public void ClearDice()
         {         
             
@@ -130,6 +127,137 @@ namespace ProjectX.ViewModels
                 diceValues[i] = 0;
             }
 
+        }
+
+        public bool CanPickPair()
+        {
+            if (GameSet.GameTypeRestricted == true && ScoreCardp1.HasUpperScore == true) { return true; }
+            if (GameSet.GameTypeRestricted == true && ScoreCardp2.HasUpperScore == true) { return true; }
+            if (GameSet.GameTypeRestricted == true && ScoreCardp4.HasUpperScore == true) { return true; }
+            if (GameSet.GameTypeRestricted == true && ScoreCardp4.HasUpperScore == true) { return true; }
+
+            if (GameSet.GameTypeRestricted == false && ScoreCardp1.HasUpperScore == false) { return true; }
+            if (GameSet.GameTypeRestricted == false && ScoreCardp2.HasUpperScore == false) { return true; }
+            if (GameSet.GameTypeRestricted == false && ScoreCardp3.HasUpperScore == false) { return true; }
+            if (GameSet.GameTypeRestricted == false && ScoreCardp4.HasUpperScore == false) { return true; }
+            else return false;
+            
+        }
+
+        public bool CanPickTwoPair()
+        {
+            if (GameSet.GameTypeRestricted == true && ScoreCardp1.HasUpperScore == true) { return true; }
+            if (GameSet.GameTypeRestricted == true && ScoreCardp2.HasUpperScore == true) { return true; }
+            if (GameSet.GameTypeRestricted == true && ScoreCardp4.HasUpperScore == true) { return true; }
+            if (GameSet.GameTypeRestricted == true && ScoreCardp4.HasUpperScore == true) { return true; }
+
+            if (GameSet.GameTypeRestricted == false && ScoreCardp1.HasUpperScore == false) { return true; }
+            if (GameSet.GameTypeRestricted == false && ScoreCardp2.HasUpperScore == false) { return true; }
+            if (GameSet.GameTypeRestricted == false && ScoreCardp3.HasUpperScore == false) { return true; }
+            if (GameSet.GameTypeRestricted == false && ScoreCardp4.HasUpperScore == false) { return true; }
+            else return false;
+        }
+
+        public bool CanPickThreeOfKind()
+        {
+            if (GameSet.GameTypeRestricted == true && ScoreCardp1.HasUpperScore == true) { return true; }
+            if (GameSet.GameTypeRestricted == true && ScoreCardp2.HasUpperScore == true) { return true; }
+            if (GameSet.GameTypeRestricted == true && ScoreCardp4.HasUpperScore == true) { return true; }
+            if (GameSet.GameTypeRestricted == true && ScoreCardp4.HasUpperScore == true) { return true; }
+
+            if (GameSet.GameTypeRestricted == false && ScoreCardp1.HasUpperScore == false) { return true; }
+            if (GameSet.GameTypeRestricted == false && ScoreCardp2.HasUpperScore == false) { return true; }
+            if (GameSet.GameTypeRestricted == false && ScoreCardp3.HasUpperScore == false) { return true; }
+            if (GameSet.GameTypeRestricted == false && ScoreCardp4.HasUpperScore == false) { return true; }
+            else return false;
+        }
+
+        /// <summary>
+        /// don't know why is not working....to disble it
+        /// </summary>
+        /// <returns></returns>
+        public bool CanPickFourOfKind()
+        {
+            if (GameSet.GameTypeRestricted == true && ScoreCardp1.HasUpperScore == true) { return true; }
+            if (GameSet.GameTypeRestricted == true && ScoreCardp2.HasUpperScore == true) { return true; }
+            if (GameSet.GameTypeRestricted == true && ScoreCardp4.HasUpperScore == true) { return true; }
+            if (GameSet.GameTypeRestricted == true && ScoreCardp4.HasUpperScore == true) { return true; }
+
+            if (GameSet.GameTypeRestricted == false && ScoreCardp1.HasUpperScore == false) { return true; }
+            if (GameSet.GameTypeRestricted == false && ScoreCardp2.HasUpperScore == false) { return true; }
+            if (GameSet.GameTypeRestricted == false && ScoreCardp3.HasUpperScore == false) { return true; }
+            if (GameSet.GameTypeRestricted == false && ScoreCardp4.HasUpperScore == false) { return true; }
+            else return false;
+        }
+
+             public bool CanPickSmallStraight()
+        {
+            if (GameSet.GameTypeRestricted == true && ScoreCardp1.HasUpperScore == true) { return true; }
+            if (GameSet.GameTypeRestricted == true && ScoreCardp2.HasUpperScore == true) { return true; }
+            if (GameSet.GameTypeRestricted == true && ScoreCardp4.HasUpperScore == true) { return true; }
+            if (GameSet.GameTypeRestricted == true && ScoreCardp4.HasUpperScore == true) { return true; }
+
+            if (GameSet.GameTypeRestricted == false && ScoreCardp1.HasUpperScore == false) { return true; }
+            if (GameSet.GameTypeRestricted == false && ScoreCardp2.HasUpperScore == false) { return true; }
+            if (GameSet.GameTypeRestricted == false && ScoreCardp3.HasUpperScore == false) { return true; }
+            if (GameSet.GameTypeRestricted == false && ScoreCardp4.HasUpperScore == false) { return true; }
+            else return false;
+        }
+
+        public bool CanPickLargeStraight()
+        {
+            if (GameSet.GameTypeRestricted == true && ScoreCardp1.HasUpperScore == true) { return true; }
+            if (GameSet.GameTypeRestricted == true && ScoreCardp2.HasUpperScore == true) { return true; }
+            if (GameSet.GameTypeRestricted == true && ScoreCardp4.HasUpperScore == true) { return true; }
+            if (GameSet.GameTypeRestricted == true && ScoreCardp4.HasUpperScore == true) { return true; }
+
+            if (GameSet.GameTypeRestricted == false && ScoreCardp1.HasUpperScore == false) { return true; }
+            if (GameSet.GameTypeRestricted == false && ScoreCardp2.HasUpperScore == false) { return true; }
+            if (GameSet.GameTypeRestricted == false && ScoreCardp3.HasUpperScore == false) { return true; }
+            if (GameSet.GameTypeRestricted == false && ScoreCardp4.HasUpperScore == false) { return true; }
+            else return false;
+        }
+
+        public bool CanPickFullHouse()
+        {
+            if (GameSet.GameTypeRestricted == true && ScoreCardp1.HasUpperScore == true) { return true; }
+            if (GameSet.GameTypeRestricted == true && ScoreCardp2.HasUpperScore == true) { return true; }
+            if (GameSet.GameTypeRestricted == true && ScoreCardp4.HasUpperScore == true) { return true; }
+            if (GameSet.GameTypeRestricted == true && ScoreCardp4.HasUpperScore == true) { return true; }
+
+            if (GameSet.GameTypeRestricted == false && ScoreCardp1.HasUpperScore == false) { return true; }
+            if (GameSet.GameTypeRestricted == false && ScoreCardp2.HasUpperScore == false) { return true; }
+            if (GameSet.GameTypeRestricted == false && ScoreCardp3.HasUpperScore == false) { return true; }
+            if (GameSet.GameTypeRestricted == false && ScoreCardp4.HasUpperScore == false) { return true; }
+            else return false;
+        }
+
+        public bool CanPickChance()
+        {
+            if (GameSet.GameTypeRestricted == true && ScoreCardp1.HasUpperScore == true) { return true; }
+            if (GameSet.GameTypeRestricted == true && ScoreCardp2.HasUpperScore == true) { return true; }
+            if (GameSet.GameTypeRestricted == true && ScoreCardp4.HasUpperScore == true) { return true; }
+            if (GameSet.GameTypeRestricted == true && ScoreCardp4.HasUpperScore == true) { return true; }
+
+            if (GameSet.GameTypeRestricted == false && ScoreCardp1.HasUpperScore == false) { return true; }
+            if (GameSet.GameTypeRestricted == false && ScoreCardp2.HasUpperScore == false) { return true; }
+            if (GameSet.GameTypeRestricted == false && ScoreCardp3.HasUpperScore == false) { return true; }
+            if (GameSet.GameTypeRestricted == false && ScoreCardp4.HasUpperScore == false) { return true; }
+            else return false;
+        }
+
+        public bool CanPickYatzy()
+        {
+            if (GameSet.GameTypeRestricted == true && ScoreCardp1.HasUpperScore == true) { return true; }
+            if (GameSet.GameTypeRestricted == true && ScoreCardp2.HasUpperScore == true) { return true; }
+            if (GameSet.GameTypeRestricted == true && ScoreCardp4.HasUpperScore == true) { return true; }
+            if (GameSet.GameTypeRestricted == true && ScoreCardp4.HasUpperScore == true) { return true; }
+
+            if (GameSet.GameTypeRestricted == false && ScoreCardp1.HasUpperScore == false) { return true; }
+            if (GameSet.GameTypeRestricted == false && ScoreCardp2.HasUpperScore == false) { return true; }
+            if (GameSet.GameTypeRestricted == false && ScoreCardp3.HasUpperScore == false) { return true; }
+            if (GameSet.GameTypeRestricted == false && ScoreCardp4.HasUpperScore == false) { return true; }
+            else return false;
         }
         /// <summary>
         /// To do gaming order, assign points to correct scorecard, classic or restricted, player list, points calculations...

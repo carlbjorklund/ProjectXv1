@@ -89,8 +89,10 @@
             <Button x:Name="PickFullHouse" Grid.Row="17" Grid.Column="1" Foreground="White" Background="Green" >Välj</Button>
             <Button x:Name="PickChance" Grid.Row="18" Grid.Column="1" Foreground="White" Background="Green" >Välj</Button>
             <Button x:Name="PickYatzy" Grid.Row="19" Grid.Column="1" Foreground="White" Background="Green">Välj</Button>
-              
-              <!--Headlines:-->
+
+            <!--<Button x:Name="Restricted" Grid.Row="21" Grid.Column="1" Foreground="Black" Background="Yellow">Restricted</Button>-->
+
+            <!--Headlines:-->
             <TextBlock Grid.Row="1" Grid.Column="3" FontSize="15" Foreground="White" >Yatzy!</TextBlock>
             <TextBlock Grid.Row="2" Grid.Column="0" FontWeight="Bold" Foreground="White" >Spelare:</TextBlock>
             <TextBlock Grid.Row="2" Grid.Column="1" FontWeight="Bold" Foreground="White" Text="{Binding CurrentPlayer.Name, Mode=TwoWay}"></TextBlock>
@@ -253,7 +255,7 @@
             <TextBlock Foreground="Red" Text="{Binding Path= ScoreCardp4.Total, Mode=TwoWay}" Grid.Row="20" Grid.Column="7"></TextBlock>
 
             <TextBlock Grid.Row="20" Grid.Column="3" FontWeight="Bold" Foreground="Red" >Total summa</TextBlock>
-            <Button Foreground="White" Grid.Column="3" Grid.Row="21" x:Name="Enable"  Background="Red" Margin="1" Click="Enable_Click" >Starta!</Button>
+            <Button Foreground="White" Grid.Column="3" Grid.Row="21" x:Name="Enable"  Background="Red" Margin="1" >Starta!</Button>
             <Button Foreground="White" Grid.Column="4" Grid.Row="21" x:Name="Rolldices"  Background="Red" Margin="1" >Kasta!</Button>
             <Button Foreground="White" Grid.Column="6" Grid.Row="21" x:Name="Next"  Background="Red" Margin="1" >Nästa!</Button>
             <Button Foreground="White" Grid.Column="7" Grid.Row="21" x:Name="Back"  Background="Red" Margin="1" >Bakåt!</Button>

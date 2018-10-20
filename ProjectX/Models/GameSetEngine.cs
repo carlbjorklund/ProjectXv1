@@ -11,8 +11,6 @@ namespace ProjectX.Models
 
     public class GameSetEngine:Screen
     {
-
-
         private int playerRoundCount=15;
         public int PlayerRoundCount
         {
