@@ -23,7 +23,8 @@ namespace ProjectX.Views
     public partial class MainGameView : UserControl
 
     {
-       
+        public GameSetEngine GameSet { get; private set; }
+
         public MainGameView()
         {
             InitializeComponent();
@@ -32,11 +33,20 @@ namespace ProjectX.Views
 
         }
 
-        private void Rolldice_Click(object sender, RoutedEventArgs e)
-        {
-            
-         
 
+        public void checkgametyp()
+        {
+            if (GameSet.GameTypeRestricted == true)
+            {
+                PickPair.IsEnabled = false;
+                PickTwoPair.IsEnabled = false;
+            }
+
+        }
+
+        private void Enable_Click(object sender, RoutedEventArgs e)
+        {
+            checkgametyp();
         }
     }
 }

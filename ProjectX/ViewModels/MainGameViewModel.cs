@@ -8,6 +8,7 @@ using System.Windows.Controls;
 using System.Windows.Media.Imaging;
 using Caliburn.Micro;
 using ProjectX.Models;
+using ProjectX.Views;
 using static System.Net.Mime.MediaTypeNames;
 using static ProjectX.Models.ScoreCard;
 
@@ -105,15 +106,21 @@ namespace ProjectX.ViewModels
             GameSet.GameName = "Game Round 1";
             DateTime today = DateTime.Now;
 
-            
+            GameSet.GameTypeRestricted = true;
 
             GameSet.Started_At = today;
             GameSet.Started_At.ToShortDateString();
+
+          
         }
         public void Revaluate()
         {
             ClearDice();
         }
+
+       
+
+
 
         public void ClearDice()
         {         
@@ -1423,6 +1430,18 @@ namespace ProjectX.ViewModels
 
                 SaveDicesToEvaluationArrayForScoreCard();
                 ScoreCardp3.FourOfAKind = FourOfKind(diceValues);
+                ClearDice();
+                ClearKeepDices();
+                TotalScore();
+            }
+            if (!ScoreCardp4.IsFourOfAKind && CurrentPlayer == player4)
+            {
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp4.FourOfAKind = FourOfKind(diceValues);
+                ClearDice();
+
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp4.FourOfAKind = FourOfKind(diceValues);
                 ClearDice();
                 ClearKeepDices();
                 TotalScore();
