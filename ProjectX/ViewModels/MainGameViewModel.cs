@@ -106,7 +106,7 @@ namespace ProjectX.ViewModels
             GameSet.GameName = "Game Round 1";
             DateTime today = DateTime.Now;
 
-            GameSet.GameTypeRestricted = true;
+            //GameSet.GameTypeRestricted = true;
 
             GameSet.Started_At = today;
             GameSet.Started_At.ToShortDateString();
@@ -1527,7 +1527,7 @@ namespace ProjectX.ViewModels
         /// <summary>
         /// take four of a kind option
         /// </summary>
-        public void PickFourOfKInd()
+        public void PickFourOfKind()
         {
             if (!ScoreCardp1.IsFourOfAKind && CurrentPlayer == player1)
             {
@@ -1812,6 +1812,64 @@ namespace ProjectX.ViewModels
             ResetDices();
             ClearKeepDices();
         }
+
+        public void PickYatzy()
+        {
+            if (!ScoreCardp1.IsYatzy && CurrentPlayer == player1)
+            {
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp1.Yatzy = Yatzee(diceValues);
+                ClearDice();
+
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp1.Yatzy = Yatzee(diceValues);
+                ClearDice();
+                ClearKeepDices();
+                TotalScore();
+            }
+            if (!ScoreCardp2.IsYatzy && CurrentPlayer == player2)
+            {
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp2.Yatzy = Yatzee(diceValues);
+                ClearDice();
+
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp2.Yatzy = Yatzee(diceValues);
+                ClearDice();
+                ClearKeepDices();
+                TotalScore();
+            }
+            if (!ScoreCardp1.IsYatzy && CurrentPlayer == player3)
+            {
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp3.Yatzy = Yatzee(diceValues);
+                ClearDice();
+
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp3.Yatzy = Yatzee(diceValues);
+                ClearDice();
+                ClearKeepDices();
+                TotalScore();
+            }
+            if (!ScoreCardp1.IsYatzy && CurrentPlayer == player4)
+            {
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp4.Yatzy = Yatzee(diceValues);
+                ClearDice();
+
+                SaveDicesToEvaluationArrayForScoreCard();
+                ScoreCardp4.Yatzy = Yatzee(diceValues);
+                ClearDice();
+                ClearKeepDices();
+                TotalScore();
+            }
+            Next();
+            ResetDices();
+            ClearKeepDices();
+
+        }
+
+
         /// <summary>
         /// Calculates total score
         /// </summary>
