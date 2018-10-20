@@ -148,7 +148,7 @@ namespace ProjectX.ViewModels
         {
             if (GameSet.GameTypeRestricted == true && ScoreCardp1.HasUpperScore == true) { return true; }
             if (GameSet.GameTypeRestricted == true && ScoreCardp2.HasUpperScore == true) { return true; }
-            if (GameSet.GameTypeRestricted == true && ScoreCardp4.HasUpperScore == true) { return true; }
+            if (GameSet.GameTypeRestricted == true && ScoreCardp3.HasUpperScore == true) { return true; }
             if (GameSet.GameTypeRestricted == true && ScoreCardp4.HasUpperScore == true) { return true; }
 
             if (GameSet.GameTypeRestricted == false && ScoreCardp1.HasUpperScore == false) { return true; }
@@ -162,7 +162,7 @@ namespace ProjectX.ViewModels
         {
             if (GameSet.GameTypeRestricted == true && ScoreCardp1.HasUpperScore == true) { return true; }
             if (GameSet.GameTypeRestricted == true && ScoreCardp2.HasUpperScore == true) { return true; }
-            if (GameSet.GameTypeRestricted == true && ScoreCardp4.HasUpperScore == true) { return true; }
+            if (GameSet.GameTypeRestricted == true && ScoreCardp3.HasUpperScore == true) { return true; }
             if (GameSet.GameTypeRestricted == true && ScoreCardp4.HasUpperScore == true) { return true; }
 
             if (GameSet.GameTypeRestricted == false && ScoreCardp1.HasUpperScore == false) { return true; }
@@ -176,7 +176,7 @@ namespace ProjectX.ViewModels
         /// don't know why is not working....to disble it
         /// </summary>
         /// <returns></returns>
-        public bool CanPickFourOfKind()
+        public bool CanPickFourOfKind() 
         {
             if (GameSet.GameTypeRestricted == true && ScoreCardp1.HasUpperScore == true) { return true; }
             if (GameSet.GameTypeRestricted == true && ScoreCardp2.HasUpperScore == true) { return true; }
@@ -222,7 +222,7 @@ namespace ProjectX.ViewModels
         {
             if (GameSet.GameTypeRestricted == true && ScoreCardp1.HasUpperScore == true) { return true; }
             if (GameSet.GameTypeRestricted == true && ScoreCardp2.HasUpperScore == true) { return true; }
-            if (GameSet.GameTypeRestricted == true && ScoreCardp4.HasUpperScore == true) { return true; }
+            if (GameSet.GameTypeRestricted == true && ScoreCardp3.HasUpperScore == true) { return true; }
             if (GameSet.GameTypeRestricted == true && ScoreCardp4.HasUpperScore == true) { return true; }
 
             if (GameSet.GameTypeRestricted == false && ScoreCardp1.HasUpperScore == false) { return true; }
@@ -236,21 +236,7 @@ namespace ProjectX.ViewModels
         {
             if (GameSet.GameTypeRestricted == true && ScoreCardp1.HasUpperScore == true) { return true; }
             if (GameSet.GameTypeRestricted == true && ScoreCardp2.HasUpperScore == true) { return true; }
-            if (GameSet.GameTypeRestricted == true && ScoreCardp4.HasUpperScore == true) { return true; }
-            if (GameSet.GameTypeRestricted == true && ScoreCardp4.HasUpperScore == true) { return true; }
-
-            if (GameSet.GameTypeRestricted == false && ScoreCardp1.HasUpperScore == false) { return true; }
-            if (GameSet.GameTypeRestricted == false && ScoreCardp2.HasUpperScore == false) { return true; }
-            if (GameSet.GameTypeRestricted == false && ScoreCardp3.HasUpperScore == false) { return true; }
-            if (GameSet.GameTypeRestricted == false && ScoreCardp4.HasUpperScore == false) { return true; }
-            else return false;
-        }
-
-        public bool CanPickYatzy()
-        {
-            if (GameSet.GameTypeRestricted == true && ScoreCardp1.HasUpperScore == true) { return true; }
-            if (GameSet.GameTypeRestricted == true && ScoreCardp2.HasUpperScore == true) { return true; }
-            if (GameSet.GameTypeRestricted == true && ScoreCardp4.HasUpperScore == true) { return true; }
+            if (GameSet.GameTypeRestricted == true && ScoreCardp3.HasUpperScore == true) { return true; }
             if (GameSet.GameTypeRestricted == true && ScoreCardp4.HasUpperScore == true) { return true; }
 
             if (GameSet.GameTypeRestricted == false && ScoreCardp1.HasUpperScore == false) { return true; }
@@ -260,7 +246,24 @@ namespace ProjectX.ViewModels
             else return false;
         }
         /// <summary>
-        /// To do gaming order, assign points to correct scorecard, classic or restricted, player list, points calculations...
+        /// Dont know why this is not working....the code is almost identical to the others of the same type...
+        /// </summary>
+        /// <returns></returns>
+        public bool CanPickYatzy()
+        {
+            if (GameSet.GameTypeRestricted == true && ScoreCardp1.HasUpperScore == true) { return true; }
+            if (GameSet.GameTypeRestricted == true && ScoreCardp2.HasUpperScore == true) { return true; }
+            if (GameSet.GameTypeRestricted == true && ScoreCardp3.HasUpperScore == true) { return true; }
+            if (GameSet.GameTypeRestricted == true && ScoreCardp4.HasUpperScore == true) { return true; }
+
+            if (GameSet.GameTypeRestricted == false && ScoreCardp1.HasUpperScore == false) { return true; }
+            if (GameSet.GameTypeRestricted == false && ScoreCardp2.HasUpperScore == false) { return true; }
+            if (GameSet.GameTypeRestricted == false && ScoreCardp3.HasUpperScore == false) { return true; }
+            if (GameSet.GameTypeRestricted == false && ScoreCardp4.HasUpperScore == false) { return true; }
+            else return false;
+        }
+        /// <summary>
+        ///
         /// </summary>
         public void Enable()
         {
