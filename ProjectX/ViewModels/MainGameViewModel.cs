@@ -287,6 +287,7 @@ namespace ProjectX.ViewModels
             CurrentPlayer.Rolles = 3;
             ClearDice();
             ClearKeepDices();
+          
        
 
         }
@@ -883,6 +884,8 @@ namespace ProjectX.ViewModels
                 UpperScore();
                 Bonus();
                 TotalScore();
+                cheackplayerposition();
+            
 
 
 
@@ -901,6 +904,7 @@ namespace ProjectX.ViewModels
                 UpperScore();
                 Bonus();
                 TotalScore();
+                cheackplayerposition();
 
             }
             if (!ScoreCardp3.IsOnes && CurrentPlayer == player3)
@@ -918,6 +922,7 @@ namespace ProjectX.ViewModels
                 UpperScore();
                 Bonus();
                 TotalScore();
+                cheackplayerposition();
             }
         
             if (!ScoreCardp4.IsOnes && CurrentPlayer == player4)
@@ -935,6 +940,7 @@ namespace ProjectX.ViewModels
                 UpperScore();
                 Bonus();
                 TotalScore();
+                cheackplayerposition();
 
 
 
@@ -943,12 +949,22 @@ namespace ProjectX.ViewModels
             Next();
             ResetDices();
             ClearKeepDices();
+            cheackplayerposition();
         }
+
+        private void cheackplayerposition()
+        {
+            if (position == 3)
+            {
+                position = -1;
+            }
+        }
+
         /// <summary>
         /// take the two options
         /// </summary>
 
-            public void PickTwo()
+        public void PickTwo()
             {
 
             if (!ScoreCardp1.Istwos && CurrentPlayer == player1)
@@ -1018,6 +1034,8 @@ namespace ProjectX.ViewModels
             Next();
             ResetDices();
             ClearKeepDices();
+            cheackplayerposition();
+
 
         }
         /// <summary>
@@ -1087,6 +1105,7 @@ namespace ProjectX.ViewModels
             Next();
             ResetDices();
             ClearKeepDices();
+            cheackplayerposition();
         }
         /// <summary>
         /// take the fours option
@@ -1155,6 +1174,7 @@ namespace ProjectX.ViewModels
             Next();
             ResetDices();
             ClearKeepDices();
+            cheackplayerposition();
         }
         /// <summary>
         /// take the fives option
@@ -1224,6 +1244,7 @@ namespace ProjectX.ViewModels
             Next();
             ResetDices();
             ClearKeepDices();
+            cheackplayerposition();
         }
 
         /// <summary>
@@ -1295,6 +1316,7 @@ namespace ProjectX.ViewModels
             Next();
             ResetDices();
             ClearKeepDices();
+            cheackplayerposition();
         }
 
         /// <summary>

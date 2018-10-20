@@ -129,7 +129,9 @@
             <TextBlock Foreground="Red" Text="{Binding Path= ScoreCardp2.Twos, Mode=TwoWay}" Grid.Row="4" Grid.Column="5"></TextBlock>
             <TextBlock Foreground="Red" Text="{Binding Path= ScoreCardp3.Twos, Mode=TwoWay}" Grid.Row="4" Grid.Column="6"></TextBlock>
             <TextBlock Foreground="Red" Text="{Binding Path= ScoreCardp4.Twos, Mode=TwoWay}" Grid.Row="4" Grid.Column="7"></TextBlock>
-            <TextBlock Foreground="Red" Text="{Binding Path= player1.ScoreCardp1.Twos, Mode=TwoWay}" Grid.Row="2" Grid.Column="8"></TextBlock> <!--testrad funkar inte-->
+            <!--<TextBlock Foreground="Red" DataObject.Copying="{Binding Path= gameSet.player1.ScoreCardp1.Twos, Mode=TwoWay}" Grid.Row="2" Grid.Column="8"></TextBlock>-->
+            <TextBlock Foreground="Red" Text="{Binding Path= gameSet.CurrentPlayer.Name, Mode=TwoWay}" Grid.Row="3" Grid.Column="8"></TextBlock>
+            <!--testrad funkar inte-->
            
             <!--Threes:-->
             <TextBlock Grid.Row="5" Grid.Column="3" Foreground="White" >Treor</TextBlock>
