@@ -105,6 +105,7 @@ namespace ProjectX.ViewModels
             GameSet.GameName = "Game Round 1";
             DateTime today = DateTime.Now;
 
+            
 
             GameSet.Started_At = today;
             GameSet.Started_At.ToShortDateString();
@@ -1820,10 +1821,11 @@ namespace ProjectX.ViewModels
                 dice4.DiceValue = temp5;
                 dice4.Img = new BitmapImage(new Uri(@"\" + dice4.DiceValue.ToString() + ".png", UriKind.Relative));
                 GameSet.DicePanel.Dice5 = dice4;
-
-
-
-          }
+            }
+            else
+            {
+                MessageBox.Show("Du har slagit tre slag. Välj poäng!");
+            }
             CurrentPlayer.Rolles -= 1;
             SaveDicesToEvaluationArray();
             EvaluateProposal();

@@ -98,7 +98,7 @@ namespace ProjectX.Models
         public int _GameType_Id { get; set; }
        
         public enum GameTypeEnum { Classic, Restricted }
-        public enum GamteTypeEnum { getSetUp, InGame, GameOver }
+        public enum GameStatusEnum { getSetUp, InGame, GameOver }
 
         public List<Player> Players;
         public DicePanel DicePanel;
