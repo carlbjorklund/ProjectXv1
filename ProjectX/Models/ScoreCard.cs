@@ -14,13 +14,13 @@ namespace ProjectX.Models
         /// </summary>
         //public bool HasUpperScore { get { return hasupperscore == IsOnes && Istwos && Isthrees && Isfours && Isfives && Issixes; } }
        
-        public bool HasUpperScore { get; private set; }
+        public bool HasUpperScore { get ; private set; }
 
         public bool Checkhasupperscore()
         {
-            if (IsOnes && Istwos && Isthrees && Isfours && Isfives && Issixes == true)
+            if (IsOnes && Istwos && Isthrees && Isfours && Isfives && Issixes)
             {
-                return HasUpperScore= true;
+                return HasUpperScore= true; 
             }
             else
             { 
@@ -37,7 +37,7 @@ namespace ProjectX.Models
         {
             if (Ispair && Istwospair && IsThreeOfAKind && IsFourOfAKind && IsLargeStraight && Ismallstraight && IsFullHouse && IsChance && IsYatzy == true)
             {
-                return HasLowerScore =true;
+                return HasLowerScore =true; 
             }
             else
             {

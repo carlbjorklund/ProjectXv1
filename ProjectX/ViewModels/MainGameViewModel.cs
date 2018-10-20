@@ -106,12 +106,25 @@ namespace ProjectX.ViewModels
             GameSet.GameName = "Game Round 1";
             DateTime today = DateTime.Now;
 
-            //GameSet.GameTypeRestricted = true;
+            GameSet.GameTypeRestricted = true;
 
             GameSet.Started_At = today;
             GameSet.Started_At.ToShortDateString();
 
           
+        }
+        /// <summary>
+        /// need to check logic for this one
+        /// </summary>
+
+        public void CheckUpperScoore()
+        {
+            if (ScoreCardp1.HasUpperScore)
+            {
+                ScoreCardp1.Checkhasupperscore();
+                CanPickPair();
+                GameSet.GameTypeRestricted = false;
+            }
         }
         public void Revaluate()
         {
@@ -129,9 +142,14 @@ namespace ProjectX.ViewModels
 
         }
 
+    /// <summary>
+    /// need to check logic for this one
+    /// </summary>
+    /// <returns></returns>
+
         public bool CanPickPair()
         {
-            if (GameSet.GameTypeRestricted == true && ScoreCardp1.HasUpperScore == true) { return true; }
+            if (GameSet.GameTypeRestricted == true && ScoreCardp1.HasUpperScore) { return true; }
             if (GameSet.GameTypeRestricted == true && ScoreCardp2.HasUpperScore == true) { return true; }
             if (GameSet.GameTypeRestricted == true && ScoreCardp4.HasUpperScore == true) { return true; }
             if (GameSet.GameTypeRestricted == true && ScoreCardp4.HasUpperScore == true) { return true; }
@@ -287,8 +305,17 @@ namespace ProjectX.ViewModels
             CurrentPlayer.Rolles = 3;
             ClearDice();
             ClearKeepDices();
-          
-       
+            CanPickPair();
+            CanPickTwoPair();
+            CanPickThreeOfKind();
+            CanPickFourOfKind();
+            CanPickFullHouse();
+            CanPickLargeStraight();
+            CanPickSmallStraight();
+            CanPickChance();
+            CanPickYatzy();
+
+
 
         }
         public void Back()
@@ -945,12 +972,18 @@ namespace ProjectX.ViewModels
 
 
             }
-          
+            if(ScoreCardp1.IsOnes || ScoreCardp2.IsOnes || ScoreCardp3.IsOnes || ScoreCardp4.IsOnes)
+            {
+                MessageBox.Show("Du har tagit ettor");
+            }
+
             Next();
             ResetDices();
             ClearKeepDices();
             cheackplayerposition();
-        }
+            CheckUpperScoore();
+        
+            }
 
         private void cheackplayerposition()
         {
@@ -1030,6 +1063,10 @@ namespace ProjectX.ViewModels
                 UpperScore();
                 Bonus();
                 TotalScore();
+            }
+            else
+            {
+                MessageBox.Show("Du har tagit tvåor");
             }
             Next();
             ResetDices();
@@ -1421,6 +1458,10 @@ namespace ProjectX.ViewModels
                 ClearDice();
                 ClearKeepDices();
                 TotalScore();
+            }
+            else
+            {
+                MessageBox.Show("Du har redan två par");
             }
             Next();
             ResetDices();
@@ -2059,9 +2100,14 @@ namespace ProjectX.ViewModels
             CurrentPlayer.Rolles -= 1;
             SaveDicesToEvaluationArray();
             EvaluateProposal();
+            CheckUpperScoore();
+
+
 
             ClearDice();
             
+
+
 
 
 
