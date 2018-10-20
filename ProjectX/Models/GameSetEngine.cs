@@ -93,6 +93,25 @@ namespace ProjectX.Models
             }
         }
 
+        private Player currentplayer;
+        public Player CurrentPlayer
+        {
+            get
+            {
+                return currentplayer;
+
+            }
+            set
+            {
+                currentplayer = value;
+                NotifyOfPropertyChange(() => CurrentPlayer);
+
+
+            }
+
+        }
+
+
         public int _GameType_Id { get; set; }
        
         public bool GameTypeRestricted{ get; set; }
