@@ -175,8 +175,11 @@ namespace ProjectX.ViewModels
 
         public bool CanPickTwoPair()
         {
-
-            if (GameSet.GameTypeRestricted == true && ScoreCardp1.Checkhasupperscore() == true  && ScoreCardp2.Checkhasupperscore() == true  && ScoreCardp4.Checkhasupperscore() == true && ScoreCardp4.Checkhasupperscore() == true) { return true; }
+            
+            if (GameSet.GameTypeRestricted == true && ScoreCardp1.Checkhasupperscore() == true && ScoreCardp2.Checkhasupperscore() == true && ScoreCardp4.Checkhasupperscore() == true && ScoreCardp4.Checkhasupperscore() == true)
+            {
+                return true;
+            }
 
             //if (GameSet.GameTypeRestricted == true && ScoreCardp1.HasUpperScore == true
             //&& ScoreCardp2.HasUpperScore == true
@@ -242,7 +245,7 @@ namespace ProjectX.ViewModels
        public bool CanPickSmallStraight()
         {
 
-            if (GameSet.GameTypeRestricted == true && ScoreCardp1.Checkhasupperscore() == true  && ScoreCardp2.Checkhasupperscore() == true  && ScoreCardp4.Checkhasupperscore() == true && ScoreCardp4.Checkhasupperscore() == true) { return true; }
+            if (GameSet.GameTypeRestricted == true && ScoreCardp1.Checkhasupperscore() == true && ScoreCardp2.Checkhasupperscore() == true  && ScoreCardp4.Checkhasupperscore() == true && ScoreCardp4.Checkhasupperscore() == true) { return true; }
 
             //if (GameSet.GameTypeRestricted == true && ScoreCardp1.HasUpperScore == true
             //   && ScoreCardp2.HasUpperScore == true
