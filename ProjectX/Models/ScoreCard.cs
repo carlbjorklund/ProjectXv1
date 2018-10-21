@@ -18,7 +18,7 @@ namespace ProjectX.Models
 
         public bool Checkhasupperscore()
         {
-            if (IsOnes && Istwos && Isthrees && Isfours && Isfives && Issixes)
+            if (IsOnes == true && Istwos == true && Isthrees == true && Isfours == true && Isfives==true && Issixes==true)
             {
                 return HasUpperScore= true; 
             }
