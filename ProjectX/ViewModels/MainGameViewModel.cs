@@ -163,7 +163,17 @@ namespace ProjectX.ViewModels
                 return true;
             }
 
-            if (ScoreCardp1.Checkhasupperscore() == true/* && ScoreCardp2.HasUpperScore == true && ScoreCardp4.HasUpperScore == true && ScoreCardp4.HasUpperScore == true*/)
+            else if (ScoreCardp1.HasUpperScore /*== true*//* && ScoreCardp2.HasUpperScore == true && ScoreCardp4.HasUpperScore == true && ScoreCardp4.HasUpperScore == true*/)
+            {
+                return true;
+            }
+
+            else if (ScoreCardp1.Checkhasupperscore() == true/* && ScoreCardp2.HasUpperScore == true && ScoreCardp4.HasUpperScore == true && ScoreCardp4.HasUpperScore == true*/)
+            {
+                return true;
+            }
+
+            else if (ScoreCardp1.Checkhasupperscore() /* && ScoreCardp2.HasUpperScore == true && ScoreCardp4.HasUpperScore == true && ScoreCardp4.HasUpperScore == true*/)
             {
                 return true;
             }
