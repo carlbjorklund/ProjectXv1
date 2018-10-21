@@ -20,7 +20,8 @@ namespace ProjectX.Models
         {
             if (IsOnes == true && Istwos == true && Isthrees == true && Isfours == true && Isfives==true && Issixes==true)
             {
-                return HasUpperScore= true; 
+                NotifyOfPropertyChange(() => HasUpperScore);
+                return HasUpperScore= true;
             }
             else
             { 

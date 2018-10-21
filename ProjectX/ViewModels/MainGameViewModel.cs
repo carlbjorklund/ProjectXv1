@@ -106,7 +106,7 @@ namespace ProjectX.ViewModels
             GameSet.GameName = "Game Round 1";
             DateTime today = DateTime.Now;
 
-            GameSet.GameTypeRestricted = true;
+            //GameSet.GameTypeRestricted = true;
 
             GameSet.Started_At = today;
             GameSet.Started_At.ToShortDateString();
@@ -158,25 +158,47 @@ namespace ProjectX.ViewModels
         public bool CanPickPair()
         {
 
-            if (ScoreCardp1.HasUpperScore == true/* && ScoreCardp2.HasUpperScore == true && ScoreCardp4.HasUpperScore == true && ScoreCardp4.HasUpperScore == true*/)
-            {
-                return true;
-            }
+            
 
-          if (ScoreCardp1.HasUpperScore /*== true*//* && ScoreCardp2.HasUpperScore == true && ScoreCardp4.HasUpperScore == true && ScoreCardp4.HasUpperScore == true*/)
+            if (GameSet.GameTypeRestricted == true && ScoreCardp1.HasUpperScore == true/* && ScoreCardp2.HasUpperScore == true && ScoreCardp4.HasUpperScore == true && ScoreCardp4.HasUpperScore == true*/)
+            {
+                /*MessageBox.Show(" upper score found first "); // this fires when all scorecard 1 upper is done..*/
+                return true;
+            }
+            if (GameSet.GameTypeRestricted == false && ScoreCardp1.HasUpperScore == false)
             {
                 return true;
             }
+            else return false;
 
-           if (ScoreCardp1.Checkhasupperscore() == true/* && ScoreCardp2.HasUpperScore == true && ScoreCardp4.HasUpperScore == true && ScoreCardp4.HasUpperScore == true*/)
-            {
-                return true;
-            }
+            //else if (ScoreCardp1.HasUpperScore==false /*== true*//* && ScoreCardp2.HasUpperScore == true && ScoreCardp4.HasUpperScore == true && ScoreCardp4.HasUpperScore == true*/)
+            //{
+            //    //MessageBox.Show("No upper score first");
+            //    return false;
+            //}
 
-            if (ScoreCardp1.Checkhasupperscore() /* && ScoreCardp2.HasUpperScore == true && ScoreCardp4.HasUpperScore == true && ScoreCardp4.HasUpperScore == true*/)
-            {
-                return true;
-            }
+            //if (ScoreCardp1.Checkhasupperscore() == true)
+            //{
+            //    //MessageBox.Show(" upper score found sencond");
+            //    return true;
+            //}
+            //else if (ScoreCardp1.Checkhasupperscore() == false)
+
+            //{
+            //    //MessageBox.Show("No upper score second");
+            //    return false;
+
+            //}
+
+            //if (ScoreCardp1.Checkhasupperscore() == true/* && ScoreCardp2.HasUpperScore == true && ScoreCardp4.HasUpperScore == true && ScoreCardp4.HasUpperScore == true*/)
+            //{
+            //    return true;
+            //}
+
+            //if (ScoreCardp1.Checkhasupperscore() /* && ScoreCardp2.HasUpperScore == true && ScoreCardp4.HasUpperScore == true && ScoreCardp4.HasUpperScore == true*/)
+            //{
+            //    return true;
+            //}
 
             //if (GameSet.GameTypeRestricted == true && ScoreCardp1.HasUpperScore == true
             //&& ScoreCardp2.HasUpperScore == true
@@ -189,11 +211,11 @@ namespace ProjectX.ViewModels
             //if (GameSet.GameTypeRestricted == false && ScoreCardp4.HasUpperScore == false) { return true; }
             //else return false;
 
-            if (GameSet.GameTypeRestricted == false/*e && ScoreCardp1.HasUpperScore == false && ScoreCardp2.HasUpperScore == false && ScoreCardp3.HasUpperScore == false && ScoreCardp4.HasUpperScore == false*/)
-            {
-                return true;
-            }
-            else return false;
+            //if (GameSet.GameTypeRestricted == false && ScoreCardp1.HasUpperScore == false /*&& ScoreCardp2.HasUpperScore == false && ScoreCardp3.HasUpperScore == false && ScoreCardp4.HasUpperScore == false*/)
+            //{
+            //    return false;
+            //}
+
 
         }
 
@@ -1101,10 +1123,10 @@ namespace ProjectX.ViewModels
 
 
             }
-            if(ScoreCardp1.IsOnes || ScoreCardp2.IsOnes || ScoreCardp3.IsOnes || ScoreCardp4.IsOnes)
-            {
-                MessageBox.Show("Du har tagit ettor");
-            }
+            //if(ScoreCardp1.IsOnes || ScoreCardp2.IsOnes || ScoreCardp3.IsOnes || ScoreCardp4.IsOnes)
+            //{
+            //    MessageBox.Show("Du har tagit ettor");
+            //}
 
             Next();
             ResetDices();
@@ -1193,10 +1215,10 @@ namespace ProjectX.ViewModels
                 Bonus();
                 TotalScore();
             }
-            else
-            {
-                MessageBox.Show("Du har tagit tvåor");
-            }
+            //else
+            //{
+            //    MessageBox.Show("Du har tagit tvåor");
+            //}
             Next();
             ResetDices();
             ClearKeepDices();
