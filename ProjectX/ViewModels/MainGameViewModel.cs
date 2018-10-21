@@ -169,6 +169,12 @@ namespace ProjectX.ViewModels
             //if (GameSet.GameTypeRestricted == false && ScoreCardp2.HasUpperScore == false) { return true; }
             //if (GameSet.GameTypeRestricted == false && ScoreCardp3.HasUpperScore == false) { return true; }
             //if (GameSet.GameTypeRestricted == false && ScoreCardp4.HasUpperScore == false) { return true; }
+            //else return false;
+
+            if (GameSet.GameTypeRestricted == false && ScoreCardp1.HasUpperScore == false && ScoreCardp2.HasUpperScore == false && ScoreCardp3.HasUpperScore == false && ScoreCardp4.HasUpperScore == false)
+            {
+                return true;
+            }
             else return false;
 
         }
@@ -194,6 +200,12 @@ namespace ProjectX.ViewModels
             //if (GameSet.GameTypeRestricted == false && ScoreCardp2.HasUpperScore == false) { return true; }
             //if (GameSet.GameTypeRestricted == false && ScoreCardp3.HasUpperScore == false) { return true; }
             //if (GameSet.GameTypeRestricted == false && ScoreCardp4.HasUpperScore == false) { return true; }
+            //else return false;
+
+            if (GameSet.GameTypeRestricted == false && ScoreCardp1.HasUpperScore == false && ScoreCardp2.HasUpperScore == false && ScoreCardp3.HasUpperScore == false && ScoreCardp4.HasUpperScore == false)
+            {
+                return true;
+            }
             else return false;
         }
 
@@ -215,6 +227,12 @@ namespace ProjectX.ViewModels
             //if (GameSet.GameTypeRestricted == false && ScoreCardp2.HasUpperScore == false) { return true; }
             //if (GameSet.GameTypeRestricted == false && ScoreCardp3.HasUpperScore == false) { return true; }
             //if (GameSet.GameTypeRestricted == false && ScoreCardp4.HasUpperScore == false) { return true; }
+            //else return false;
+
+            if (GameSet.GameTypeRestricted == false && ScoreCardp1.HasUpperScore == false && ScoreCardp2.HasUpperScore == false && ScoreCardp3.HasUpperScore == false && ScoreCardp4.HasUpperScore == false)
+            {
+                return true;
+            }
             else return false;
         }
 
@@ -239,6 +257,12 @@ namespace ProjectX.ViewModels
             //if (GameSet.GameTypeRestricted == false && ScoreCardp2.HasUpperScore == false) { return true; }
             //if (GameSet.GameTypeRestricted == false && ScoreCardp3.HasUpperScore == false) { return true; }
             //if (GameSet.GameTypeRestricted == false && ScoreCardp4.HasUpperScore == false) { return true; }
+            //else return false;
+
+            if (GameSet.GameTypeRestricted == false && ScoreCardp1.HasUpperScore == false && ScoreCardp2.HasUpperScore == false && ScoreCardp3.HasUpperScore == false && ScoreCardp4.HasUpperScore == false)
+            {
+                return true;
+            }
             else return false;
         } 
 
@@ -261,6 +285,12 @@ namespace ProjectX.ViewModels
             //if (GameSet.GameTypeRestricted == false && ScoreCardp2.HasUpperScore == false) { return true; }
             //if (GameSet.GameTypeRestricted == false && ScoreCardp3.HasUpperScore == false) { return true; }
             //if (GameSet.GameTypeRestricted == false && ScoreCardp4.HasUpperScore == false) { return true; }
+            //else return false;
+
+            if (GameSet.GameTypeRestricted == false && ScoreCardp1.HasUpperScore == false && ScoreCardp2.HasUpperScore == false && ScoreCardp3.HasUpperScore == false && ScoreCardp4.HasUpperScore == false)
+            {
+                return true;
+            }
             else return false;
         }
 
@@ -281,6 +311,12 @@ namespace ProjectX.ViewModels
             //if (GameSet.GameTypeRestricted == false && ScoreCardp2.HasUpperScore == false) { return true; }
             //if (GameSet.GameTypeRestricted == false && ScoreCardp3.HasUpperScore == false) { return true; }
             //if (GameSet.GameTypeRestricted == false && ScoreCardp4.HasUpperScore == false) { return true; }
+            //else return false;
+
+            if (GameSet.GameTypeRestricted == false && ScoreCardp1.HasUpperScore == false && ScoreCardp2.HasUpperScore == false && ScoreCardp3.HasUpperScore == false && ScoreCardp4.HasUpperScore == false)
+            {
+                return true;
+            }
             else return false;
         }
 
@@ -300,6 +336,12 @@ namespace ProjectX.ViewModels
             //if (GameSet.GameTypeRestricted == false && ScoreCardp2.HasUpperScore == false) { return true; }
             //if (GameSet.GameTypeRestricted == false && ScoreCardp3.HasUpperScore == false) { return true; }
             //if (GameSet.GameTypeRestricted == false && ScoreCardp4.HasUpperScore == false) { return true; }
+            //else return false;
+
+            if (GameSet.GameTypeRestricted == false && ScoreCardp1.HasUpperScore == false && ScoreCardp2.HasUpperScore == false && ScoreCardp3.HasUpperScore == false && ScoreCardp4.HasUpperScore == false)
+            {
+                return true;
+            }
             else return false;
         }
 
@@ -319,6 +361,12 @@ namespace ProjectX.ViewModels
             //if (GameSet.GameTypeRestricted == false && ScoreCardp2.HasUpperScore == false) { return true; }
             //if (GameSet.GameTypeRestricted == false && ScoreCardp3.HasUpperScore == false) { return true; }
             //if (GameSet.GameTypeRestricted == false && ScoreCardp4.HasUpperScore == false) { return true; }
+            //else return false;
+
+            if (GameSet.GameTypeRestricted == false && ScoreCardp1.HasUpperScore == false && ScoreCardp2.HasUpperScore == false && ScoreCardp3.HasUpperScore == false && ScoreCardp4.HasUpperScore == false)
+            {
+                return true;
+            }
             else return false;
         }
         /// <summary>
@@ -337,10 +385,10 @@ namespace ProjectX.ViewModels
             //if (GameSet.GameTypeRestricted == true && ScoreCardp3.HasUpperScore == true) { return true; }
             //if (GameSet.GameTypeRestricted == true && ScoreCardp4.HasUpperScore == true) { return true; }
 
-            //if (GameSet.GameTypeRestricted == false && ScoreCardp1.HasUpperScore == false) { return true; }
-            //if (GameSet.GameTypeRestricted == false && ScoreCardp2.HasUpperScore == false) { return true; }
-            //if (GameSet.GameTypeRestricted == false && ScoreCardp3.HasUpperScore == false) { return true; }
-            //if (GameSet.GameTypeRestricted == false && ScoreCardp4.HasUpperScore == false) { return true; }
+            if (GameSet.GameTypeRestricted == false && ScoreCardp1.HasUpperScore == false && ScoreCardp2.HasUpperScore == false && ScoreCardp3.HasUpperScore == false && ScoreCardp4.HasUpperScore == false)
+            {
+                return true;
+            }
             else return false;
         }
         /// <summary>
